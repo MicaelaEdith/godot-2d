@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/btnInicio.png" type="Texture" id=1]
+[ext_resource path="res://assets/imgMenu.png" type="Texture" id=2]
+[ext_resource path="res://assets/btnOpciones.png" type="Texture" id=3]
+[ext_resource path="res://scripts/btns.gd" type="Script" id=4]
+[ext_resource path="res://assets/btnInicio_ok.png" type="Texture" id=5]
+[ext_resource path="res://assets/btnOpciones_ok.png" type="Texture" id=6]
+[ext_resource path="res://Capitulo1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Opciones.tscn" type="PackedScene" id=8]
+
+[node name="Menu" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -13.0
+margin_right = 1039.0
+margin_bottom = 601.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 743.0
+margin_top = 354.0
+margin_right = 901.0
+margin_bottom = 567.0
+size_flags_vertical = 4
+
+[node name="btnInicio" type="Button" parent="VBoxContainer"]
+margin_right = 158.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 60, 45 )
+size_flags_vertical = 0
+script = ExtResource( 4 )
+normal_texture = ExtResource( 1 )
+pressed_texture = ExtResource( 5 )
+scene_to_load = ExtResource( 7 )
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/btnInicio"]
+margin_right = 158.0
+margin_bottom = 46.0
+expand = true
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+margin_top = 49.0
+margin_right = 158.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="btnOpciones" type="Button" parent="VBoxContainer"]
+margin_top = 68.0
+margin_right = 158.0
+margin_bottom = 113.0
+rect_min_size = Vector2( 60, 45 )
+size_flags_vertical = 0
+script = ExtResource( 4 )
+normal_texture = ExtResource( 3 )
+pressed_texture = ExtResource( 6 )
+scene_to_load = ExtResource( 8 )
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/btnOpciones"]
+margin_left = 1.0
+margin_top = -3.0
+margin_right = 158.0
+margin_bottom = 51.0
+expand = true
