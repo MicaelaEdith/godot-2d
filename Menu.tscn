@@ -12,9 +12,10 @@
 [node name="Menu" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = -13.0
-margin_right = 1039.0
-margin_bottom = 601.0
+margin_left = -31.0
+margin_top = -15.0
+margin_right = 1070.0
+margin_bottom = 614.0
 texture = ExtResource( 2 )
 expand = true
 

@@ -2,7 +2,7 @@ extends Button
 
 export(Texture) var normal_texture
 export(Texture) var pressed_texture
-export(PackedScene) var scene_to_load  # <--- escena que se cargará al hacer click
+export(PackedScene) var scene_to_load 
 
 onready var icono = $TextureRect
 
@@ -19,6 +19,5 @@ func _gui_input(event):
 			else:
 				if normal_texture:
 					icono.texture = normal_texture
-					# Cambio de escena al soltar el click
 					if scene_to_load:
 						get_tree().change_scene_to(scene_to_load)
