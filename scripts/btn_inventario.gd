@@ -8,7 +8,7 @@ onready var icono = $TextureRect
 func _ready():
 	if normal_texture:
 		icono.texture = normal_texture
-	# conectamos las señales de hover
+
 	connect("mouse_entered", self, "_on_mouse_entered")
 	connect("mouse_exited", self, "_on_mouse_exited")
 
