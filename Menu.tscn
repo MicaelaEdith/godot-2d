@@ -70,15 +70,16 @@ margin_bottom = 46.0
 expand = true
 
 [node name="Control" type="Control" parent="VBoxContainer"]
+visible = false
 margin_top = 49.0
 margin_right = 158.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 0, 15 )
 
 [node name="btnOpciones" type="Button" parent="VBoxContainer"]
-margin_top = 68.0
+margin_top = 49.0
 margin_right = 158.0
-margin_bottom = 113.0
+margin_bottom = 94.0
 rect_min_size = Vector2( 60, 45 )
 size_flags_vertical = 0
 custom_styles/hover = SubResource( 6 )

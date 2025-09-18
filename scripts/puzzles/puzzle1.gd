@@ -1,64 +1,64 @@
-extends Control 
+extends Control
 
-export(Vector2) var cell_size = Vector2(100,100)
-export(PackedScene) var tile_scene
-
-const ROWS = 5
-const COLS = 5
-
-var grid = []
-var tiles = {}
+const GRID_SIZE = 5
+var tiles = []
 var empty_pos = Vector2()
+var tile_size = Vector2(192, 162)
 
 func _ready():
-	_init_grid()
-	_create_tiles()
+	tiles = get_children()
+	
+	for i in range(tiles.size()):
+		var t = tiles[i]
+		if t is TextureRect:
+			if not t.is_connected("gui_input", self, "_on_tile_input"):
+				t.connect("gui_input", self, "_on_tile_input", [t])
+			
+			var pos = index_to_grid(i)
+			t.rect_position = Vector2(pos.y * tile_size.x, pos.x * tile_size.y)
+			
+			if "es_vacia" in t and t.es_vacia:
+				empty_pos = pos
 
-func _init_grid():
-	grid = []
-	var count = 1
-	for r in range(ROWS):
-		var row = []
-		for c in range(COLS):
-			if r == ROWS-1 and c == COLS-1:
-				row.append(0)
-				empty_pos = Vector2(c,r)
-			else:
-				row.append(count)
-				count += 1
-		grid.append(row)
+#helpers
+func index_to_grid(index: int) -> Vector2:
+	var row = int(index / GRID_SIZE)
+	var col = index % GRID_SIZE
+	return Vector2(row, col)
 
-func _create_tiles():
-	for r in range(ROWS):
-		for c in range(COLS):
-			var id = grid[r][c]
-			if id == 0:
-				continue
-			var tile = tile_scene.instance()
-			tile.rect_position = Vector2(c,r) * cell_size
-			# Propiedades extra
-			tile.nseo = Vector4(false,false,false,false)
-			tile.conectado = false
-			tile.connect("gui_input", self, "_on_tile_input", [r,c])
-			add_child(tile)
-			tiles[id] = tile
+func grid_to_index(pos: Vector2) -> int:
+	return int(pos.x) * GRID_SIZE + int(pos.y)
 
-# Manejo de click en ficha
-func _on_tile_input(event, r, c):
-	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
-		if _is_adjacent(Vector2(c,r), empty_pos):
-			_move_tile(Vector2(c,r))
+func is_adjacent(pos1: Vector2, pos2: Vector2) -> bool:
+	var dx = int(pos1.x) - int(pos2.x)
+	var dy = int(pos1.y) - int(pos2.y)
+	return (abs(dx) == 1 and dy == 0) or (abs(dy) == 1 and dx == 0)
 
-# Verifica si la ficha está adyacente al espacio vacío
-func _is_adjacent(pos, empty):
-	return abs(pos.x - empty.x) + abs(pos.y - empty.y) == 1
+#evento clic ficha
+func _on_tile_input(event, tile_node):
+	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
+		var index = tiles.find(tile_node)
+		if index == -1:
+			return
+		var clicked_pos = index_to_grid(index)
+		
+		if is_adjacent(clicked_pos, empty_pos):
+			swap_tiles(clicked_pos, empty_pos)
 
-# Intercambia ficha con el vacío
-func _move_tile(pos):
-	var id = grid[pos.y][pos.x]
-	# Actualiza grilla lógica
-	grid[empty_pos.y][empty_pos.x] = id
-	grid[pos.y][pos.x] = 0
-	# Actualiza posición física
-	tiles[id].rect_position = empty_pos * cell_size
-	empty_pos = pos
+#intercambiar posiciones
+func swap_tiles(tile_pos: Vector2, empty: Vector2):
+	var tile_index = grid_to_index(tile_pos)
+	var empty_index = grid_to_index(empty)
+	
+	var tile_node = tiles[tile_index]
+	var empty_node = tiles[empty_index]
+	
+	#intercambio array
+	tiles[tile_index] = empty_node
+	tiles[empty_index] = tile_node
+	
+	#actualizar posiciones físicas
+	tile_node.rect_position = Vector2(empty.y * tile_size.x, empty.x * tile_size.y)
+	empty_node.rect_position = Vector2(tile_pos.y * tile_size.x, tile_pos.x * tile_size.y)
+	
+	empty_pos = tile_pos
