@@ -21,6 +21,28 @@
 
 [sub_resource type="GDScript" id=41]
 
+[sub_resource type="StyleBoxFlat" id=53]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=54]
+bg_color = Color( 0.898039, 0.858824, 0.803922, 0 )
+
+[sub_resource type="StyleBoxEmpty" id=55]
+
+[sub_resource type="StyleBoxEmpty" id=56]
+
+[sub_resource type="StyleBoxFlat" id=57]
+bg_color = Color( 0.388235, 0.376471, 0.356863, 1 )
+border_width_bottom = 1
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+expand_margin_top = 3.0
+expand_margin_bottom = 3.0
+
 [sub_resource type="StyleBoxEmpty" id=1]
 
 [sub_resource type="StyleBoxEmpty" id=2]
@@ -92,6 +114,20 @@ bg_color = Color( 0.952941, 0.905882, 0.905882, 0.164706 )
 
 [sub_resource type="StyleBoxEmpty" id=40]
 
+[sub_resource type="StyleBoxTexture" id=48]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 550, 470 )
+
+[sub_resource type="StyleBoxEmpty" id=50]
+
+[sub_resource type="StyleBoxEmpty" id=51]
+
+[sub_resource type="StyleBoxEmpty" id=52]
+
+[sub_resource type="StyleBoxTexture" id=49]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 550, 470 )
+
 [sub_resource type="StyleBoxFlat" id=42]
 bg_color = Color( 0.0666667, 0.0588235, 0.0588235, 1 )
 border_width_bottom = 1
@@ -125,44 +161,33 @@ corner_radius_bottom_left = 3
 expand_margin_left = 1.0
 expand_margin_top = 1.0
 
-[sub_resource type="StyleBoxTexture" id=48]
-texture = ExtResource( 6 )
-region_rect = Rect2( 0, 0, 550, 470 )
-
-[sub_resource type="StyleBoxEmpty" id=50]
-
-[sub_resource type="StyleBoxEmpty" id=51]
-
-[sub_resource type="StyleBoxEmpty" id=52]
-
-[sub_resource type="StyleBoxTexture" id=49]
-texture = ExtResource( 5 )
-region_rect = Rect2( 0, 0, 550, 470 )
-
-[sub_resource type="StyleBoxFlat" id=53]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="StyleBoxFlat" id=54]
-bg_color = Color( 0.898039, 0.858824, 0.803922, 0 )
-
-[sub_resource type="StyleBoxEmpty" id=55]
-
-[sub_resource type="StyleBoxEmpty" id=56]
-
-[sub_resource type="StyleBoxFlat" id=57]
-bg_color = Color( 0.388235, 0.376471, 0.356863, 1 )
-border_width_bottom = 1
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-expand_margin_left = 3.0
-expand_margin_right = 3.0
-expand_margin_top = 3.0
-expand_margin_bottom = 3.0
-
 [node name="Capitulo1" type="Node2D"]
 script = SubResource( 41 )
+
+[node name="Libreta" type="TextureRect" parent="."]
+visible = false
+margin_left = 23.0
+margin_top = 49.0
+margin_right = 723.0
+margin_bottom = 499.0
+rect_scale = Vector2( 1.18971, 1.18971 )
+texture = ExtResource( 18 )
+
+[node name="Button" type="Button" parent="Libreta"]
+margin_left = 664.026
+margin_top = 28.5783
+margin_right = 676.026
+margin_bottom = 48.5783
+rect_scale = Vector2( 1.23083, 1.02132 )
+custom_colors/icon_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 53 )
+custom_styles/pressed = SubResource( 54 )
+custom_styles/focus = SubResource( 55 )
+custom_styles/disabled = SubResource( 56 )
+custom_styles/normal = SubResource( 57 )
+text = "X"
+script = ExtResource( 11 )
+puzzle_node_path = NodePath("..")
 
 [node name="imgFondo" type="TextureRect" parent="."]
 margin_left = -34.0
@@ -346,13 +371,27 @@ custom_styles/normal = SubResource( 40 )
 script = ExtResource( 7 )
 puzzle_node_path = NodePath("../puzzle1")
 
+[node name="btnLibreta" type="Button" parent="."]
+margin_left = 44.0
+margin_top = 460.0
+margin_right = 56.0
+margin_bottom = 480.0
+rect_scale = Vector2( 6.20182, 3.84105 )
+custom_styles/hover = SubResource( 48 )
+custom_styles/pressed = SubResource( 50 )
+custom_styles/focus = SubResource( 51 )
+custom_styles/disabled = SubResource( 52 )
+custom_styles/normal = SubResource( 49 )
+script = ExtResource( 7 )
+puzzle_node_path = NodePath("../Libreta")
+
 [node name="puzzle1" type="Control" parent="."]
-visible = false
 margin_left = 46.0
 margin_top = 40.0
 margin_right = 86.0
 margin_bottom = 80.0
 rect_scale = Vector2( 23.5765, 12.9968 )
+mouse_filter = 2
 
 [node name="fondo" type="TextureRect" parent="puzzle1"]
 margin_left = -2.46007
@@ -360,6 +399,7 @@ margin_top = -3.84709
 margin_right = 1077.54
 margin_bottom = 916.153
 rect_scale = Vector2( 0.0355257, 0.052865 )
+mouse_filter = 2
 texture = ExtResource( 9 )
 
 [node name="GridContainer" type="Control" parent="puzzle1/fondo"]
@@ -369,6 +409,7 @@ margin_right = 1114.5
 margin_bottom = 927.881
 rect_min_size = Vector2( 0.5, 0.5 )
 rect_scale = Vector2( 0.785092, 0.859949 )
+mouse_filter = 2
 script = ExtResource( 8 )
 
 [node name="ficha-horizontal1" type="TextureRect" parent="puzzle1/fondo/GridContainer"]
@@ -660,44 +701,5 @@ custom_styles/disabled = SubResource( 45 )
 custom_styles/normal = SubResource( 46 )
 text = "x"
 icon_align = 1
-script = ExtResource( 11 )
-puzzle_node_path = NodePath("..")
-
-[node name="btnLibreta" type="Button" parent="."]
-margin_left = 44.0
-margin_top = 460.0
-margin_right = 56.0
-margin_bottom = 480.0
-rect_scale = Vector2( 6.20182, 3.84105 )
-custom_styles/hover = SubResource( 48 )
-custom_styles/pressed = SubResource( 50 )
-custom_styles/focus = SubResource( 51 )
-custom_styles/disabled = SubResource( 52 )
-custom_styles/normal = SubResource( 49 )
-script = ExtResource( 7 )
-puzzle_node_path = NodePath("../Libreta")
-
-[node name="Libreta" type="TextureRect" parent="."]
-visible = false
-margin_left = 23.0
-margin_top = 49.0
-margin_right = 723.0
-margin_bottom = 499.0
-rect_scale = Vector2( 1.18971, 1.18971 )
-texture = ExtResource( 18 )
-
-[node name="Button" type="Button" parent="Libreta"]
-margin_left = 664.026
-margin_top = 28.5783
-margin_right = 676.026
-margin_bottom = 48.5783
-rect_scale = Vector2( 1.23083, 1.02132 )
-custom_colors/icon_color_pressed = Color( 0, 0, 0, 1 )
-custom_styles/hover = SubResource( 53 )
-custom_styles/pressed = SubResource( 54 )
-custom_styles/focus = SubResource( 55 )
-custom_styles/disabled = SubResource( 56 )
-custom_styles/normal = SubResource( 57 )
-text = "X"
 script = ExtResource( 11 )
 puzzle_node_path = NodePath("..")
