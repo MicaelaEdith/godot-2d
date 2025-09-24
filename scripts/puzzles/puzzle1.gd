@@ -1,80 +1,84 @@
 extends Control
 
 const GRID_SIZE = 5
+
 var tiles = []
-var empty_pos = Vector2()
-var tile_size = Vector2(192, 162)
+var empty_index = -1
 
 func _ready():
+	print("=== Puzzle inicializando ===")
+
 	tiles = get_children()
 	print("Tiles detectados:", tiles.size())
-	for t in tiles:
-		print("Tile:", t.name, "mouse_filter:", t.mouse_filter)
 
 	for i in range(tiles.size()):
-		var t = tiles[i]		
-		if t is TextureRect:
-			# conectar input de cada tile al handler
-			if not t.is_connected("gui_input", self, "_on_tile_input"):
-				t.connect("gui_input", self, "_on_tile_input", [t])
-			
-			# posicionar las tiles en la grilla manualmente
-			var pos = index_to_grid(i)
-			t.rect_position = Vector2(pos.y * tile_size.x, pos.x * tile_size.y)
-			
-			# guardar posición inicial de la vacía
-			if "es_vacia" in t and t.es_vacia:
-				empty_pos = pos
-				
-func _gui_input(event):
-	if event is InputEventMouseButton and event.pressed:
-		print("El contenedor Puzzle recibió un clic")
+		var t = tiles[i]
+		# Intentar conectar
+		var ok = false
+		if not t.is_connected("gui_input", self, "_on_tile_input"):
+			var err = t.connect("gui_input", self, "_on_tile_input", [t])
+			if err == OK:
+				ok = true
+		print("Tile agregado:", t.name, "pos:", t.rect_position, " conectado:", ok)
 
-# helpers
+	# Buscar vacía
+	for i in range(tiles.size()):
+		if tiles[i].es_vacia:
+			empty_index = i
+			print("Ficha vacía en índice:", i)
+			break
+
+# ========================
+# Helpers
+# ========================
 func index_to_grid(index: int) -> Vector2:
-	var row = int(index / GRID_SIZE)
+	var row = index / GRID_SIZE  # truncado
 	var col = index % GRID_SIZE
-	return Vector2(row, col)
+	return Vector2(col, row)
 
-func grid_to_index(pos: Vector2) -> int:
-	return int(pos.x) * GRID_SIZE + int(pos.y)
+func grid_to_index(grid_pos: Vector2) -> int:
+	return int(grid_pos.y) * GRID_SIZE + int(grid_pos.x)
 
-func is_adjacent(pos1: Vector2, pos2: Vector2) -> bool:
-	var dx = int(pos1.x) - int(pos2.x)
-	var dy = int(pos1.y) - int(pos2.y)
-	return (abs(dx) == 1 and dy == 0) or (abs(dy) == 1 and dx == 0)
+func is_adjacent(idx1: int, idx2: int) -> bool:
+	var g1 = index_to_grid(idx1)
+	var g2 = index_to_grid(idx2)
+	return (abs(g1.x - g2.x) + abs(g1.y - g2.y)) == 1
 
-# evento clic ficha
-func _on_tile_input(event, tile_node):
+
+# ========================
+# Input de fichas
+# ========================
+func _on_tile_input(event: InputEvent, tile):
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
-		print("Click detectado en:", tile_node.name)
-		var index = tiles.find(tile_node)
-		if index == -1:
+		var tile_index = tiles.find(tile)
+		if tile_index == -1:
 			return
-		var clicked_pos = index_to_grid(index)
-		
-		if is_adjacent(clicked_pos, empty_pos):
-			print("Moviendo ficha:", tile_node.name, "a", empty_pos)
-			swap_tiles(clicked_pos, empty_pos)
+
+		print("Click en:", tile.name, "idx:", tile_index, "empty:", empty_index)
+
+		if is_adjacent(tile_index, empty_index):
+			swap_tiles(tile_index, empty_index)
+		else:
+			print("No es adyacente")
 
 
-			
-
-# intercambiar posiciones
-func swap_tiles(tile_pos: Vector2, empty: Vector2):
-	var tile_index = grid_to_index(tile_pos)
-	var empty_index = grid_to_index(empty)
-	
+# ========================
+# Swap
+# ========================
+func swap_tiles(tile_index: int, empty_idx: int):
 	var tile_node = tiles[tile_index]
-	var empty_node = tiles[empty_index]
-	
-	# intercambio en el array
+	var empty_node = tiles[empty_idx]
+
+	# Intercambiar posiciones visuales
+	var temp_pos = tile_node.rect_position
+	tile_node.rect_position = empty_node.rect_position
+	empty_node.rect_position = temp_pos
+
+	# Intercambiar en el array
 	tiles[tile_index] = empty_node
-	tiles[empty_index] = tile_node
-	
-	# actualizar posiciones visuales
-	tile_node.rect_position = Vector2(empty.y * tile_size.x, empty.x * tile_size.y)
-	empty_node.rect_position = Vector2(tile_pos.y * tile_size.x, tile_pos.x * tile_size.y)
-	
-	# actualizar posición de la vacía
-	empty_pos = tile_pos
+	tiles[empty_idx] = tile_node
+
+	# Actualizar índice vacío
+	empty_index = tile_index
+
+	print("Swap:", tile_node.name, "<=>", empty_node.name, "Nuevo empty:", empty_index)

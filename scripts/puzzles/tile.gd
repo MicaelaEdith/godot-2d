@@ -9,5 +9,4 @@ export(bool) var es_vacia = false
 var conectado = false
 
 func _ready():
-	# Este valor asegura que el nodo capture clics
-	mouse_filter = MOUSE_FILTER_STOP
+	mouse_filter = Control.MOUSE_FILTER_STOP  # permite que reciba clicks
