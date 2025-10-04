@@ -1,140 +1,144 @@
-[gd_scene load_steps=75 format=2]
+[gd_scene load_steps=75 format=3 uid="uid://bq3m5pkfnaveb"]
 
-[ext_resource path="res://assets/fondos-escenas/scn1.png" type="Texture" id=1]
-[ext_resource path="res://scripts/btn_inventario.gd" type="Script" id=2]
-[ext_resource path="res://assets/btnInventario_ok.png" type="Texture" id=3]
-[ext_resource path="res://assets/btnInventario.png" type="Texture" id=4]
-[ext_resource path="res://assets/btn_libreta.png" type="Texture" id=5]
-[ext_resource path="res://assets/btn_libreta_ok.png" type="Texture" id=6]
-[ext_resource path="res://scripts/btns_abrir.gd" type="Script" id=7]
-[ext_resource path="res://scripts/puzzles/puzzle1.gd" type="Script" id=8]
-[ext_resource path="res://assets/puzzles/puzzle1/fondo.png" type="Texture" id=9]
-[ext_resource path="res://assets/puzzles/puzzle1/grilla.png" type="Texture" id=10]
-[ext_resource path="res://scripts/btn_cerrar.gd" type="Script" id=11]
-[ext_resource path="res://scripts/puzzles/tile.gd" type="Script" id=12]
-[ext_resource path="res://assets/puzzles/puzzle1/ficha-horizontal.png" type="Texture" id=13]
-[ext_resource path="res://assets/puzzles/puzzle1/ficha-codo2.png" type="Texture" id=14]
-[ext_resource path="res://assets/puzzles/puzzle1/ficha-codo1.png" type="Texture" id=15]
-[ext_resource path="res://assets/puzzles/puzzle1/ficha-t.png" type="Texture" id=16]
-[ext_resource path="res://assets/puzzles/puzzle1/ficha-vertical.png" type="Texture" id=17]
-[ext_resource path="res://assets/libreta.png" type="Texture" id=18]
-[ext_resource path="res://assets/elementos/interruptor.png" type="Texture" id=19]
-[ext_resource path="res://assets/elementos/quimico.png" type="Texture" id=20]
-[ext_resource path="res://scripts/elementos.gd" type="Script" id=21]
-[ext_resource path="res://scripts/inventario.gd" type="Script" id=22]
-[ext_resource path="res://assets/elementos/piedra.png" type="Texture" id=23]
+[ext_resource type="Texture2D" uid="uid://chfsp46bs10gt" path="res://assets/fondos-escenas/scn1.png" id="1"]
+[ext_resource type="Script" uid="uid://v5ac5lvhi78m" path="res://scripts/btn_inventario.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://di6sswiin63fd" path="res://assets/btnInventario_ok.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://d0bd52yan3rdx" path="res://assets/btnInventario.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dsxs74g5j20l1" path="res://assets/btn_libreta.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cd73oqgoxvota" path="res://assets/btn_libreta_ok.png" id="6"]
+[ext_resource type="Script" uid="uid://y3m1nku12x7n" path="res://scripts/btns_abrir.gd" id="7"]
+[ext_resource type="Script" uid="uid://c7w15rkhnjiob" path="res://scripts/puzzles/puzzle1.gd" id="8"]
+[ext_resource type="Texture2D" uid="uid://c07jbwhq8oop0" path="res://assets/puzzles/puzzle1/fondo.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://bjsb2q2i4ja5r" path="res://assets/puzzles/puzzle1/grilla.png" id="10"]
+[ext_resource type="Script" uid="uid://bm4ftx147rmym" path="res://scripts/btn_cerrar.gd" id="11"]
+[ext_resource type="Script" uid="uid://dbknxeejasanw" path="res://scripts/puzzles/tile.gd" id="12"]
+[ext_resource type="Texture2D" uid="uid://3gj3yvhxekyb" path="res://assets/puzzles/puzzle1/ficha-horizontal.png" id="13"]
+[ext_resource type="Texture2D" uid="uid://b0fqydmtkwlnj" path="res://assets/puzzles/puzzle1/ficha-codo2.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://cmkfqy6orqfqo" path="res://assets/puzzles/puzzle1/ficha-codo1.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://dikgqqe6oe1x8" path="res://assets/puzzles/puzzle1/ficha-t.png" id="16"]
+[ext_resource type="Texture2D" uid="uid://n6s4uw8ab2ve" path="res://assets/puzzles/puzzle1/ficha-vertical.png" id="17"]
+[ext_resource type="Texture2D" uid="uid://ds71wu2xx5qgb" path="res://assets/libreta.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://c2jnqfwailt1l" path="res://assets/elementos/interruptor.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://5fdnyainh8f5" path="res://assets/elementos/quimico.png" id="20"]
+[ext_resource type="Script" uid="uid://csulo2gwie42r" path="res://scripts/elementos.gd" id="21"]
+[ext_resource type="Script" uid="uid://bpccimtsph6i4" path="res://scripts/inventario.gd" id="22"]
+[ext_resource type="Texture2D" uid="uid://b07kk5acknrxn" path="res://assets/elementos/piedra.png" id="23"]
 
-[sub_resource type="GDScript" id=41]
+[sub_resource type="GDScript" id="41"]
 
-[sub_resource type="StyleBoxFlat" id=53]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
+[sub_resource type="StyleBoxEmpty" id="55"]
 
-[sub_resource type="StyleBoxFlat" id=54]
-bg_color = Color( 0.898039, 0.858824, 0.803922, 0 )
+[sub_resource type="StyleBoxEmpty" id="56"]
 
-[sub_resource type="StyleBoxEmpty" id=55]
+[sub_resource type="StyleBoxFlat" id="53"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxEmpty" id=56]
+[sub_resource type="StyleBoxFlat" id="54"]
+bg_color = Color(0.898039, 0.858824, 0.803922, 0)
 
-[sub_resource type="StyleBoxFlat" id=57]
-bg_color = Color( 0.388235, 0.376471, 0.356863, 1 )
+[sub_resource type="StyleBoxFlat" id="57"]
+bg_color = Color(0.388235, 0.376471, 0.356863, 1)
 border_width_bottom = 1
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 expand_margin_left = 3.0
-expand_margin_right = 3.0
 expand_margin_top = 3.0
+expand_margin_right = 3.0
 expand_margin_bottom = 3.0
 
-[sub_resource type="StyleBoxEmpty" id=1]
+[sub_resource type="StyleBoxEmpty" id="3"]
 
-[sub_resource type="StyleBoxEmpty" id=2]
+[sub_resource type="StyleBoxEmpty" id="4"]
 
-[sub_resource type="StyleBoxEmpty" id=3]
+[sub_resource type="StyleBoxEmpty" id="1"]
 
-[sub_resource type="StyleBoxEmpty" id=4]
+[sub_resource type="StyleBoxEmpty" id="2"]
 
-[sub_resource type="StyleBoxEmpty" id=58]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l3b1b"]
 
-[sub_resource type="StyleBoxEmpty" id=6]
+[sub_resource type="StyleBoxEmpty" id="8"]
 
-[sub_resource type="StyleBoxEmpty" id=7]
+[sub_resource type="StyleBoxEmpty" id="9"]
 
-[sub_resource type="StyleBoxEmpty" id=8]
+[sub_resource type="StyleBoxEmpty" id="6"]
 
-[sub_resource type="StyleBoxEmpty" id=9]
+[sub_resource type="StyleBoxEmpty" id="7"]
 
-[sub_resource type="StyleBoxEmpty" id=10]
+[sub_resource type="StyleBoxEmpty" id="10"]
 
-[sub_resource type="StyleBoxEmpty" id=11]
+[sub_resource type="StyleBoxEmpty" id="13"]
 
-[sub_resource type="StyleBoxEmpty" id=12]
+[sub_resource type="StyleBoxEmpty" id="14"]
 
-[sub_resource type="StyleBoxEmpty" id=13]
+[sub_resource type="StyleBoxEmpty" id="11"]
 
-[sub_resource type="StyleBoxEmpty" id=14]
+[sub_resource type="StyleBoxEmpty" id="12"]
 
-[sub_resource type="StyleBoxEmpty" id=15]
+[sub_resource type="StyleBoxEmpty" id="15"]
 
-[sub_resource type="StyleBoxEmpty" id=16]
+[sub_resource type="StyleBoxEmpty" id="18"]
 
-[sub_resource type="StyleBoxEmpty" id=17]
+[sub_resource type="StyleBoxEmpty" id="19"]
 
-[sub_resource type="StyleBoxEmpty" id=18]
+[sub_resource type="StyleBoxEmpty" id="16"]
 
-[sub_resource type="StyleBoxEmpty" id=19]
+[sub_resource type="StyleBoxEmpty" id="17"]
 
-[sub_resource type="StyleBoxEmpty" id=20]
+[sub_resource type="StyleBoxEmpty" id="20"]
 
-[sub_resource type="StyleBoxEmpty" id=21]
+[sub_resource type="StyleBoxEmpty" id="23"]
 
-[sub_resource type="StyleBoxEmpty" id=22]
+[sub_resource type="StyleBoxEmpty" id="24"]
 
-[sub_resource type="StyleBoxEmpty" id=23]
+[sub_resource type="StyleBoxEmpty" id="21"]
 
-[sub_resource type="StyleBoxEmpty" id=24]
+[sub_resource type="StyleBoxEmpty" id="22"]
 
-[sub_resource type="StyleBoxEmpty" id=25]
+[sub_resource type="StyleBoxEmpty" id="25"]
 
-[sub_resource type="StyleBoxEmpty" id=26]
+[sub_resource type="StyleBoxEmpty" id="28"]
 
-[sub_resource type="StyleBoxEmpty" id=27]
+[sub_resource type="StyleBoxEmpty" id="29"]
 
-[sub_resource type="StyleBoxEmpty" id=28]
+[sub_resource type="StyleBoxEmpty" id="26"]
 
-[sub_resource type="StyleBoxEmpty" id=29]
+[sub_resource type="StyleBoxEmpty" id="27"]
 
-[sub_resource type="StyleBoxEmpty" id=30]
+[sub_resource type="StyleBoxEmpty" id="30"]
 
-[sub_resource type="StyleBoxFlat" id=36]
-bg_color = Color( 0.952941, 0.905882, 0.905882, 0.164706 )
+[sub_resource type="StyleBoxEmpty" id="51"]
 
-[sub_resource type="StyleBoxEmpty" id=37]
+[sub_resource type="StyleBoxEmpty" id="52"]
 
-[sub_resource type="StyleBoxEmpty" id=38]
+[sub_resource type="StyleBoxTexture" id="48"]
+texture = ExtResource("6")
+region_rect = Rect2(0, 0, 550, 470)
 
-[sub_resource type="StyleBoxEmpty" id=39]
+[sub_resource type="StyleBoxEmpty" id="50"]
 
-[sub_resource type="StyleBoxEmpty" id=40]
+[sub_resource type="StyleBoxTexture" id="49"]
+texture = ExtResource("5")
+region_rect = Rect2(0, 0, 550, 470)
 
-[sub_resource type="StyleBoxTexture" id=48]
-texture = ExtResource( 6 )
-region_rect = Rect2( 0, 0, 550, 470 )
+[sub_resource type="StyleBoxEmpty" id="38"]
 
-[sub_resource type="StyleBoxEmpty" id=50]
+[sub_resource type="StyleBoxEmpty" id="39"]
 
-[sub_resource type="StyleBoxEmpty" id=51]
+[sub_resource type="StyleBoxFlat" id="36"]
+bg_color = Color(0.952941, 0.905882, 0.905882, 0.164706)
 
-[sub_resource type="StyleBoxEmpty" id=52]
+[sub_resource type="StyleBoxEmpty" id="37"]
 
-[sub_resource type="StyleBoxTexture" id=49]
-texture = ExtResource( 5 )
-region_rect = Rect2( 0, 0, 550, 470 )
+[sub_resource type="StyleBoxEmpty" id="40"]
 
-[sub_resource type="StyleBoxFlat" id=42]
-bg_color = Color( 0.0666667, 0.0588235, 0.0588235, 1 )
+[sub_resource type="StyleBoxEmpty" id="44"]
+
+[sub_resource type="StyleBoxEmpty" id="45"]
+
+[sub_resource type="StyleBoxFlat" id="42"]
+bg_color = Color(0.0666667, 0.0588235, 0.0588235, 1)
 border_width_bottom = 1
 corner_radius_top_left = 3
 corner_radius_top_right = 3
@@ -143,22 +147,18 @@ corner_radius_bottom_left = 3
 expand_margin_left = 1.0
 expand_margin_top = 1.0
 
-[sub_resource type="StyleBoxFlat" id=47]
-bg_color = Color( 0.0901961, 0.0901961, 0.0901961, 0 )
+[sub_resource type="StyleBoxFlat" id="47"]
+bg_color = Color(0.0901961, 0.0901961, 0.0901961, 0)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 expand_margin_left = 1.0
 
-[sub_resource type="StyleBoxEmpty" id=44]
-
-[sub_resource type="StyleBoxEmpty" id=45]
-
-[sub_resource type="StyleBoxFlat" id=46]
-bg_color = Color( 0.482353, 0.294118, 0.294118, 1 )
+[sub_resource type="StyleBoxFlat" id="46"]
+bg_color = Color(0.482353, 0.294118, 0.294118, 1)
 border_width_bottom = 1
-border_color = Color( 0.686275, 0.686275, 0.67451, 1 )
+border_color = Color(0.686275, 0.686275, 0.67451, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -167,596 +167,678 @@ expand_margin_left = 1.0
 expand_margin_top = 1.0
 
 [node name="Capitulo1" type="Node2D"]
-script = SubResource( 41 )
+script = SubResource("41")
 
 [node name="Libreta" type="TextureRect" parent="."]
-visible = false
-margin_left = 23.0
-margin_top = 49.0
-margin_right = 723.0
-margin_bottom = 499.0
-rect_scale = Vector2( 1.18971, 1.18971 )
-texture = ExtResource( 18 )
+offset_left = 23.0
+offset_top = 49.0
+offset_right = 723.0
+offset_bottom = 499.0
+scale = Vector2(1.18971, 1.18971)
+texture = ExtResource("18")
 
 [node name="Button" type="Button" parent="Libreta"]
-margin_left = 664.026
-margin_top = 28.5783
-margin_right = 676.026
-margin_bottom = 48.5783
-rect_scale = Vector2( 1.23083, 1.02132 )
-custom_colors/icon_color_pressed = Color( 0, 0, 0, 1 )
-custom_styles/hover = SubResource( 53 )
-custom_styles/pressed = SubResource( 54 )
-custom_styles/focus = SubResource( 55 )
-custom_styles/disabled = SubResource( 56 )
-custom_styles/normal = SubResource( 57 )
+layout_mode = 0
+offset_left = 664.026
+offset_top = 28.5783
+offset_right = 676.026
+offset_bottom = 48.5783
+scale = Vector2(1.23083, 1.02132)
+theme_override_styles/focus = SubResource("55")
+theme_override_styles/disabled = SubResource("56")
+theme_override_styles/hover = SubResource("53")
+theme_override_styles/pressed = SubResource("54")
+theme_override_styles/normal = SubResource("57")
 text = "X"
-script = ExtResource( 11 )
+script = ExtResource("11")
 puzzle_node_path = NodePath("..")
 
 [node name="imgFondo" type="TextureRect" parent="."]
-margin_left = -34.0
-margin_top = -57.0
-margin_right = 1069.0
-margin_bottom = 662.0
-texture = ExtResource( 1 )
-expand = true
+offset_left = -39.0
+offset_top = -66.0
+offset_right = 1064.0
+offset_bottom = 653.0
+scale = Vector2(1.1219, 1.07247)
+texture = ExtResource("1")
+expand_mode = 1
 
 [node name="inventario" type="VBoxContainer" parent="."]
-margin_left = 923.0
-margin_top = 63.0
-margin_right = 963.0
-margin_bottom = 203.0
-rect_scale = Vector2( 1.9059, 3.45433 )
-script = ExtResource( 22 )
+offset_left = 1021.0
+offset_top = 63.0
+offset_right = 1061.0
+offset_bottom = 203.0
+scale = Vector2(2.13822, 3.70468)
+script = ExtResource("22")
 
 [node name="i1" type="Button" parent="inventario"]
-margin_right = 40.0
-margin_bottom = 14.0
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 4 )
-custom_styles/normal = SubResource( 58 )
-script = ExtResource( 2 )
-normal_texture = ExtResource( 4 )
-hover_texture = ExtResource( 3 )
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+theme_override_styles/focus = SubResource("3")
+theme_override_styles/disabled = SubResource("4")
+theme_override_styles/hover = SubResource("1")
+theme_override_styles/pressed = SubResource("2")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l3b1b")
+script = ExtResource("2")
+normal_texture = ExtResource("4")
+hover_texture = ExtResource("3")
 
 [node name="Fondo" type="TextureRect" parent="inventario/i1"]
-margin_right = 40.0
-margin_bottom = 40.0
-rect_scale = Vector2( 0.943248, 0.492254 )
-expand = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.943248, 0.492254)
+expand_mode = 1
 
 [node name="Icono" type="TextureRect" parent="inventario/i1"]
-margin_left = 4.72217
-margin_top = 3.18441
-margin_right = 104.722
-margin_bottom = 103.184
-rect_scale = Vector2( 0.264946, 0.138164 )
+layout_mode = 0
+offset_left = 4.72217
+offset_top = 3.18441
+offset_right = 104.722
+offset_bottom = 103.184
+scale = Vector2(0.264946, 0.138164)
 
 [node name="Control" type="Control" parent="inventario"]
-margin_top = 18.0
-margin_right = 40.0
-margin_bottom = 18.5
-rect_min_size = Vector2( 0, 0.5 )
+custom_minimum_size = Vector2(0, 0.5)
+layout_mode = 2
 
 [node name="i2" type="Button" parent="inventario"]
-margin_top = 22.0
-margin_right = 40.0
-margin_bottom = 36.0
-custom_styles/hover = SubResource( 6 )
-custom_styles/pressed = SubResource( 7 )
-custom_styles/focus = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-script = ExtResource( 2 )
-normal_texture = ExtResource( 4 )
-hover_texture = ExtResource( 3 )
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+theme_override_styles/focus = SubResource("8")
+theme_override_styles/disabled = SubResource("9")
+theme_override_styles/hover = SubResource("6")
+theme_override_styles/pressed = SubResource("7")
+theme_override_styles/normal = SubResource("10")
+script = ExtResource("2")
+normal_texture = ExtResource("4")
+hover_texture = ExtResource("3")
 
 [node name="Fondo" type="TextureRect" parent="inventario/i2"]
-margin_left = 0.524658
-margin_top = 0.606812
-margin_right = 40.5247
-margin_bottom = 40.6068
-rect_scale = Vector2( 0.943248, 0.492254 )
-expand = true
+layout_mode = 0
+offset_left = 0.524658
+offset_top = 0.606812
+offset_right = 40.5247
+offset_bottom = 40.6068
+scale = Vector2(0.943248, 0.492254)
+expand_mode = 1
 
 [node name="Icono" type="TextureRect" parent="inventario/i2"]
-margin_left = 6.29626
-margin_top = 4.34375
-margin_right = 46.2963
-margin_bottom = 44.3438
-rect_scale = Vector2( 0.259803, 0.141704 )
+layout_mode = 0
+offset_left = 6.29626
+offset_top = 4.34375
+offset_right = 46.2963
+offset_bottom = 44.3438
+scale = Vector2(0.259803, 0.141704)
 
 [node name="Control2" type="Control" parent="inventario"]
-margin_top = 40.0
-margin_right = 40.0
-margin_bottom = 41.0
-rect_min_size = Vector2( 0, 1 )
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
 
 [node name="i3" type="Button" parent="inventario"]
-margin_top = 45.0
-margin_right = 40.0
-margin_bottom = 59.0
-custom_styles/hover = SubResource( 11 )
-custom_styles/pressed = SubResource( 12 )
-custom_styles/focus = SubResource( 13 )
-custom_styles/disabled = SubResource( 14 )
-custom_styles/normal = SubResource( 15 )
-script = ExtResource( 2 )
-normal_texture = ExtResource( 4 )
-hover_texture = ExtResource( 3 )
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+theme_override_styles/focus = SubResource("13")
+theme_override_styles/disabled = SubResource("14")
+theme_override_styles/hover = SubResource("11")
+theme_override_styles/pressed = SubResource("12")
+theme_override_styles/normal = SubResource("15")
+script = ExtResource("2")
+normal_texture = ExtResource("4")
+hover_texture = ExtResource("3")
 
 [node name="Fondo" type="TextureRect" parent="inventario/i3"]
-margin_left = 0.524658
-margin_top = 0.0556564
-margin_right = 40.5247
-margin_bottom = 40.0557
-rect_scale = Vector2( 0.943248, 0.492254 )
-expand = true
+layout_mode = 0
+offset_left = 0.524658
+offset_top = 0.0556564
+offset_right = 40.5247
+offset_bottom = 40.0557
+scale = Vector2(0.943248, 0.492254)
+expand_mode = 1
 
 [node name="Icono" type="TextureRect" parent="inventario/i3"]
-margin_left = 4.72217
-margin_top = 3.05563
-margin_right = 44.7222
-margin_bottom = 43.0556
-rect_scale = Vector2( 0.269144, 0.146715 )
+layout_mode = 0
+offset_left = 4.72217
+offset_top = 3.05563
+offset_right = 44.7222
+offset_bottom = 43.0556
+scale = Vector2(0.269144, 0.146715)
 
 [node name="Control3" type="Control" parent="inventario"]
-margin_top = 63.0
-margin_right = 40.0
-margin_bottom = 64.0
-rect_min_size = Vector2( 0, 1 )
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
 
 [node name="i4" type="Button" parent="inventario"]
-margin_top = 68.0
-margin_right = 40.0
-margin_bottom = 82.0
-custom_styles/hover = SubResource( 16 )
-custom_styles/pressed = SubResource( 17 )
-custom_styles/focus = SubResource( 18 )
-custom_styles/disabled = SubResource( 19 )
-custom_styles/normal = SubResource( 20 )
-script = ExtResource( 2 )
-normal_texture = ExtResource( 4 )
-hover_texture = ExtResource( 3 )
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+theme_override_styles/focus = SubResource("18")
+theme_override_styles/disabled = SubResource("19")
+theme_override_styles/hover = SubResource("16")
+theme_override_styles/pressed = SubResource("17")
+theme_override_styles/normal = SubResource("20")
+script = ExtResource("2")
+normal_texture = ExtResource("4")
+hover_texture = ExtResource("3")
 
 [node name="Fondo" type="TextureRect" parent="inventario/i4"]
-margin_left = 0.524658
-margin_top = 0.0834885
-margin_right = 40.5247
-margin_bottom = 40.0835
-rect_scale = Vector2( 0.943248, 0.492254 )
-expand = true
+layout_mode = 0
+offset_left = 0.524658
+offset_top = 0.0834885
+offset_right = 40.5247
+offset_bottom = 40.0835
+scale = Vector2(0.943248, 0.492254)
+expand_mode = 1
 
 [node name="Icono" type="TextureRect" parent="inventario/i4"]
-margin_left = 5.24683
-margin_top = 2.63599
-margin_right = 45.2468
-margin_bottom = 42.636
-rect_scale = Vector2( 0.258596, 0.139149 )
+layout_mode = 0
+offset_left = 5.24683
+offset_top = 2.63599
+offset_right = 45.2468
+offset_bottom = 42.636
+scale = Vector2(0.258596, 0.139149)
 
 [node name="Control4" type="Control" parent="inventario"]
-margin_top = 86.0
-margin_right = 40.0
-margin_bottom = 87.0
-rect_min_size = Vector2( 0, 1 )
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
 
 [node name="i5" type="Button" parent="inventario"]
-margin_top = 91.0
-margin_right = 40.0
-margin_bottom = 105.0
-custom_styles/hover = SubResource( 21 )
-custom_styles/pressed = SubResource( 22 )
-custom_styles/focus = SubResource( 23 )
-custom_styles/disabled = SubResource( 24 )
-custom_styles/normal = SubResource( 25 )
-script = ExtResource( 2 )
-normal_texture = ExtResource( 4 )
-hover_texture = ExtResource( 3 )
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+theme_override_styles/focus = SubResource("23")
+theme_override_styles/disabled = SubResource("24")
+theme_override_styles/hover = SubResource("21")
+theme_override_styles/pressed = SubResource("22")
+theme_override_styles/normal = SubResource("25")
+script = ExtResource("2")
+normal_texture = ExtResource("4")
+hover_texture = ExtResource("3")
 
 [node name="Fondo" type="TextureRect" parent="inventario/i5"]
-margin_left = 0.524658
-margin_top = 0.11132
-margin_right = 40.5247
-margin_bottom = 40.1113
-rect_scale = Vector2( 0.943248, 0.492254 )
-expand = true
+layout_mode = 0
+offset_left = 0.524658
+offset_top = 0.11132
+offset_right = 40.5247
+offset_bottom = 40.1113
+scale = Vector2(0.943248, 0.492254)
+expand_mode = 1
 
 [node name="Icono" type="TextureRect" parent="inventario/i5"]
-margin_left = 5.77161
-margin_top = 2.79535
-margin_right = 45.7716
-margin_bottom = 42.7953
-rect_scale = Vector2( 0.260282, 0.142183 )
+layout_mode = 0
+offset_left = 5.77161
+offset_top = 2.79535
+offset_right = 45.7716
+offset_bottom = 42.7953
+scale = Vector2(0.260282, 0.142183)
 
 [node name="Control5" type="Control" parent="inventario"]
-margin_top = 109.0
-margin_right = 40.0
-margin_bottom = 110.0
-rect_min_size = Vector2( 0, 1 )
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
 
 [node name="i6" type="Button" parent="inventario"]
-margin_top = 114.0
-margin_right = 40.0
-margin_bottom = 128.0
-custom_styles/hover = SubResource( 26 )
-custom_styles/pressed = SubResource( 27 )
-custom_styles/focus = SubResource( 28 )
-custom_styles/disabled = SubResource( 29 )
-custom_styles/normal = SubResource( 30 )
-script = ExtResource( 2 )
-normal_texture = ExtResource( 4 )
-hover_texture = ExtResource( 3 )
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+theme_override_styles/focus = SubResource("28")
+theme_override_styles/disabled = SubResource("29")
+theme_override_styles/hover = SubResource("26")
+theme_override_styles/pressed = SubResource("27")
+theme_override_styles/normal = SubResource("30")
+script = ExtResource("2")
+normal_texture = ExtResource("4")
+hover_texture = ExtResource("3")
 
 [node name="Fondo" type="TextureRect" parent="inventario/i6"]
-margin_left = 0.524658
-margin_top = 1.00761
-margin_right = 40.5247
-margin_bottom = 41.0076
-rect_scale = Vector2( 0.943248, 0.492254 )
-expand = true
+layout_mode = 0
+offset_left = 0.524658
+offset_top = 1.00761
+offset_right = 40.5247
+offset_bottom = 41.0076
+scale = Vector2(0.943248, 0.492254)
+expand_mode = 1
 
 [node name="Icono" type="TextureRect" parent="inventario/i6"]
-margin_left = 5.77148
-margin_top = 3.53363
-margin_right = 45.7715
-margin_bottom = 43.5336
-rect_scale = Vector2( 0.270173, 0.147004 )
-
-[node name="btn_puzzle1" type="Button" parent="."]
-margin_left = 304.0
-margin_top = 292.0
-margin_right = 352.0
-margin_bottom = 339.0
-rect_scale = Vector2( 0.701681, 1.22542 )
-custom_styles/hover = SubResource( 36 )
-custom_styles/pressed = SubResource( 37 )
-custom_styles/focus = SubResource( 38 )
-custom_styles/disabled = SubResource( 39 )
-custom_styles/normal = SubResource( 40 )
-script = ExtResource( 7 )
-puzzle_node_path = NodePath("../puzzle1")
+layout_mode = 0
+offset_left = 5.77148
+offset_top = 3.53363
+offset_right = 45.7715
+offset_bottom = 43.5336
+scale = Vector2(0.270173, 0.147004)
 
 [node name="btnLibreta" type="Button" parent="."]
-margin_left = 44.0
-margin_top = 460.0
-margin_right = 56.0
-margin_bottom = 480.0
-rect_scale = Vector2( 6.20182, 3.84105 )
-custom_styles/hover = SubResource( 48 )
-custom_styles/pressed = SubResource( 50 )
-custom_styles/focus = SubResource( 51 )
-custom_styles/disabled = SubResource( 52 )
-custom_styles/normal = SubResource( 49 )
-script = ExtResource( 7 )
+offset_left = 39.0
+offset_top = 546.0
+offset_right = 51.0
+offset_bottom = 566.0
+scale = Vector2(6.9578, 4.11943)
+theme_override_styles/focus = SubResource("51")
+theme_override_styles/disabled = SubResource("52")
+theme_override_styles/hover = SubResource("48")
+theme_override_styles/pressed = SubResource("50")
+theme_override_styles/normal = SubResource("49")
+script = ExtResource("7")
 puzzle_node_path = NodePath("../Libreta")
+
+[node name="btn_puzzle1" type="Button" parent="."]
+offset_left = 341.0
+offset_top = 308.0
+offset_right = 389.0
+offset_bottom = 355.0
+scale = Vector2(0.769365, 1.38253)
+theme_override_styles/focus = SubResource("38")
+theme_override_styles/disabled = SubResource("39")
+theme_override_styles/hover = SubResource("36")
+theme_override_styles/pressed = SubResource("37")
+theme_override_styles/normal = SubResource("40")
+script = ExtResource("7")
+puzzle_node_path = NodePath("../puzzle1")
+
+[node name="interruptor" type="TextureRect" parent="."]
+offset_left = 573.0
+offset_top = 523.0
+offset_right = 673.0
+offset_bottom = 623.0
+rotation = -24.2313
+scale = Vector2(0.415709, 0.399506)
+texture = ExtResource("19")
+script = ExtResource("21")
+icono_inventario = ExtResource("19")
+
+[node name="interruptor2" type="TextureRect" parent="."]
+offset_left = 534.0
+offset_top = 553.0
+offset_right = 634.0
+offset_bottom = 653.0
+rotation = -24.2313
+scale = Vector2(0.415709, 0.399506)
+texture = ExtResource("19")
+script = ExtResource("21")
+icono_inventario = ExtResource("19")
+
+[node name="quimico" type="TextureRect" parent="."]
+offset_left = 235.0
+offset_top = 588.0
+offset_right = 335.0
+offset_bottom = 688.0
+scale = Vector2(0.357542, 0.353837)
+texture = ExtResource("20")
+script = ExtResource("21")
+icono_inventario = ExtResource("20")
+
+[node name="quimico2" type="TextureRect" parent="."]
+offset_left = 274.0
+offset_top = 587.0
+offset_right = 374.0
+offset_bottom = 687.0
+scale = Vector2(0.357542, 0.353837)
+texture = ExtResource("20")
+script = ExtResource("21")
+icono_inventario = ExtResource("20")
+
+[node name="piedra" type="TextureRect" parent="."]
+offset_left = 350.0
+offset_top = 527.0
+offset_right = 450.0
+offset_bottom = 627.0
+scale = Vector2(0.358843, 0.316814)
+texture = ExtResource("23")
+script = ExtResource("21")
+icono_inventario = ExtResource("23")
+
+[node name="piedra2" type="TextureRect" parent="."]
+offset_left = 395.0
+offset_top = 531.0
+offset_right = 495.0
+offset_bottom = 631.0
+scale = Vector2(0.358843, 0.316814)
+texture = ExtResource("23")
+script = ExtResource("21")
+icono_inventario = ExtResource("23")
 
 [node name="puzzle1" type="Control" parent="."]
 visible = false
-margin_left = 46.0
-margin_top = 40.0
-margin_right = 86.0
-margin_bottom = 80.0
-rect_scale = Vector2( 23.5765, 12.9968 )
-mouse_filter = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = 46.0
+offset_top = 40.0
+offset_right = 86.0
+offset_bottom = 80.0
+scale = Vector2(23.5765, 12.9968)
+mouse_filter = 2
+script = ExtResource("8")
 
 [node name="fondo" type="TextureRect" parent="puzzle1"]
-margin_left = -2.46007
-margin_top = -3.84709
-margin_right = 1077.54
-margin_bottom = 916.153
-rect_scale = Vector2( 0.0355257, 0.052865 )
-texture = ExtResource( 9 )
+layout_mode = 0
+offset_left = -2.46007
+offset_top = -3.84709
+offset_right = 1077.54
+offset_bottom = 916.153
+scale = Vector2(0.0355257, 0.052865)
+mouse_filter = 2
+texture = ExtResource("9")
 
 [node name="control" type="Control" parent="puzzle1/fondo"]
-margin_left = 138.495
-margin_top = 101.881
-margin_right = 1114.5
-margin_bottom = 927.881
-rect_min_size = Vector2( 0.5, 0.5 )
-rect_scale = Vector2( 0.785092, 0.859949 )
-mouse_filter = 1
-script = ExtResource( 8 )
+custom_minimum_size = Vector2(0.5, 0.5)
+anchors_preset = 0
+offset_left = 138.495
+offset_top = 101.881
+offset_right = 1114.5
+offset_bottom = 927.881
+scale = Vector2(0.785092, 0.859949)
+mouse_filter = 2
 
 [node name="ficha-horizontal1" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = -4.57764e-05
-margin_top = 5.07744
-margin_right = 192.0
-margin_bottom = 167.077
-texture = ExtResource( 13 )
-script = ExtResource( 12 )
+layout_mode = 0
+offset_left = -4.57764e-05
+offset_top = 5.07744
+offset_right = 192.0
+offset_bottom = 167.077
+mouse_filter = 0
+texture = ExtResource("13")
+script = ExtResource("12")
+este = true
+oeste = true
 
 [node name="ficha-codo_a1" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 196.0
-margin_right = 388.0
-margin_bottom = 162.0
+layout_mode = 0
+offset_left = 196.0
+offset_right = 388.0
+offset_bottom = 162.0
 mouse_filter = 0
-texture = ExtResource( 15 )
-script = ExtResource( 12 )
+texture = ExtResource("15")
+script = ExtResource("12")
+sur = true
+oeste = true
 
 [node name="ficha-horizontal2" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 392.0
-margin_right = 584.0
-margin_bottom = 162.0
+layout_mode = 0
+offset_left = 392.0
+offset_right = 584.0
+offset_bottom = 162.0
 mouse_filter = 0
-texture = ExtResource( 13 )
-script = ExtResource( 12 )
+texture = ExtResource("13")
+script = ExtResource("12")
+este = true
+oeste = true
 
 [node name="ficha-vertical4" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 588.0
-margin_right = 780.0
-margin_bottom = 162.0
+layout_mode = 0
+offset_left = 588.0
+offset_right = 780.0
+offset_bottom = 162.0
 mouse_filter = 0
-texture = ExtResource( 17 )
-script = ExtResource( 12 )
+texture = ExtResource("17")
+script = ExtResource("12")
+norte = true
+sur = true
 
 [node name="ficha-horizontal3" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 784.0
-margin_right = 976.0
-margin_bottom = 162.0
+layout_mode = 0
+offset_left = 784.0
+offset_right = 976.0
+offset_bottom = 162.0
 mouse_filter = 0
-texture = ExtResource( 13 )
-script = ExtResource( 12 )
+texture = ExtResource("13")
+script = ExtResource("12")
+este = true
+oeste = true
 
 [node name="vacio" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_top = 166.0
-margin_right = 192.0
-margin_bottom = 328.0
+layout_mode = 0
+offset_top = 166.0
+offset_right = 192.0
+offset_bottom = 328.0
 mouse_filter = 0
-script = ExtResource( 12 )
+script = ExtResource("12")
+es_vacia = true
 
 [node name="ficha-horizontal4" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 196.0
-margin_top = 166.0
-margin_right = 388.0
-margin_bottom = 328.0
+layout_mode = 0
+offset_left = 196.0
+offset_top = 166.0
+offset_right = 388.0
+offset_bottom = 328.0
 mouse_filter = 0
-texture = ExtResource( 13 )
-script = ExtResource( 12 )
+texture = ExtResource("13")
+script = ExtResource("12")
+este = true
+oeste = true
 
 [node name="ficha-vertical5" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 392.0
-margin_top = 166.0
-margin_right = 584.0
-margin_bottom = 328.0
+layout_mode = 0
+offset_left = 392.0
+offset_top = 166.0
+offset_right = 584.0
+offset_bottom = 328.0
 mouse_filter = 0
-texture = ExtResource( 17 )
-script = ExtResource( 12 )
+texture = ExtResource("17")
+script = ExtResource("12")
+norte = true
+sur = true
 
 [node name="ficha-t1" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 588.0
-margin_top = 166.0
-margin_right = 780.0
-margin_bottom = 328.0
+layout_mode = 0
+offset_left = 588.0
+offset_top = 166.0
+offset_right = 780.0
+offset_bottom = 328.0
 mouse_filter = 0
-texture = ExtResource( 16 )
-script = ExtResource( 12 )
+texture = ExtResource("16")
+script = ExtResource("12")
+norte = true
+sur = true
+oeste = true
 
 [node name="ficha-codo_a2" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 784.0
-margin_top = 166.0
-margin_right = 976.0
-margin_bottom = 328.0
+layout_mode = 0
+offset_left = 784.0
+offset_top = 166.0
+offset_right = 976.0
+offset_bottom = 328.0
 mouse_filter = 0
-texture = ExtResource( 15 )
-script = ExtResource( 12 )
+texture = ExtResource("15")
+script = ExtResource("12")
+sur = true
+oeste = true
 
 [node name="ficha-horizontal5" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_top = 332.0
-margin_right = 192.0
-margin_bottom = 494.0
+layout_mode = 0
+offset_top = 332.0
+offset_right = 192.0
+offset_bottom = 494.0
 mouse_filter = 0
-texture = ExtResource( 13 )
-script = ExtResource( 12 )
+texture = ExtResource("13")
+script = ExtResource("12")
+este = true
+oeste = true
 
 [node name="ficha-codo_a3" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 196.0
-margin_top = 332.0
-margin_right = 388.0
-margin_bottom = 494.0
+layout_mode = 0
+offset_left = 196.0
+offset_top = 332.0
+offset_right = 388.0
+offset_bottom = 494.0
 mouse_filter = 0
-texture = ExtResource( 15 )
-script = ExtResource( 12 )
+texture = ExtResource("15")
+script = ExtResource("12")
+sur = true
+oeste = true
 
 [node name="ficha-t3" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 392.0
-margin_top = 332.0
-margin_right = 584.0
-margin_bottom = 494.0
+layout_mode = 0
+offset_left = 392.0
+offset_top = 332.0
+offset_right = 584.0
+offset_bottom = 494.0
 mouse_filter = 0
-texture = ExtResource( 16 )
-script = ExtResource( 12 )
+texture = ExtResource("16")
+script = ExtResource("12")
+norte = true
+sur = true
+oeste = true
 
 [node name="ficha-horizontal6" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 588.0
-margin_top = 332.0
-margin_right = 780.0
-margin_bottom = 494.0
+layout_mode = 0
+offset_left = 588.0
+offset_top = 332.0
+offset_right = 780.0
+offset_bottom = 494.0
 mouse_filter = 0
-texture = ExtResource( 13 )
-script = ExtResource( 12 )
+texture = ExtResource("13")
+script = ExtResource("12")
+este = true
+oeste = true
 
 [node name="ficha-vertical2" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 784.0
-margin_top = 332.0
-margin_right = 976.0
-margin_bottom = 494.0
+layout_mode = 0
+offset_left = 784.0
+offset_top = 332.0
+offset_right = 976.0
+offset_bottom = 494.0
 mouse_filter = 0
-texture = ExtResource( 17 )
-script = ExtResource( 12 )
+texture = ExtResource("17")
+script = ExtResource("12")
+norte = true
+sur = true
 
 [node name="ficha-vertical3" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_top = 498.0
-margin_right = 192.0
-margin_bottom = 660.0
+layout_mode = 0
+offset_top = 498.0
+offset_right = 192.0
+offset_bottom = 660.0
 mouse_filter = 0
-texture = ExtResource( 17 )
-script = ExtResource( 12 )
+texture = ExtResource("17")
+script = ExtResource("12")
+norte = true
+sur = true
 
 [node name="ficha-vertical1" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 196.0
-margin_top = 498.0
-margin_right = 388.0
-margin_bottom = 660.0
+layout_mode = 0
+offset_left = 196.0
+offset_top = 498.0
+offset_right = 388.0
+offset_bottom = 660.0
 mouse_filter = 0
-texture = ExtResource( 17 )
-script = ExtResource( 12 )
+texture = ExtResource("17")
+script = ExtResource("12")
+norte = true
+sur = true
 
 [node name="ficha-horizontal7" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 392.0
-margin_top = 498.0
-margin_right = 584.0
-margin_bottom = 660.0
+layout_mode = 0
+offset_left = 392.0
+offset_top = 498.0
+offset_right = 584.0
+offset_bottom = 660.0
 mouse_filter = 0
-texture = ExtResource( 13 )
-script = ExtResource( 12 )
+texture = ExtResource("13")
+script = ExtResource("12")
+este = true
+oeste = true
 
 [node name="ficha-horizontal8" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 588.0
-margin_top = 498.0
-margin_right = 780.0
-margin_bottom = 660.0
+layout_mode = 0
+offset_left = 588.0
+offset_top = 498.0
+offset_right = 780.0
+offset_bottom = 660.0
 mouse_filter = 0
-texture = ExtResource( 13 )
-script = ExtResource( 12 )
+texture = ExtResource("13")
+script = ExtResource("12")
+este = true
+oeste = true
 
 [node name="ficha-horizontal10" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 784.0
-margin_top = 498.0
-margin_right = 976.0
-margin_bottom = 660.0
+layout_mode = 0
+offset_left = 784.0
+offset_top = 498.0
+offset_right = 976.0
+offset_bottom = 660.0
 mouse_filter = 0
-texture = ExtResource( 13 )
-script = ExtResource( 12 )
+texture = ExtResource("13")
+script = ExtResource("12")
+este = true
+oeste = true
 
 [node name="ficha-codo_b1" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_top = 664.0
-margin_right = 192.0
-margin_bottom = 826.0
+layout_mode = 0
+offset_top = 664.0
+offset_right = 192.0
+offset_bottom = 826.0
 mouse_filter = 0
-texture = ExtResource( 14 )
-script = ExtResource( 12 )
+texture = ExtResource("14")
+script = ExtResource("12")
+norte = true
+este = true
 
 [node name="ficha-codo_b2" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 196.0
-margin_top = 664.0
-margin_right = 388.0
-margin_bottom = 826.0
+layout_mode = 0
+offset_left = 196.0
+offset_top = 664.0
+offset_right = 388.0
+offset_bottom = 826.0
 mouse_filter = 0
-texture = ExtResource( 14 )
-script = ExtResource( 12 )
+texture = ExtResource("14")
+script = ExtResource("12")
+norte = true
+este = true
 
 [node name="ficha-codo_b3" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 392.0
-margin_top = 664.0
-margin_right = 584.0
-margin_bottom = 826.0
+layout_mode = 0
+offset_left = 392.0
+offset_top = 664.0
+offset_right = 584.0
+offset_bottom = 826.0
 mouse_filter = 0
-texture = ExtResource( 14 )
-script = ExtResource( 12 )
+texture = ExtResource("14")
+script = ExtResource("12")
+norte = true
+este = true
 
 [node name="ficha-horizontal9" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 588.0
-margin_top = 664.0
-margin_right = 780.0
-margin_bottom = 826.0
+layout_mode = 0
+offset_left = 588.0
+offset_top = 664.0
+offset_right = 780.0
+offset_bottom = 826.0
 mouse_filter = 0
-texture = ExtResource( 13 )
-script = ExtResource( 12 )
+texture = ExtResource("13")
+script = ExtResource("12")
+este = true
+oeste = true
 
 [node name="ficha-t2" type="TextureRect" parent="puzzle1/fondo/control"]
-margin_left = 784.0
-margin_top = 664.0
-margin_right = 976.0
-margin_bottom = 826.0
+layout_mode = 0
+offset_left = 784.0
+offset_top = 664.0
+offset_right = 976.0
+offset_bottom = 826.0
 mouse_filter = 0
-texture = ExtResource( 16 )
-script = ExtResource( 12 )
+texture = ExtResource("16")
+script = ExtResource("12")
+norte = true
+sur = true
+oeste = true
 
 [node name="img-grilla" type="TextureRect" parent="puzzle1/fondo"]
-margin_left = 81.8726
-margin_top = 52.8096
-margin_right = 1161.87
-margin_bottom = 972.81
-rect_scale = Vector2( 0.79764, 0.880065 )
-texture = ExtResource( 10 )
+layout_mode = 0
+offset_left = 81.8726
+offset_top = 52.8096
+offset_right = 1161.87
+offset_bottom = 972.81
+scale = Vector2(0.79764, 0.880065)
+texture = ExtResource("10")
 
 [node name="Button" type="Button" parent="puzzle1"]
-margin_left = 32.2355
-margin_top = -0.153885
-margin_right = 44.2355
-margin_bottom = 19.8461
-rect_scale = Vector2( 0.122266, 0.116634 )
-custom_styles/hover = SubResource( 42 )
-custom_styles/pressed = SubResource( 47 )
-custom_styles/focus = SubResource( 44 )
-custom_styles/disabled = SubResource( 45 )
-custom_styles/normal = SubResource( 46 )
+layout_mode = 0
+offset_left = 32.2355
+offset_top = -0.153885
+offset_right = 44.2355
+offset_bottom = 19.8461
+scale = Vector2(0.122266, 0.116634)
+theme_override_styles/focus = SubResource("44")
+theme_override_styles/disabled = SubResource("45")
+theme_override_styles/hover = SubResource("42")
+theme_override_styles/pressed = SubResource("47")
+theme_override_styles/normal = SubResource("46")
 text = "x"
-icon_align = 1
-script = ExtResource( 11 )
+icon_alignment = 1
+script = ExtResource("11")
 puzzle_node_path = NodePath("..")
-
-[node name="interruptor" type="TextureRect" parent="."]
-margin_left = 491.0
-margin_top = 478.0
-margin_right = 591.0
-margin_bottom = 578.0
-rect_rotation = -24.2313
-rect_scale = Vector2( 0.370541, 0.372509 )
-texture = ExtResource( 19 )
-script = ExtResource( 21 )
-icono_inventario = ExtResource( 19 )
-
-[node name="interruptor2" type="TextureRect" parent="."]
-margin_left = 452.0
-margin_top = 508.0
-margin_right = 552.0
-margin_bottom = 608.0
-rect_rotation = -24.2313
-rect_scale = Vector2( 0.370541, 0.372509 )
-texture = ExtResource( 19 )
-script = ExtResource( 21 )
-icono_inventario = ExtResource( 19 )
-
-[node name="quimico" type="TextureRect" parent="."]
-margin_left = 153.0
-margin_top = 543.0
-margin_right = 253.0
-margin_bottom = 643.0
-rect_scale = Vector2( 0.318694, 0.329926 )
-texture = ExtResource( 20 )
-script = ExtResource( 21 )
-icono_inventario = ExtResource( 20 )
-
-[node name="quimico2" type="TextureRect" parent="."]
-margin_left = 192.0
-margin_top = 542.0
-margin_right = 292.0
-margin_bottom = 642.0
-rect_scale = Vector2( 0.318694, 0.329926 )
-texture = ExtResource( 20 )
-script = ExtResource( 21 )
-icono_inventario = ExtResource( 20 )
-
-[node name="piedra" type="TextureRect" parent="."]
-margin_left = 268.0
-margin_top = 482.0
-margin_right = 368.0
-margin_bottom = 582.0
-rect_scale = Vector2( 0.319854, 0.295405 )
-texture = ExtResource( 23 )
-script = ExtResource( 21 )
-icono_inventario = ExtResource( 23 )
-
-[node name="piedra2" type="TextureRect" parent="."]
-margin_left = 313.0
-margin_top = 486.0
-margin_right = 413.0
-margin_bottom = 586.0
-rect_scale = Vector2( 0.319854, 0.295405 )
-texture = ExtResource( 23 )
-script = ExtResource( 21 )
-icono_inventario = ExtResource( 23 )

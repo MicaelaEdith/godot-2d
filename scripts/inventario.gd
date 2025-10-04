@@ -1,6 +1,6 @@
 extends VBoxContainer
 
-func agregar_objeto(texture: Texture):
+func agregar_objeto(texture: Texture2D):
 	for slot in get_children():
 		if slot.has_node("Icono"):		
 			if slot.icono.texture == null:   

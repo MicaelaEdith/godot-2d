@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://objetos_escenas/tile_puzzle1.gd" type="Script" id=1]
-[ext_resource path="res://assets/puzzles/puzzle1/ficha-t.png" type="Texture" id=2]
-[ext_resource path="res://assets/puzzles/puzzle1/ficha-vertical.png" type="Texture" id=3]
-[ext_resource path="res://assets/puzzles/puzzle1/ficha-codo2.png" type="Texture" id=4]
-[ext_resource path="res://assets/puzzles/puzzle1/ficha-horizontal.png" type="Texture" id=5]
-[ext_resource path="res://assets/puzzles/puzzle1/ficha-codo1.png" type="Texture" id=6]
+[ext_resource path="res://assets/puzzles/puzzle1/ficha-t.png" type="Texture2D" id=2]
+[ext_resource path="res://assets/puzzles/puzzle1/ficha-vertical.png" type="Texture2D" id=3]
+[ext_resource path="res://assets/puzzles/puzzle1/ficha-codo2.png" type="Texture2D" id=4]
+[ext_resource path="res://assets/puzzles/puzzle1/ficha-horizontal.png" type="Texture2D" id=5]
+[ext_resource path="res://assets/puzzles/puzzle1/ficha-codo1.png" type="Texture2D" id=6]
 
 [node name="tile_puzzle1" type="TextureRect"]
 script = ExtResource( 1 )

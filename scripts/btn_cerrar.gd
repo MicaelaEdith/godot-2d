@@ -1,6 +1,6 @@
 extends Button
 
-export(NodePath) var puzzle_node_path
+@export var puzzle_node_path: NodePath
 var puzzle_node : Node = null
 
 func _ready():

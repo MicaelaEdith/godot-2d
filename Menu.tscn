@@ -1,101 +1,99 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=21 format=3 uid="uid://drr6kqt2rjvdx"]
 
-[ext_resource path="res://assets/btnInicio.png" type="Texture" id=1]
-[ext_resource path="res://assets/imgMenu.png" type="Texture" id=2]
-[ext_resource path="res://assets/btnOpciones.png" type="Texture" id=3]
-[ext_resource path="res://scripts/btns.gd" type="Script" id=4]
-[ext_resource path="res://assets/btnInicio_ok.png" type="Texture" id=5]
-[ext_resource path="res://assets/btnOpciones_ok.png" type="Texture" id=6]
-[ext_resource path="res://Capitulo1.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Opciones.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assets/btnOpciones_press.png" type="Texture" id=9]
-[ext_resource path="res://assets/btnInicio_press.png" type="Texture" id=10]
+[ext_resource type="Texture2D" uid="uid://c0ilopkal5ewa" path="res://assets/btnInicio.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://d1pwemyr8w28a" path="res://assets/imgMenu.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cur4t0uemu2g6" path="res://assets/btnOpciones.png" id="3"]
+[ext_resource type="Script" uid="uid://dwrqtt3rae8ng" path="res://scripts/btns.gd" id="4"]
+[ext_resource type="Texture2D" uid="uid://cgfgm7uucp5ne" path="res://assets/btnInicio_ok.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://bv3b75l06pcwr" path="res://assets/btnOpciones_ok.png" id="6"]
+[ext_resource type="PackedScene" uid="uid://bq3m5pkfnaveb" path="res://Capitulo1.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://dj6n8x43xftv4" path="res://Opciones.tscn" id="8"]
+[ext_resource type="Texture2D" uid="uid://be2kn83qoxtrd" path="res://assets/btnOpciones_press.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://duw0eji83605x" path="res://assets/btnInicio_press.png" id="10"]
 
-[sub_resource type="StyleBoxEmpty" id=1]
+[sub_resource type="StyleBoxEmpty" id="3"]
 
-[sub_resource type="StyleBoxEmpty" id=2]
+[sub_resource type="StyleBoxEmpty" id="4"]
 
-[sub_resource type="StyleBoxEmpty" id=3]
+[sub_resource type="StyleBoxEmpty" id="1"]
 
-[sub_resource type="StyleBoxEmpty" id=4]
+[sub_resource type="StyleBoxEmpty" id="2"]
 
-[sub_resource type="StyleBoxEmpty" id=5]
+[sub_resource type="StyleBoxEmpty" id="5"]
 
-[sub_resource type="StyleBoxEmpty" id=6]
+[sub_resource type="StyleBoxEmpty" id="8"]
 
-[sub_resource type="StyleBoxEmpty" id=12]
+[sub_resource type="StyleBoxEmpty" id="9"]
 
-[sub_resource type="StyleBoxEmpty" id=8]
+[sub_resource type="StyleBoxEmpty" id="6"]
 
-[sub_resource type="StyleBoxEmpty" id=9]
+[sub_resource type="StyleBoxEmpty" id="12"]
 
-[sub_resource type="StyleBoxEmpty" id=11]
+[sub_resource type="StyleBoxEmpty" id="11"]
 
 [node name="Menu" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = -31.0
-margin_top = -15.0
-margin_right = 1068.0
-margin_bottom = 614.0
-texture = ExtResource( 2 )
-expand = true
+offset_left = -31.0
+offset_top = -15.0
+offset_right = 1068.0
+offset_bottom = 614.0
+scale = Vector2(1.1195, 1.06861)
+texture = ExtResource("2")
+expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 743.0
-margin_top = 354.0
-margin_right = 901.0
-margin_bottom = 567.0
+offset_left = 877.0
+offset_top = 382.0
+offset_right = 1035.0
+offset_bottom = 595.0
 size_flags_vertical = 4
 
 [node name="btnInicio" type="Button" parent="VBoxContainer"]
-margin_right = 158.0
-margin_bottom = 45.0
-rect_min_size = Vector2( 60, 45 )
+custom_minimum_size = Vector2(60, 45)
+layout_mode = 2
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
-script = ExtResource( 4 )
-normal_texture = ExtResource( 1 )
-pressed_texture = ExtResource( 10 )
-hover_texture = ExtResource( 5 )
-scene_to_load = ExtResource( 7 )
+theme_override_styles/focus = SubResource("3")
+theme_override_styles/disabled = SubResource("4")
+theme_override_styles/hover = SubResource("1")
+theme_override_styles/pressed = SubResource("2")
+theme_override_styles/normal = SubResource("5")
+script = ExtResource("4")
+normal_texture = ExtResource("1")
+pressed_texture = ExtResource("10")
+hover_texture = ExtResource("5")
+scene_to_load = ExtResource("7")
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/btnInicio"]
-margin_right = 158.0
-margin_bottom = 46.0
-expand = true
+layout_mode = 0
+offset_right = 158.0
+offset_bottom = 46.0
+expand_mode = 1
 
 [node name="Control" type="Control" parent="VBoxContainer"]
 visible = false
-margin_top = 49.0
-margin_right = 158.0
-margin_bottom = 64.0
-rect_min_size = Vector2( 0, 15 )
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
 
 [node name="btnOpciones" type="Button" parent="VBoxContainer"]
-margin_top = 49.0
-margin_right = 158.0
-margin_bottom = 94.0
-rect_min_size = Vector2( 60, 45 )
+custom_minimum_size = Vector2(60, 45)
+layout_mode = 2
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 6 )
-custom_styles/pressed = SubResource( 12 )
-custom_styles/focus = SubResource( 8 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 11 )
-script = ExtResource( 4 )
-normal_texture = ExtResource( 3 )
-pressed_texture = ExtResource( 9 )
-hover_texture = ExtResource( 6 )
-scene_to_load = ExtResource( 8 )
+theme_override_styles/focus = SubResource("8")
+theme_override_styles/disabled = SubResource("9")
+theme_override_styles/hover = SubResource("6")
+theme_override_styles/pressed = SubResource("12")
+theme_override_styles/normal = SubResource("11")
+script = ExtResource("4")
+normal_texture = ExtResource("3")
+pressed_texture = ExtResource("9")
+hover_texture = ExtResource("6")
+scene_to_load = ExtResource("8")
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/btnOpciones"]
-margin_left = 1.0
-margin_top = -3.0
-margin_right = 158.0
-margin_bottom = 51.0
-expand = true
+layout_mode = 0
+offset_left = 1.0
+offset_top = -3.0
+offset_right = 158.0
+offset_bottom = 51.0
+expand_mode = 1

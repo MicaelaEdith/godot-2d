@@ -1,19 +1,19 @@
 extends TextureRect
 
-export(String, "horizontal","vertical","codo","codo2","tipo_t") var tile_type = "horizontal"
+@export var tile_type = "horizontal" # (String, "horizontal","vertical","codo","codo2","tipo_t")
 
-export(bool) var n = false
-export(bool) var s = false
-export(bool) var e = false
-export(bool) var o = false
+@export var n: bool = false
+@export var s: bool = false
+@export var e: bool = false
+@export var o: bool = false
 
-export(bool) var conectado = false
+@export var conectado: bool = false
 
-export(Texture) var horizontal_texture
-export(Texture) var vertical_texture
-export(Texture) var codo_texture
-export(Texture) var codo2_texture
-export(Texture) var tipo_t_texture
+@export var horizontal_texture: Texture2D
+@export var vertical_texture: Texture2D
+@export var codo_texture: Texture2D
+@export var codo2_texture: Texture2D
+@export var tipo_t_texture: Texture2D
 
 func _ready():
 	match tile_type:
