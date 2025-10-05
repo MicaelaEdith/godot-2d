@@ -56,6 +56,7 @@ func intercambiar(tile, tile_index):
 	# Propagar corriente después de mover
 	propagar_corriente()
 	if puzzle_completo():
+		_cambiar_fondo_a_puerta_abierta()
 		print("¡Circuito completado!")
 
 # --- Grilla helper ---
@@ -114,3 +115,11 @@ func propagar_corriente():
 func puzzle_completo() -> bool:
 	var end_tile = get_tile(3, 4)  # salida
 	return end_tile.conectado and end_tile.este
+
+func _cambiar_fondo_a_puerta_abierta():
+	var capitulo = get_parent()
+	if capitulo and capitulo.has_node("imgFondo"):
+		var img_fondo = capitulo.get_node("imgFondo")
+		img_fondo.texture = load("res://assets/fondos-escenas/scn1_b.png")
+	else:
+		push_warning("No se encontró el nodo imgfondo en Capitulo1")

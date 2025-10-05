@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://bq3m5pkfnaveb"]
+[gd_scene load_steps=86 format=3 uid="uid://bq3m5pkfnaveb"]
 
 [ext_resource type="Texture2D" uid="uid://chfsp46bs10gt" path="res://assets/fondos-escenas/scn1.png" id="1"]
 [ext_resource type="Script" uid="uid://v5ac5lvhi78m" path="res://scripts/btn_inventario.gd" id="2"]
@@ -23,30 +23,7 @@
 [ext_resource type="Script" uid="uid://csulo2gwie42r" path="res://scripts/elementos.gd" id="21"]
 [ext_resource type="Script" uid="uid://bpccimtsph6i4" path="res://scripts/inventario.gd" id="22"]
 [ext_resource type="Texture2D" uid="uid://b07kk5acknrxn" path="res://assets/elementos/piedra.png" id="23"]
-
-[sub_resource type="GDScript" id="41"]
-
-[sub_resource type="StyleBoxEmpty" id="55"]
-
-[sub_resource type="StyleBoxEmpty" id="56"]
-
-[sub_resource type="StyleBoxFlat" id="53"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="54"]
-bg_color = Color(0.898039, 0.858824, 0.803922, 0)
-
-[sub_resource type="StyleBoxFlat" id="57"]
-bg_color = Color(0.388235, 0.376471, 0.356863, 1)
-border_width_bottom = 1
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-expand_margin_left = 3.0
-expand_margin_top = 3.0
-expand_margin_right = 3.0
-expand_margin_bottom = 3.0
+[ext_resource type="Script" uid="uid://b4c8y5aqos71h" path="res://btn_puerta.gd" id="24_vgviy"]
 
 [sub_resource type="StyleBoxEmpty" id="3"]
 
@@ -166,32 +143,51 @@ corner_radius_bottom_left = 3
 expand_margin_left = 1.0
 expand_margin_top = 1.0
 
+[sub_resource type="StyleBoxEmpty" id="55"]
+
+[sub_resource type="StyleBoxEmpty" id="56"]
+
+[sub_resource type="StyleBoxFlat" id="53"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="54"]
+bg_color = Color(0.898039, 0.858824, 0.803922, 0)
+
+[sub_resource type="StyleBoxFlat" id="57"]
+bg_color = Color(0.388235, 0.376471, 0.356863, 1)
+border_width_bottom = 1
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vgviy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8y3g0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_judj0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ndkbp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6s3fh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jrjag"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sjqmj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_md1dm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5txkl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4fbd5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bdndx"]
+
 [node name="Capitulo1" type="Node2D"]
-script = SubResource("41")
-
-[node name="Libreta" type="TextureRect" parent="."]
-offset_left = 23.0
-offset_top = 49.0
-offset_right = 723.0
-offset_bottom = 499.0
-scale = Vector2(1.18971, 1.18971)
-texture = ExtResource("18")
-
-[node name="Button" type="Button" parent="Libreta"]
-layout_mode = 0
-offset_left = 664.026
-offset_top = 28.5783
-offset_right = 676.026
-offset_bottom = 48.5783
-scale = Vector2(1.23083, 1.02132)
-theme_override_styles/focus = SubResource("55")
-theme_override_styles/disabled = SubResource("56")
-theme_override_styles/hover = SubResource("53")
-theme_override_styles/pressed = SubResource("54")
-theme_override_styles/normal = SubResource("57")
-text = "X"
-script = ExtResource("11")
-puzzle_node_path = NodePath("..")
 
 [node name="imgFondo" type="TextureRect" parent="."]
 offset_left = -39.0
@@ -403,10 +399,10 @@ offset_bottom = 43.5336
 scale = Vector2(0.270173, 0.147004)
 
 [node name="btnLibreta" type="Button" parent="."]
-offset_left = 39.0
-offset_top = 546.0
-offset_right = 51.0
-offset_bottom = 566.0
+offset_left = 25.0
+offset_top = 503.0
+offset_right = 37.0
+offset_bottom = 523.0
 scale = Vector2(6.9578, 4.11943)
 theme_override_styles/focus = SubResource("51")
 theme_override_styles/disabled = SubResource("52")
@@ -842,3 +838,47 @@ text = "x"
 icon_alignment = 1
 script = ExtResource("11")
 puzzle_node_path = NodePath("..")
+
+[node name="Libreta" type="TextureRect" parent="."]
+visible = false
+offset_left = 17.0
+offset_top = 30.0
+offset_right = 717.0
+offset_bottom = 480.0
+scale = Vector2(1.35969, 1.34163)
+texture = ExtResource("18")
+
+[node name="Button" type="Button" parent="Libreta"]
+layout_mode = 0
+offset_left = 664.026
+offset_top = 28.5783
+offset_right = 676.026
+offset_bottom = 48.5783
+scale = Vector2(1.52528, 1.02132)
+theme_override_styles/focus = SubResource("55")
+theme_override_styles/disabled = SubResource("56")
+theme_override_styles/hover = SubResource("53")
+theme_override_styles/pressed = SubResource("54")
+theme_override_styles/normal = SubResource("57")
+text = "X"
+script = ExtResource("11")
+puzzle_node_path = NodePath("..")
+
+[node name="btnPuerta" type="Button" parent="."]
+offset_left = 200.0
+offset_top = 251.0
+offset_right = 208.0
+offset_bottom = 259.0
+scale = Vector2(11.4114, 35.4459)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vgviy")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8y3g0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_judj0")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ndkbp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6s3fh")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_jrjag")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_sjqmj")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_md1dm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5txkl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4fbd5")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bdndx")
+script = ExtResource("24_vgviy")
