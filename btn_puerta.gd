@@ -20,8 +20,6 @@ func _on_pressed():
 
 	if nombre == "scn1_b":
 		_cargar_capitulo2()
-	else:
-		print("puerta cerrada")
 
 func _cargar_capitulo2():
 	var nueva_escena = load("res://Capitulo2.tscn")

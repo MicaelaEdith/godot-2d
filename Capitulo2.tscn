@@ -11,89 +11,79 @@
 [ext_resource type="Texture2D" uid="uid://ds71wu2xx5qgb" path="res://assets/libreta.png" id="9_jc18c"]
 [ext_resource type="Script" uid="uid://bm4ftx147rmym" path="res://scripts/btn_cerrar.gd" id="10_lk1rc"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lspob"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hfvqd"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vt40w"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5k77u"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3sgwf"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5k77u"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vt40w"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gekx4"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hfvqd"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ummw5"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x5348"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y7ptj"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lspob"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eku8t"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_njswf"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y7ptj"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mvd64"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x5348"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e0s3v"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ummw5"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h00ou"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gekx4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8a1qp"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fb6pi"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h00ou"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rwnkh"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e0s3v"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e50sl"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mvd64"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jrg3n"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_njswf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oub8t"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eydma"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jrg3n"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3uc4u"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e50sl"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cofmx"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rwnkh"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_72jg8"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fb6pi"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oydi2"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_330k4"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_72jg8"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m863n"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cofmx"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2atnl"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3uc4u"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_abg0y"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eydma"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_stpgo"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ebc2r"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_abg0y"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6oxaa"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2atnl"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lmpyi"]
-texture = ExtResource("6_x13rj")
-region_rect = Rect2(0, 0, 550, 470)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m863n"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wsbci"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_330k4"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b3wq7"]
 texture = ExtResource("7_lfxi8")
 region_rect = Rect2(0, 0, 550, 470)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kmqp1"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wsbci"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v1pru"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lmpyi"]
+texture = ExtResource("6_x13rj")
+region_rect = Rect2(0, 0, 550, 470)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uu0sk"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6oxaa"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xvoya"]
-bg_color = Color(0.898039, 0.858824, 0.803922, 0)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ebc2r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_07yux"]
 bg_color = Color(0.388235, 0.376471, 0.356863, 1)
@@ -106,6 +96,16 @@ expand_margin_left = 3.0
 expand_margin_top = 3.0
 expand_margin_right = 3.0
 expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xvoya"]
+bg_color = Color(0.898039, 0.858824, 0.803922, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uu0sk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v1pru"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kmqp1"]
 
 [node name="Capitulo2" type="Node2D"]
 
@@ -128,11 +128,11 @@ script = ExtResource("2_7u07a")
 [node name="i1" type="Button" parent="inventario"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_lspob")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_hfvqd")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_vt40w")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_3sgwf")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5k77u")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3sgwf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vt40w")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hfvqd")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lspob")
 script = ExtResource("3_3vvbw")
 normal_texture = ExtResource("4_o3yyy")
 hover_texture = ExtResource("5_upkax")
@@ -159,11 +159,11 @@ layout_mode = 2
 [node name="i2" type="Button" parent="inventario"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_gekx4")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_ummw5")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_x5348")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_y7ptj")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_eku8t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_y7ptj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x5348")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ummw5")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gekx4")
 script = ExtResource("3_3vvbw")
 normal_texture = ExtResource("4_o3yyy")
 hover_texture = ExtResource("5_upkax")
@@ -181,8 +181,8 @@ expand_mode = 1
 layout_mode = 0
 offset_left = 6.29626
 offset_top = 4.34375
-offset_right = 46.2963
-offset_bottom = 44.3438
+offset_right = 90.06921
+offset_bottom = 90.05463
 scale = Vector2(0.259803, 0.141704)
 
 [node name="Control2" type="Control" parent="inventario"]
@@ -192,11 +192,11 @@ layout_mode = 2
 [node name="i3" type="Button" parent="inventario"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_njswf")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_mvd64")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_e0s3v")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_h00ou")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_8a1qp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_h00ou")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e0s3v")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mvd64")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_njswf")
 script = ExtResource("3_3vvbw")
 normal_texture = ExtResource("4_o3yyy")
 hover_texture = ExtResource("5_upkax")
@@ -214,8 +214,8 @@ expand_mode = 1
 layout_mode = 0
 offset_left = 4.72217
 offset_top = 3.05563
-offset_right = 44.7222
-offset_bottom = 43.0556
+offset_right = 87.96094
+offset_bottom = 86.12445
 scale = Vector2(0.269144, 0.146715)
 
 [node name="Control3" type="Control" parent="inventario"]
@@ -225,11 +225,11 @@ layout_mode = 2
 [node name="i4" type="Button" parent="inventario"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_fb6pi")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_rwnkh")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_e50sl")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_jrg3n")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_oub8t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jrg3n")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e50sl")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rwnkh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fb6pi")
 script = ExtResource("3_3vvbw")
 normal_texture = ExtResource("4_o3yyy")
 hover_texture = ExtResource("5_upkax")
@@ -247,8 +247,8 @@ expand_mode = 1
 layout_mode = 0
 offset_left = 5.24683
 offset_top = 2.63599
-offset_right = 45.2468
-offset_bottom = 42.636
+offset_right = 115.171265
+offset_bottom = 113.37872
 scale = Vector2(0.258596, 0.139149)
 
 [node name="Control4" type="Control" parent="inventario"]
@@ -258,11 +258,11 @@ layout_mode = 2
 [node name="i5" type="Button" parent="inventario"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_eydma")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_3uc4u")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_cofmx")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_72jg8")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_oydi2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_72jg8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_cofmx")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3uc4u")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eydma")
 script = ExtResource("3_3vvbw")
 normal_texture = ExtResource("4_o3yyy")
 hover_texture = ExtResource("5_upkax")
@@ -280,8 +280,8 @@ expand_mode = 1
 layout_mode = 0
 offset_left = 5.77161
 offset_top = 2.79535
-offset_right = 45.7716
-offset_bottom = 42.7953
+offset_right = 102.18701
+offset_bottom = 93.69525
 scale = Vector2(0.260282, 0.142183)
 
 [node name="Control5" type="Control" parent="inventario"]
@@ -291,11 +291,11 @@ layout_mode = 2
 [node name="i6" type="Button" parent="inventario"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_330k4")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_m863n")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_2atnl")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_abg0y")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_stpgo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_abg0y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2atnl")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_m863n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_330k4")
 script = ExtResource("3_3vvbw")
 normal_texture = ExtResource("4_o3yyy")
 hover_texture = ExtResource("5_upkax")
@@ -313,8 +313,8 @@ expand_mode = 1
 layout_mode = 0
 offset_left = 5.77148
 offset_top = 3.53363
-offset_right = 45.7715
-offset_bottom = 43.5336
+offset_right = 96.926506
+offset_bottom = 87.133484
 scale = Vector2(0.270173, 0.147004)
 
 [node name="btnLibreta" type="Button" parent="."]
@@ -323,11 +323,11 @@ offset_top = 503.0
 offset_right = 37.0
 offset_bottom = 523.0
 scale = Vector2(6.9578, 4.11943)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ebc2r")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_6oxaa")
-theme_override_styles/hover = SubResource("StyleBoxTexture_lmpyi")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_wsbci")
 theme_override_styles/normal = SubResource("StyleBoxTexture_b3wq7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wsbci")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lmpyi")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6oxaa")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebc2r")
 script = ExtResource("8_yhujg")
 puzzle_node_path = NodePath("../Libreta")
 
@@ -347,11 +347,11 @@ offset_top = 28.5783
 offset_right = 676.026
 offset_bottom = 48.5783
 scale = Vector2(1.52528, 1.02132)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_kmqp1")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_v1pru")
-theme_override_styles/hover = SubResource("StyleBoxFlat_uu0sk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_xvoya")
 theme_override_styles/normal = SubResource("StyleBoxFlat_07yux")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xvoya")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uu0sk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_v1pru")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kmqp1")
 text = "X"
 script = ExtResource("10_lk1rc")
 puzzle_node_path = NodePath("..")

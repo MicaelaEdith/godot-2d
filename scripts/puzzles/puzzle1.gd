@@ -16,9 +16,7 @@ func inicializar_puzzle():
 		if child.es_vacia:
 			empty_tile = child
 	empty_index = tiles.find(empty_tile)
-	print("Tiles detectados:%d" % tiles.size())
-	print("Ficha vacía en índice:%d" % empty_index)
-
+	
 # --- Manejo de clicks ---
 func _unhandled_input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
