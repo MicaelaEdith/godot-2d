@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://7t38wh05jrn3"]
+[gd_scene load_steps=63 format=3 uid="uid://7t38wh05jrn3"]
 
 [ext_resource type="Texture2D" uid="uid://do101gcww5hg1" path="res://assets/fondos-escenas/scn2.png" id="1_qsvus"]
 [ext_resource type="Script" uid="uid://bpccimtsph6i4" path="res://scripts/inventario.gd" id="2_7u07a"]
@@ -10,6 +10,11 @@
 [ext_resource type="Script" uid="uid://y3m1nku12x7n" path="res://scripts/btns_abrir.gd" id="8_yhujg"]
 [ext_resource type="Texture2D" uid="uid://ds71wu2xx5qgb" path="res://assets/libreta.png" id="9_jc18c"]
 [ext_resource type="Script" uid="uid://bm4ftx147rmym" path="res://scripts/btn_cerrar.gd" id="10_lk1rc"]
+[ext_resource type="Script" uid="uid://dwrqtt3rae8ng" path="res://scripts/btns.gd" id="11_3vvbw"]
+[ext_resource type="PackedScene" uid="uid://bq3m5pkfnaveb" path="res://Capitulo1.tscn" id="12_o3yyy"]
+[ext_resource type="Texture2D" uid="uid://oi8mm7w8xu01" path="res://assets/btnVolver.png" id="12_x13rj"]
+[ext_resource type="Texture2D" uid="uid://loxu6ug4k36h" path="res://assets/btnVolver_ok.png" id="13_lfxi8"]
+[ext_resource type="Texture2D" uid="uid://du5u4c57laqf1" path="res://assets/btnVolver_press.png" id="14_yhujg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5k77u"]
 
@@ -106,6 +111,20 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v1pru"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kmqp1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x13rj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lfxi8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lk1rc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yhujg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jc18c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lmpyi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b3wq7"]
 
 [node name="Capitulo2" type="Node2D"]
 
@@ -355,3 +374,32 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_kmqp1")
 text = "X"
 script = ExtResource("10_lk1rc")
 puzzle_node_path = NodePath("..")
+
+[node name="btn-volver" type="Button" parent="."]
+offset_left = 775.0
+offset_top = 568.0
+offset_right = 795.0317
+offset_bottom = 604.0365
+rotation = 0.0031619072
+scale = Vector2(2.0137522, 0.8624775)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x13rj")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_lfxi8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lk1rc")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_yhujg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jc18c")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lmpyi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_b3wq7")
+script = ExtResource("11_3vvbw")
+normal_texture = ExtResource("12_x13rj")
+pressed_texture = ExtResource("14_yhujg")
+hover_texture = ExtResource("13_lfxi8")
+scene_to_load = ExtResource("12_o3yyy")
+
+[node name="TextureRect" type="TextureRect" parent="btn-volver"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.89633983, 1.8906679)
+expand_mode = 3
+stretch_mode = 6
