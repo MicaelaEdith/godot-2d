@@ -25,95 +25,98 @@
 [ext_resource type="Texture2D" uid="uid://b07kk5acknrxn" path="res://assets/elementos/piedra.png" id="23"]
 [ext_resource type="Script" uid="uid://b4c8y5aqos71h" path="res://btn_puerta.gd" id="24_vgviy"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l3b1b"]
-
-[sub_resource type="StyleBoxEmpty" id="2"]
-
-[sub_resource type="StyleBoxEmpty" id="1"]
+[sub_resource type="StyleBoxEmpty" id="3"]
 
 [sub_resource type="StyleBoxEmpty" id="4"]
 
-[sub_resource type="StyleBoxEmpty" id="3"]
+[sub_resource type="StyleBoxEmpty" id="1"]
 
-[sub_resource type="StyleBoxEmpty" id="10"]
+[sub_resource type="StyleBoxEmpty" id="2"]
 
-[sub_resource type="StyleBoxEmpty" id="7"]
-
-[sub_resource type="StyleBoxEmpty" id="6"]
-
-[sub_resource type="StyleBoxEmpty" id="9"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l3b1b"]
 
 [sub_resource type="StyleBoxEmpty" id="8"]
 
-[sub_resource type="StyleBoxEmpty" id="15"]
+[sub_resource type="StyleBoxEmpty" id="9"]
 
-[sub_resource type="StyleBoxEmpty" id="12"]
+[sub_resource type="StyleBoxEmpty" id="6"]
 
-[sub_resource type="StyleBoxEmpty" id="11"]
+[sub_resource type="StyleBoxEmpty" id="7"]
 
-[sub_resource type="StyleBoxEmpty" id="14"]
+[sub_resource type="StyleBoxEmpty" id="10"]
 
 [sub_resource type="StyleBoxEmpty" id="13"]
 
-[sub_resource type="StyleBoxEmpty" id="20"]
+[sub_resource type="StyleBoxEmpty" id="14"]
 
-[sub_resource type="StyleBoxEmpty" id="17"]
+[sub_resource type="StyleBoxEmpty" id="11"]
 
-[sub_resource type="StyleBoxEmpty" id="16"]
+[sub_resource type="StyleBoxEmpty" id="12"]
 
-[sub_resource type="StyleBoxEmpty" id="19"]
+[sub_resource type="StyleBoxEmpty" id="15"]
 
 [sub_resource type="StyleBoxEmpty" id="18"]
 
-[sub_resource type="StyleBoxEmpty" id="25"]
+[sub_resource type="StyleBoxEmpty" id="19"]
 
-[sub_resource type="StyleBoxEmpty" id="22"]
+[sub_resource type="StyleBoxEmpty" id="16"]
 
-[sub_resource type="StyleBoxEmpty" id="21"]
+[sub_resource type="StyleBoxEmpty" id="17"]
 
-[sub_resource type="StyleBoxEmpty" id="24"]
+[sub_resource type="StyleBoxEmpty" id="20"]
 
 [sub_resource type="StyleBoxEmpty" id="23"]
 
-[sub_resource type="StyleBoxEmpty" id="30"]
+[sub_resource type="StyleBoxEmpty" id="24"]
 
-[sub_resource type="StyleBoxEmpty" id="27"]
+[sub_resource type="StyleBoxEmpty" id="21"]
 
-[sub_resource type="StyleBoxEmpty" id="26"]
+[sub_resource type="StyleBoxEmpty" id="22"]
 
-[sub_resource type="StyleBoxEmpty" id="29"]
+[sub_resource type="StyleBoxEmpty" id="25"]
 
 [sub_resource type="StyleBoxEmpty" id="28"]
 
-[sub_resource type="StyleBoxTexture" id="49"]
-texture = ExtResource("5")
-region_rect = Rect2(0, 0, 550, 470)
+[sub_resource type="StyleBoxEmpty" id="29"]
 
-[sub_resource type="StyleBoxEmpty" id="50"]
+[sub_resource type="StyleBoxEmpty" id="26"]
+
+[sub_resource type="StyleBoxEmpty" id="27"]
+
+[sub_resource type="StyleBoxEmpty" id="30"]
+
+[sub_resource type="StyleBoxEmpty" id="51"]
+
+[sub_resource type="StyleBoxEmpty" id="52"]
 
 [sub_resource type="StyleBoxTexture" id="48"]
 texture = ExtResource("6")
 region_rect = Rect2(0, 0, 550, 470)
 
-[sub_resource type="StyleBoxEmpty" id="52"]
+[sub_resource type="StyleBoxEmpty" id="50"]
 
-[sub_resource type="StyleBoxEmpty" id="51"]
+[sub_resource type="StyleBoxTexture" id="49"]
+texture = ExtResource("5")
+region_rect = Rect2(0, 0, 550, 470)
 
-[sub_resource type="StyleBoxEmpty" id="40"]
+[sub_resource type="StyleBoxEmpty" id="38"]
 
-[sub_resource type="StyleBoxEmpty" id="37"]
+[sub_resource type="StyleBoxEmpty" id="39"]
 
 [sub_resource type="StyleBoxFlat" id="36"]
 bg_color = Color(0.952941, 0.905882, 0.905882, 0.164706)
 
-[sub_resource type="StyleBoxEmpty" id="39"]
+[sub_resource type="StyleBoxEmpty" id="37"]
 
-[sub_resource type="StyleBoxEmpty" id="38"]
+[sub_resource type="StyleBoxEmpty" id="40"]
 
-[sub_resource type="StyleBoxFlat" id="46"]
-bg_color = Color(0.482353, 0.294118, 0.294118, 1)
+[sub_resource type="StyleBoxEmpty" id="44"]
+
+[sub_resource type="StyleBoxEmpty" id="45"]
+
+[sub_resource type="StyleBoxFlat" id="42"]
+bg_color = Color(0.0666667, 0.0588235, 0.0588235, 1)
 border_width_bottom = 1
-border_color = Color(0.686275, 0.686275, 0.67451, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -129,9 +132,10 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 expand_margin_left = 1.0
 
-[sub_resource type="StyleBoxFlat" id="42"]
-bg_color = Color(0.0666667, 0.0588235, 0.0588235, 1)
+[sub_resource type="StyleBoxFlat" id="46"]
+bg_color = Color(0.482353, 0.294118, 0.294118, 1)
 border_width_bottom = 1
+border_color = Color(0.686275, 0.686275, 0.67451, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -139,9 +143,15 @@ corner_radius_bottom_left = 3
 expand_margin_left = 1.0
 expand_margin_top = 1.0
 
-[sub_resource type="StyleBoxEmpty" id="45"]
+[sub_resource type="StyleBoxEmpty" id="55"]
 
-[sub_resource type="StyleBoxEmpty" id="44"]
+[sub_resource type="StyleBoxEmpty" id="56"]
+
+[sub_resource type="StyleBoxFlat" id="53"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="54"]
+bg_color = Color(0.898039, 0.858824, 0.803922, 0)
 
 [sub_resource type="StyleBoxFlat" id="57"]
 bg_color = Color(0.388235, 0.376471, 0.356863, 1)
@@ -155,37 +165,27 @@ expand_margin_top = 3.0
 expand_margin_right = 3.0
 expand_margin_bottom = 3.0
 
-[sub_resource type="StyleBoxFlat" id="54"]
-bg_color = Color(0.898039, 0.858824, 0.803922, 0)
-
-[sub_resource type="StyleBoxFlat" id="53"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxEmpty" id="56"]
-
-[sub_resource type="StyleBoxEmpty" id="55"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bdndx"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4fbd5"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5txkl"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_md1dm"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sjqmj"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jrjag"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6s3fh"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ndkbp"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_judj0"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vgviy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8y3g0"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vgviy"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_judj0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ndkbp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6s3fh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jrjag"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sjqmj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_md1dm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5txkl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4fbd5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bdndx"]
 
 [node name="Capitulo1" type="Node2D"]
 
@@ -209,11 +209,11 @@ script = ExtResource("22")
 [node name="i1" type="Button" parent="inventario"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_l3b1b")
-theme_override_styles/pressed = SubResource("2")
-theme_override_styles/hover = SubResource("1")
-theme_override_styles/disabled = SubResource("4")
 theme_override_styles/focus = SubResource("3")
+theme_override_styles/disabled = SubResource("4")
+theme_override_styles/hover = SubResource("1")
+theme_override_styles/pressed = SubResource("2")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l3b1b")
 script = ExtResource("2")
 normal_texture = ExtResource("4")
 hover_texture = ExtResource("3")
@@ -240,11 +240,11 @@ layout_mode = 2
 [node name="i2" type="Button" parent="inventario"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
-theme_override_styles/normal = SubResource("10")
-theme_override_styles/pressed = SubResource("7")
-theme_override_styles/hover = SubResource("6")
-theme_override_styles/disabled = SubResource("9")
 theme_override_styles/focus = SubResource("8")
+theme_override_styles/disabled = SubResource("9")
+theme_override_styles/hover = SubResource("6")
+theme_override_styles/pressed = SubResource("7")
+theme_override_styles/normal = SubResource("10")
 script = ExtResource("2")
 normal_texture = ExtResource("4")
 hover_texture = ExtResource("3")
@@ -273,11 +273,11 @@ layout_mode = 2
 [node name="i3" type="Button" parent="inventario"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
-theme_override_styles/normal = SubResource("15")
-theme_override_styles/pressed = SubResource("12")
-theme_override_styles/hover = SubResource("11")
-theme_override_styles/disabled = SubResource("14")
 theme_override_styles/focus = SubResource("13")
+theme_override_styles/disabled = SubResource("14")
+theme_override_styles/hover = SubResource("11")
+theme_override_styles/pressed = SubResource("12")
+theme_override_styles/normal = SubResource("15")
 script = ExtResource("2")
 normal_texture = ExtResource("4")
 hover_texture = ExtResource("3")
@@ -306,11 +306,11 @@ layout_mode = 2
 [node name="i4" type="Button" parent="inventario"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
-theme_override_styles/normal = SubResource("20")
-theme_override_styles/pressed = SubResource("17")
-theme_override_styles/hover = SubResource("16")
-theme_override_styles/disabled = SubResource("19")
 theme_override_styles/focus = SubResource("18")
+theme_override_styles/disabled = SubResource("19")
+theme_override_styles/hover = SubResource("16")
+theme_override_styles/pressed = SubResource("17")
+theme_override_styles/normal = SubResource("20")
 script = ExtResource("2")
 normal_texture = ExtResource("4")
 hover_texture = ExtResource("3")
@@ -339,11 +339,11 @@ layout_mode = 2
 [node name="i5" type="Button" parent="inventario"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
-theme_override_styles/normal = SubResource("25")
-theme_override_styles/pressed = SubResource("22")
-theme_override_styles/hover = SubResource("21")
-theme_override_styles/disabled = SubResource("24")
 theme_override_styles/focus = SubResource("23")
+theme_override_styles/disabled = SubResource("24")
+theme_override_styles/hover = SubResource("21")
+theme_override_styles/pressed = SubResource("22")
+theme_override_styles/normal = SubResource("25")
 script = ExtResource("2")
 normal_texture = ExtResource("4")
 hover_texture = ExtResource("3")
@@ -372,11 +372,11 @@ layout_mode = 2
 [node name="i6" type="Button" parent="inventario"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
-theme_override_styles/normal = SubResource("30")
-theme_override_styles/pressed = SubResource("27")
-theme_override_styles/hover = SubResource("26")
-theme_override_styles/disabled = SubResource("29")
 theme_override_styles/focus = SubResource("28")
+theme_override_styles/disabled = SubResource("29")
+theme_override_styles/hover = SubResource("26")
+theme_override_styles/pressed = SubResource("27")
+theme_override_styles/normal = SubResource("30")
 script = ExtResource("2")
 normal_texture = ExtResource("4")
 hover_texture = ExtResource("3")
@@ -404,11 +404,11 @@ offset_top = 503.0
 offset_right = 37.0
 offset_bottom = 523.0
 scale = Vector2(6.9578, 4.11943)
-theme_override_styles/normal = SubResource("49")
-theme_override_styles/pressed = SubResource("50")
-theme_override_styles/hover = SubResource("48")
-theme_override_styles/disabled = SubResource("52")
 theme_override_styles/focus = SubResource("51")
+theme_override_styles/disabled = SubResource("52")
+theme_override_styles/hover = SubResource("48")
+theme_override_styles/pressed = SubResource("50")
+theme_override_styles/normal = SubResource("49")
 script = ExtResource("7")
 puzzle_node_path = NodePath("../Libreta")
 
@@ -418,11 +418,11 @@ offset_top = 308.0
 offset_right = 389.0
 offset_bottom = 355.0
 scale = Vector2(0.769365, 1.38253)
-theme_override_styles/normal = SubResource("40")
-theme_override_styles/pressed = SubResource("37")
-theme_override_styles/hover = SubResource("36")
-theme_override_styles/disabled = SubResource("39")
 theme_override_styles/focus = SubResource("38")
+theme_override_styles/disabled = SubResource("39")
+theme_override_styles/hover = SubResource("36")
+theme_override_styles/pressed = SubResource("37")
+theme_override_styles/normal = SubResource("40")
 script = ExtResource("7")
 puzzle_node_path = NodePath("../puzzle1")
 
@@ -829,11 +829,11 @@ offset_top = -0.153885
 offset_right = 44.2355
 offset_bottom = 19.8461
 scale = Vector2(0.122266, 0.116634)
-theme_override_styles/normal = SubResource("46")
-theme_override_styles/pressed = SubResource("47")
-theme_override_styles/hover = SubResource("42")
-theme_override_styles/disabled = SubResource("45")
 theme_override_styles/focus = SubResource("44")
+theme_override_styles/disabled = SubResource("45")
+theme_override_styles/hover = SubResource("42")
+theme_override_styles/pressed = SubResource("47")
+theme_override_styles/normal = SubResource("46")
 text = "x"
 icon_alignment = 1
 script = ExtResource("11")
@@ -855,11 +855,11 @@ offset_top = 28.5783
 offset_right = 676.026
 offset_bottom = 48.5783
 scale = Vector2(1.52528, 1.02132)
-theme_override_styles/normal = SubResource("57")
-theme_override_styles/pressed = SubResource("54")
-theme_override_styles/hover = SubResource("53")
-theme_override_styles/disabled = SubResource("56")
 theme_override_styles/focus = SubResource("55")
+theme_override_styles/disabled = SubResource("56")
+theme_override_styles/hover = SubResource("53")
+theme_override_styles/pressed = SubResource("54")
+theme_override_styles/normal = SubResource("57")
 text = "X"
 script = ExtResource("11")
 puzzle_node_path = NodePath("..")
@@ -870,15 +870,15 @@ offset_top = 251.0
 offset_right = 208.0
 offset_bottom = 259.0
 scale = Vector2(11.4114, 35.4459)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_bdndx")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4fbd5")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_5txkl")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_md1dm")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_sjqmj")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_jrjag")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6s3fh")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ndkbp")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_judj0")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8y3g0")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_vgviy")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8y3g0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_judj0")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ndkbp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6s3fh")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_jrjag")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_sjqmj")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_md1dm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5txkl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4fbd5")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bdndx")
 script = ExtResource("24_vgviy")

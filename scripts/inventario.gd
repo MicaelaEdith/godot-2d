@@ -21,10 +21,10 @@ func cargar_inventario() -> void:
 		if child is Button:
 			slots.append(child)
 	
-	print("🖼 [InventarioUI] Cargando inventario en UI, slots válidos:", slots.size(), " | Objetos:", items.size())
+	print("[InventarioUI] Cargando inventario en UI, slots válidos:", slots.size(), " | Objetos:", items.size())
 	
 	for i in range(min(items.size(), slots.size())):
 		var slot = slots[i]
 		if slot.has_node("Icono"):
 			slot.set_icon(items[i])
-			print("🖼 [InventarioUI] Slot", slot.name, "recibe objeto:", items[i])
+			print("[InventarioUI] Slot", slot.name, "recibe objeto:", items[i])
