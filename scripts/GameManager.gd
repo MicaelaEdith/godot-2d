@@ -1,6 +1,7 @@
 extends Node
 
 var inventario : Array[Texture2D]
+var transicion = 0
 
 func _ready():
 	if inventario == null:

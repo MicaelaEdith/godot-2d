@@ -4,3 +4,9 @@
 
 [node name="Transicion" type="Node2D"]
 script = ExtResource("1_8oljd")
+
+[node name="imagen" type="TextureRect" parent="."]
+offset_right = 1156.0
+offset_bottom = 652.0
+expand_mode = 1
+stretch_mode = 6

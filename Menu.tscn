@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://dwrqtt3rae8ng" path="res://scripts/btns.gd" id="4"]
 [ext_resource type="Texture2D" uid="uid://cgfgm7uucp5ne" path="res://assets/btnInicio_ok.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://bv3b75l06pcwr" path="res://assets/btnOpciones_ok.png" id="6"]
-[ext_resource type="PackedScene" uid="uid://bq3m5pkfnaveb" path="res://Capitulo1.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://di221eamj26ps" path="res://Transicion.tscn" id="6_1igrg"]
 [ext_resource type="PackedScene" uid="uid://dj6n8x43xftv4" path="res://Opciones.tscn" id="8"]
 [ext_resource type="Texture2D" uid="uid://be2kn83qoxtrd" path="res://assets/btnOpciones_press.png" id="9"]
 [ext_resource type="Texture2D" uid="uid://duw0eji83605x" path="res://assets/btnInicio_press.png" id="10"]
@@ -62,7 +62,7 @@ script = ExtResource("4")
 normal_texture = ExtResource("1")
 pressed_texture = ExtResource("10")
 hover_texture = ExtResource("5")
-scene_to_load = ExtResource("7")
+scene_to_load = ExtResource("6_1igrg")
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/btnInicio"]
 layout_mode = 0
