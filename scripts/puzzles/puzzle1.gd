@@ -8,6 +8,8 @@ var empty_index: int = -1
 
 func _ready():
 	inicializar_puzzle()
+	if GameManager.puzzle_1:
+		_cambiar_fondo_a_puerta_abierta()
 
 func inicializar_puzzle():
 	tiles.clear()
@@ -55,6 +57,7 @@ func intercambiar(tile, tile_index):
 	propagar_corriente()
 	if puzzle_completo():
 		_cambiar_fondo_a_puerta_abierta()
+		GameManager.puzzle_1 = true
 		print("¡Circuito completado!")
 
 # --- Grilla helper ---
