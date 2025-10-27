@@ -57,10 +57,11 @@ func intercambiar(tile, tile_index):
 	propagar_corriente()
 	if puzzle_completo():
 		_cambiar_fondo_a_puerta_abierta()
+		SoundManager.reproducir_efecto(3)
 		GameManager.puzzle_1 = true
 		print("¡Circuito completado!")
 		
-		await get_tree().create_timer(1.0).timeout
+		await get_tree().create_timer(0.85).timeout
 		self.visible = false
 		
 # --- Grilla helper ---

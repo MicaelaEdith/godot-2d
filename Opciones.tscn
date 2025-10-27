@@ -1,3 +1,86 @@
-[gd_scene format=3 uid="uid://dj6n8x43xftv4"]
+[gd_scene load_steps=17 format=3 uid="uid://dj6n8x43xftv4"]
+
+[ext_resource type="Texture2D" uid="uid://d1pwemyr8w28a" path="res://assets/imgMenu.png" id="1_pqjxc"]
+[ext_resource type="Texture2D" uid="uid://3ss3yjm8dfkm" path="res://assets/fondos-escenas/menu opciones.png" id="2_xb7gc"]
+[ext_resource type="Script" uid="uid://4ju2g4sjm0ue" path="res://scripts/opciones.gd" id="3_47jwd"]
+[ext_resource type="Script" uid="uid://dwrqtt3rae8ng" path="res://scripts/btns.gd" id="4_47jwd"]
+[ext_resource type="PackedScene" uid="uid://drr6kqt2rjvdx" path="res://Menu.tscn" id="5_4pi2k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4pi2k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nnjo4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fm522"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a5ebf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ahv07"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_etejr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ko73x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b83d3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u04sk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_swsk5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8aaad"]
 
 [node name="Opciones" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -31.0
+offset_top = -15.0
+offset_right = 1068.0
+offset_bottom = 614.0
+scale = Vector2(1.1195, 1.06861)
+texture = ExtResource("1_pqjxc")
+expand_mode = 1
+
+[node name="opciones" type="TextureRect" parent="TextureRect"]
+offset_left = 622.599
+offset_top = 136.626
+offset_right = 998.599
+offset_bottom = 393.626
+texture = ExtResource("2_xb7gc")
+expand_mode = 1
+script = ExtResource("3_47jwd")
+
+[node name="BotonMusica" type="Button" parent="TextureRect/opciones"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 124.0
+offset_right = 84.0
+offset_bottom = 156.0
+scale = Vector2(2.40415, 2.41112)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4pi2k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_nnjo4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fm522")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_a5ebf")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ahv07")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_etejr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ko73x")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_b83d3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_u04sk")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_swsk5")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8aaad")
+
+[node name="BotonEfectos" type="Button" parent="TextureRect/opciones"]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 123.0
+offset_right = 183.0
+offset_bottom = 155.0
+scale = Vector2(2.40415, 2.41112)
+
+[node name="BotonCerrar" type="Button" parent="TextureRect/opciones"]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 124.0
+offset_right = 281.0
+offset_bottom = 156.0
+scale = Vector2(2.40415, 2.41112)
+script = ExtResource("4_47jwd")
+scene_to_load = ExtResource("5_4pi2k")

@@ -2,12 +2,17 @@ extends Node
 
 var sonidos : Array[AudioStream] = [
 	preload("res://assets/audio/menu.mp3"),
-	preload("res://assets/audio/backgound.mp3")
+	preload("res://assets/audio/backgound.mp3"),
+	preload("res://assets/audio/boton.mp3"),
+	preload("res://assets/audio/puerta.mp3"),
+	preload("res://assets/audio/libreta.mp3")
 ]
 
 var reproductor : AudioStreamPlayer
 var sonido_activo : int = -1
+
 var sonido_encendido : bool = true
+var efectos_encendidos : bool = true
 
 func _ready():
 	reproductor = AudioStreamPlayer.new()
@@ -17,7 +22,7 @@ func _ready():
 
 func reproducir_sonido(indice: int) -> void:
 	if not sonido_encendido:
-		print("[SoundManager] Sonido desactivado, no se reproduce nada.")
+		print("[SoundManager] Música desactivada, no se reproduce nada.")
 		return
 	if indice < 0 or indice >= sonidos.size():
 		push_error("[SoundManager] Índice inválido: " + str(indice))
@@ -34,6 +39,7 @@ func reproducir_sonido(indice: int) -> void:
 		stream_copy.loop = true
 
 	reproductor.stream = stream_copy
+	reproductor.volume_db = 0
 	reproductor.play()
 	sonido_activo = indice
 	print("[SoundManager] Reproduciendo sonido", indice)
@@ -43,17 +49,22 @@ func detener_sonido():
 		reproductor.stop()
 		print("[SoundManager] Sonido detenido.")
 	sonido_activo = -1
-
-func toggle_sonido():
+	
+func toggle_musica():
 	sonido_encendido = not sonido_encendido
-	print("[SoundManager] Sonido encendido:", sonido_encendido)
+	print("[SoundManager] Música encendida:", sonido_encendido)
 
 	if not sonido_encendido:
 		detener_sonido()
-	elif sonido_activo >= 0:
-		reproducir_sonido(sonido_activo)
-		
-		
+	else:
+		if sonido_activo == -1:
+			reproducir_sonido(0)
+		else:
+			reproducir_sonido(sonido_activo)
+
+func toggle_efectos():
+	efectos_encendidos = not efectos_encendidos
+
 func fade_out_tiempo(duracion: float = 2.0) -> void:
 	if not reproductor.playing:
 		return
@@ -64,5 +75,26 @@ func fade_out_tiempo(duracion: float = 2.0) -> void:
 
 func _on_fade_out_completado():
 	reproductor.stop()
-	reproductor.volume_db = 1
+	reproductor.volume_db = 0
 	print("[SoundManager] Fade-out temporal completado")
+
+	
+func reproducir_efecto(indice: int) -> void:
+	if not efectos_encendidos:
+		print("[SoundManager] Efectos desactivados, no se reproduce nada.")
+		return
+	if indice < 0 or indice >= sonidos.size():
+		push_error("[SoundManager] Índice inválido para efecto: " + str(indice))
+		return
+
+	var efecto = sonidos[indice]
+	var player_temp = AudioStreamPlayer.new()
+	player_temp.stream = efecto
+	player_temp.autoplay = false
+	player_temp.volume_db = reproductor.volume_db 
+	add_child(player_temp)
+
+	player_temp.play()
+	print("[SoundManager] Reproduciendo efecto:", indice)
+
+	player_temp.connect("finished", Callable(player_temp, "queue_free"))

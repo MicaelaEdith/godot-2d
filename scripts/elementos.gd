@@ -1,12 +1,12 @@
 extends TextureRect
 
 @export var icono_inventario: Texture2D
-@onready var inventario = get_node("/root/Capitulo1/inventario")
+@onready var inventario = get_tree().get_root().find_child("inventario", true, false)
 
 func _ready():
 	if icono_inventario == null:
 		return
-	
+
 	var path = icono_inventario.resource_path
 	var recolectados = GameManager.obtener_recolectados()
 	
@@ -17,5 +17,11 @@ func _ready():
 
 func _on_gui_input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		inventario.agregar_objeto(icono_inventario)
+		SoundManager.reproducir_efecto(2)
+		
+		if inventario:
+			inventario.agregar_objeto(icono_inventario)
+		else:
+			GameManager.agregar_objeto(icono_inventario)
+		
 		visible = false

@@ -8,5 +8,6 @@ func _ready():
 		puzzle_node = get_node(puzzle_node_path)
 
 func _pressed():
+	SoundManager.reproducir_efecto(2)
 	if puzzle_node:
 		puzzle_node.visible = false

@@ -9,6 +9,7 @@ func _ready():
 
 func _gui_input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		SoundManager.reproducir_efecto(2)
 		if puzzle_node:
 			if puzzle_node.name == "puzzle1":
 				if not GameManager.puzzle_1:
