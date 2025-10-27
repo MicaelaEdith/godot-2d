@@ -55,6 +55,7 @@ func _iniciar_fade_out():
 	fade_rect.visible = true
 	var tween = create_tween()
 	tween.tween_property(fade_rect, "modulate:a", 1.0, 2.0)
+	SoundManager.fade_out_tiempo(2.0) 
 	tween.finished.connect(_cargar_siguiente_escena)
 
 func _cargar_siguiente_escena():

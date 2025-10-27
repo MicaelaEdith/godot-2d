@@ -59,7 +59,10 @@ func intercambiar(tile, tile_index):
 		_cambiar_fondo_a_puerta_abierta()
 		GameManager.puzzle_1 = true
 		print("¡Circuito completado!")
-
+		
+		await get_tree().create_timer(1.0).timeout
+		self.visible = false
+		
 # --- Grilla helper ---
 func get_tile(row: int, col: int):
 	if row < 0 or row >= grid_size or col < 0 or col >= grid_size:

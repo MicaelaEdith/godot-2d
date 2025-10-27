@@ -1,6 +1,7 @@
-[gd_scene load_steps=86 format=3 uid="uid://bq3m5pkfnaveb"]
+[gd_scene load_steps=87 format=3 uid="uid://bq3m5pkfnaveb"]
 
 [ext_resource type="Texture2D" uid="uid://chfsp46bs10gt" path="res://assets/fondos-escenas/scn1.png" id="1"]
+[ext_resource type="Script" uid="uid://c0lsa6rksj0b3" path="res://scripts/Capitulo1.gd" id="1_8y3g0"]
 [ext_resource type="Script" uid="uid://v5ac5lvhi78m" path="res://scripts/btn_inventario.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://di6sswiin63fd" path="res://assets/btnInventario_ok.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://d0bd52yan3rdx" path="res://assets/btnInventario.png" id="4"]
@@ -188,6 +189,7 @@ expand_margin_bottom = 3.0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bdndx"]
 
 [node name="Capitulo1" type="Node2D"]
+script = ExtResource("1_8y3g0")
 
 [node name="imgFondo" type="TextureRect" parent="."]
 offset_left = -39.0
@@ -437,17 +439,6 @@ texture = ExtResource("19")
 script = ExtResource("21")
 icono_inventario = ExtResource("19")
 
-[node name="interruptor2" type="TextureRect" parent="."]
-offset_left = 534.0
-offset_top = 553.0
-offset_right = 634.0
-offset_bottom = 653.0
-rotation = -24.2313
-scale = Vector2(0.415709, 0.399506)
-texture = ExtResource("19")
-script = ExtResource("21")
-icono_inventario = ExtResource("19")
-
 [node name="quimico" type="TextureRect" parent="."]
 offset_left = 235.0
 offset_top = 588.0
@@ -458,31 +449,11 @@ texture = ExtResource("20")
 script = ExtResource("21")
 icono_inventario = ExtResource("20")
 
-[node name="quimico2" type="TextureRect" parent="."]
-offset_left = 274.0
-offset_top = 587.0
-offset_right = 374.0
-offset_bottom = 687.0
-scale = Vector2(0.357542, 0.353837)
-texture = ExtResource("20")
-script = ExtResource("21")
-icono_inventario = ExtResource("20")
-
 [node name="piedra" type="TextureRect" parent="."]
 offset_left = 350.0
 offset_top = 527.0
 offset_right = 450.0
 offset_bottom = 627.0
-scale = Vector2(0.358843, 0.316814)
-texture = ExtResource("23")
-script = ExtResource("21")
-icono_inventario = ExtResource("23")
-
-[node name="piedra2" type="TextureRect" parent="."]
-offset_left = 395.0
-offset_top = 531.0
-offset_right = 495.0
-offset_bottom = 631.0
 scale = Vector2(0.358843, 0.316814)
 texture = ExtResource("23")
 script = ExtResource("21")
