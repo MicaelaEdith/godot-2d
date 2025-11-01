@@ -947,6 +947,7 @@ scale = Vector2(1.0468, 1.051)
 color = Color(0.635982, 0.575336, 0.4205, 0.741176)
 
 [node name="opciones" type="TextureRect" parent="menu-opciones"]
+layout_mode = 0
 offset_left = 397.401
 offset_top = 186.49
 offset_right = 773.401

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://di6sswiin63fd"
-path="res://.godot/imported/btnInventario_ok.png-f4139aed4659183bc3e8a26aa38f2ed9.ctex"
+uid="uid://dljss85j5xnya"
+path="res://.godot/imported/afiche.png-e7ab259126cda9d2301139430657ad03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/btnInventario_ok.png"
-dest_files=["res://.godot/imported/btnInventario_ok.png-f4139aed4659183bc3e8a26aa38f2ed9.ctex"]
+source_file="res://assets/fondos-escenas/afiche.png"
+dest_files=["res://.godot/imported/afiche.png-e7ab259126cda9d2301139430657ad03.ctex"]
 
 [params]
 

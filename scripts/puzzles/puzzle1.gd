@@ -7,7 +7,7 @@ var empty_tile
 var empty_index: int = -1
 
 func _ready():
-	inicializar_puzzle()
+	inicializar_puzzle() 
 	if GameManager.puzzle_1:
 		_cambiar_fondo_a_puerta_abierta()
 
@@ -61,7 +61,7 @@ func intercambiar(tile, tile_index):
 		GameManager.puzzle_1 = true
 		print("¡Circuito completado!")
 		
-		await get_tree().create_timer(0.85).timeout
+		await get_tree().create_timer(0.75).timeout
 		self.visible = false
 		
 # --- Grilla helper ---

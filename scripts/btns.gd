@@ -39,6 +39,9 @@ func _accion_boton():
 			nodo.visible = true
 		else:
 			push_warning("[Botón] No se encontró el nodo en el path asignado.")
+			
+		if nodo.name == "fondo1":
+			get_parent().visible = false
 	else:
 		print("[Botón] No hay acción asignada.")
 

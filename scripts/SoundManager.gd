@@ -57,10 +57,18 @@ func toggle_musica():
 	if not sonido_encendido:
 		detener_sonido()
 	else:
-		if sonido_activo == -1:
-			reproducir_sonido(0)
+		var escena_actual = get_tree().current_scene
+		if escena_actual:
+			var nombre_escena = escena_actual.scene_file_path.get_file()
+			print("[SoundManager] Escena actual:", nombre_escena)
+
+			var indice_sonido = 0 if nombre_escena == "Menu.tscn" else 1
+			reproducir_sonido(indice_sonido)
 		else:
-			reproducir_sonido(sonido_activo)
+			if sonido_activo >= 0:
+				reproducir_sonido(sonido_activo)
+			else:
+				reproducir_sonido(0)
 
 func toggle_efectos():
 	efectos_encendidos = not efectos_encendidos
