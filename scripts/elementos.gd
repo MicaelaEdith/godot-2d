@@ -8,7 +8,8 @@ func _ready():
 		return
 
 	var path = icono_inventario.resource_path
-	var recolectados = GameManager.obtener_recolectados()
+	var recolectados = GameManager.obtener_inventario_registrado()
+
 	
 	if path in recolectados:
 		visible = false

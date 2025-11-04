@@ -343,7 +343,6 @@ script = ExtResource("8_yhujg")
 puzzle_node_path = NodePath("../fondo-maquina")
 
 [node name="fondo-afiche" type="ColorRect" parent="fondo1"]
-visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -393,7 +392,6 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_1root")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_aiftn")
 
 [node name="img-pistas" type="TextureRect" parent="fondo1/fondo-afiche/btn-imagenes"]
-visible = false
 layout_mode = 0
 offset_left = 0.97123134
 offset_top = 1.0163811

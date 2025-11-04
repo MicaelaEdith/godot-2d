@@ -1,0 +1,21 @@
+extends Node
+
+@export var boton: Button
+@export var img_pistas: TextureRect
+@onready var inventario = get_tree().get_root().find_child("inventario", true, false)
+
+func _ready():
+	if boton:
+		boton.connect("pressed", Callable(self, "_on_boton_pressed"))
+	if img_pistas:
+		img_pistas.visible = false
+
+func _on_boton_pressed():
+	if GameManager.objeto_seleccionado == "botella_i.png":
+		if img_pistas:
+			img_pistas.visible = true
+			print("[BotonInteractivo] Imagen mostrada (botella_i.png)")
+			if inventario:
+				inventario.quitar_objeto("botella_i.png")
+	else:
+		print("[BotonInteractivo] No se cumple la condición, objeto seleccionado:", GameManager.objeto_seleccionado)

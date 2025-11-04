@@ -343,14 +343,13 @@ script = ExtResource("8_yhujg")
 puzzle_node_path = NodePath("../fondo-maquina")
 
 [node name="fondo-afiche" type="ColorRect" parent="fondo1"]
-visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(38.3822, 26.7287)
 color = Color(0.0728427, 0.0728426, 0.0728426, 0.945098)
 
-[node name="afiche" type="TextureRect" parent="fondo1/fondo-afiche" node_paths=PackedStringArray("boton", "img_pistas")]
+[node name="afiche" type="TextureRect" parent="fondo1/fondo-afiche"]
 layout_mode = 0
 offset_left = 12.943
 offset_top = 3.25825
@@ -360,8 +359,6 @@ scale = Vector2(0.348288, 0.793471)
 texture = ExtResource("12_ummw5")
 expand_mode = 1
 script = ExtResource("12_njswf")
-boton = NodePath("../btn-imagenes")
-img_pistas = NodePath("../btn-imagenes/img-pistas")
 
 [node name="btn-salir" type="Button" parent="fondo1/fondo-afiche"]
 layout_mode = 0
@@ -393,7 +390,6 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_1root")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_aiftn")
 
 [node name="img-pistas" type="TextureRect" parent="fondo1/fondo-afiche/btn-imagenes"]
-visible = false
 layout_mode = 0
 offset_left = 0.97123134
 offset_top = 1.0163811
