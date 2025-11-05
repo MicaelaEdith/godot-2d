@@ -1,4 +1,4 @@
-[gd_scene load_steps=119 format=3 uid="uid://7t38wh05jrn3"]
+[gd_scene load_steps=122 format=3 uid="uid://7t38wh05jrn3"]
 
 [ext_resource type="Texture2D" uid="uid://do101gcww5hg1" path="res://assets/fondos-escenas/scn2.png" id="1_ummw5"]
 [ext_resource type="Script" uid="uid://bpccimtsph6i4" path="res://scripts/inventario.gd" id="2_7u07a"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://3ss3yjm8dfkm" path="res://assets/fondos-escenas/menu opciones.png" id="23_x5348"]
 [ext_resource type="Script" uid="uid://4ju2g4sjm0ue" path="res://scripts/opciones.gd" id="24_y7ptj"]
 [ext_resource type="Script" uid="uid://bfw2ecnhxedp0" path="res://scripts/btn-libreta.gd" id="26_mvd64"]
+[ext_resource type="Texture2D" uid="uid://kb0ndoilqke7" path="res://assets/libreta-0.png" id="27_8a1qp"]
 [ext_resource type="Texture2D" uid="uid://buh0rynj2ky88" path="res://assets/libreta-1.png" id="27_e0s3v"]
 [ext_resource type="Texture2D" uid="uid://doikq1mausg6k" path="res://assets/libreta-2.png" id="27_h00ou"]
 
@@ -174,8 +175,24 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 corner_detail = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8a1qp"]
+bg_color = Color(0.341176, 0.341176, 0.341176, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 10
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mvd64"]
 bg_color = Color(0.76662, 0.766619, 0.76662, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fb6pi"]
+bg_color = Color(0.341176, 0.341176, 0.341176, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -717,6 +734,7 @@ script = ExtResource("8_yhujg")
 puzzle_node_path = NodePath("../fondo-libreta")
 
 [node name="fondo-libreta" type="ColorRect" parent="."]
+visible = false
 offset_left = -15.0
 offset_top = -11.0
 offset_right = 25.0
@@ -725,14 +743,22 @@ scale = Vector2(29.594, 16.8703)
 color = Color(0.168627, 0.168627, 0.168627, 0.858824)
 
 [node name="Libreta" type="TextureRect" parent="fondo-libreta"]
+layout_mode = 0
 offset_left = 1.0813
 offset_top = 2.45131
 offset_right = 701.081
 offset_bottom = 452.451
 scale = Vector2(0.0440265, 0.0822041)
 texture = ExtResource("9_jc18c")
+script = ExtResource("26_mvd64")
 
 [node name="hoja1" type="TextureRect" parent="fondo-libreta/Libreta"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("27_8a1qp")
+
+[node name="hoja2" type="TextureRect" parent="fondo-libreta/Libreta"]
 visible = false
 layout_mode = 0
 offset_left = 16.1176
@@ -743,7 +769,7 @@ scale = Vector2(16.2927, 9.82715)
 texture = ExtResource("27_e0s3v")
 expand_mode = 1
 
-[node name="hoja2" type="TextureRect" parent="fondo-libreta/Libreta"]
+[node name="hoja3" type="TextureRect" parent="fondo-libreta/Libreta"]
 visible = false
 layout_mode = 0
 offset_left = 16.1176
@@ -753,6 +779,12 @@ offset_bottom = 60.6559
 scale = Vector2(16.2927, 9.82715)
 texture = ExtResource("27_h00ou")
 expand_mode = 1
+
+[node name="hoja4" type="TextureRect" parent="fondo-libreta/Libreta"]
+layout_mode = 0
+offset_right = 700.0
+offset_bottom = 450.0
+texture = ExtResource("27_8a1qp")
 
 [node name="btn-salir" type="Button" parent="fondo-libreta/Libreta"]
 layout_mode = 0
@@ -770,23 +802,7 @@ text = "X"
 script = ExtResource("10_lk1rc")
 puzzle_node_path = NodePath("../..")
 
-[node name="btn-izquierda" type="Button" parent="fondo-libreta/Libreta"]
-layout_mode = 0
-offset_left = 66.7729
-offset_top = 196.599
-offset_right = 89.7729
-offset_bottom = 216.599
-scale = Vector2(1.62185, 1.61946)
-theme_override_font_sizes/font_size = 14
-theme_override_styles/focus = SubResource("StyleBoxFlat_njswf")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_njswf")
-theme_override_styles/hover = SubResource("StyleBoxFlat_mvd64")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_njswf")
-theme_override_styles/normal = SubResource("StyleBoxFlat_njswf")
-text = "  <  "
-script = ExtResource("26_mvd64")
-
-[node name="btn-derecha" type="Button" parent="fondo-libreta/Libreta"]
+[node name="btn_derecha" type="Button" parent="fondo-libreta/Libreta"]
 layout_mode = 0
 offset_left = 573.327
 offset_top = 196.599
@@ -795,12 +811,28 @@ offset_bottom = 216.599
 scale = Vector2(1.62185, 1.61946)
 theme_override_font_sizes/font_size = 14
 theme_override_styles/focus = SubResource("StyleBoxFlat_njswf")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8a1qp")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_njswf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_mvd64")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_njswf")
 theme_override_styles/normal = SubResource("StyleBoxFlat_njswf")
 text = "  >  "
-script = ExtResource("26_mvd64")
+
+[node name="btn_izquierda" type="Button" parent="fondo-libreta/Libreta"]
+layout_mode = 0
+offset_left = 66.0051
+offset_top = 196.599
+offset_right = 89.0051
+offset_bottom = 216.599
+scale = Vector2(1.62185, 1.61946)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_njswf")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_fb6pi")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_njswf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mvd64")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_njswf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_njswf")
+text = "  <  "
 
 [node name="btn-opciones" type="Button" parent="."]
 offset_left = 14.0

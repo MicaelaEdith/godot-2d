@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=3 uid="uid://bq3m5pkfnaveb"]
+[gd_scene load_steps=127 format=3 uid="uid://bq3m5pkfnaveb"]
 
 [ext_resource type="Texture2D" uid="uid://chfsp46bs10gt" path="res://assets/fondos-escenas/scn1.png" id="1"]
 [ext_resource type="Script" uid="uid://c0lsa6rksj0b3" path="res://scripts/Capitulo1.gd" id="1_8y3g0"]
@@ -28,9 +28,12 @@
 [ext_resource type="Texture2D" uid="uid://3ss3yjm8dfkm" path="res://assets/fondos-escenas/menu opciones.png" id="25_judj0"]
 [ext_resource type="Script" uid="uid://bfw2ecnhxedp0" path="res://scripts/btn-libreta.gd" id="26_5txkl"]
 [ext_resource type="Script" uid="uid://4ju2g4sjm0ue" path="res://scripts/opciones.gd" id="26_ndkbp"]
+[ext_resource type="Texture2D" uid="uid://kb0ndoilqke7" path="res://assets/libreta-0.png" id="27_ogpdh"]
 [ext_resource type="Script" uid="uid://dwrqtt3rae8ng" path="res://scripts/btns.gd" id="27_sjqmj"]
+[ext_resource type="Texture2D" uid="uid://buh0rynj2ky88" path="res://assets/libreta-1.png" id="28_gwcpy"]
 [ext_resource type="Texture2D" uid="uid://cur4t0uemu2g6" path="res://assets/btnOpciones.png" id="28_md1dm"]
 [ext_resource type="Texture2D" uid="uid://bv3b75l06pcwr" path="res://assets/btnOpciones_ok.png" id="29_5txkl"]
+[ext_resource type="Texture2D" uid="uid://doikq1mausg6k" path="res://assets/libreta-2.png" id="29_mq2b3"]
 [ext_resource type="Texture2D" uid="uid://be2kn83qoxtrd" path="res://assets/btnOpciones_press.png" id="30_4fbd5"]
 
 [sub_resource type="StyleBoxEmpty" id="3"]
@@ -173,17 +176,17 @@ region_rect = Rect2(0, 0, 550, 470)
 texture = ExtResource("5")
 region_rect = Rect2(0, 0, 550, 470)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_usbpn"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqfho"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0845a"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ufin0"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6j1yl"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_usbpn"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_maio5"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0845a"]
 bg_color = Color(0.898039, 0.858824, 0.803922, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2y37h"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6j1yl"]
 bg_color = Color(0.388235, 0.376471, 0.356863, 1)
 border_width_bottom = 1
 corner_radius_top_left = 3
@@ -195,7 +198,7 @@ expand_margin_top = 3.0
 expand_margin_right = 3.0
 expand_margin_bottom = 3.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_stucp"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_maio5"]
 bg_color = Color(0.341584, 0.341584, 0.341584, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
@@ -203,8 +206,24 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 corner_detail = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkesk"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2y37h"]
+bg_color = Color(0.341176, 0.341176, 0.341176, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_stucp"]
 bg_color = Color(0.76662, 0.766619, 0.76662, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkesk"]
+bg_color = Color(0.341176, 0.341176, 0.341176, 1)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -908,19 +927,55 @@ puzzle_node_path = NodePath("../fondo-libreta")
 [node name="fondo-libreta" type="ColorRect" parent="."]
 visible = false
 offset_left = -38.0
-offset_top = -43.0
+offset_top = -45.0
 offset_right = 2.0
-offset_bottom = -3.0
+offset_bottom = -4.99997
 scale = Vector2(29.594, 16.8703)
 color = Color(0.168627, 0.168627, 0.168627, 0.858824)
 
 [node name="Libreta" type="TextureRect" parent="fondo-libreta"]
+layout_mode = 0
 offset_left = 1.0813
 offset_top = 2.45131
 offset_right = 701.081
 offset_bottom = 452.451
 scale = Vector2(0.0440265, 0.0822041)
 texture = ExtResource("18")
+script = ExtResource("26_5txkl")
+
+[node name="hoja1" type="TextureRect" parent="fondo-libreta/Libreta"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("27_ogpdh")
+
+[node name="hoja2" type="TextureRect" parent="fondo-libreta/Libreta"]
+visible = false
+layout_mode = 0
+offset_left = 16.1176
+offset_top = 20.6559
+offset_right = 56.1176
+offset_bottom = 60.6559
+scale = Vector2(16.2927, 9.82715)
+texture = ExtResource("28_gwcpy")
+expand_mode = 1
+
+[node name="hoja3" type="TextureRect" parent="fondo-libreta/Libreta"]
+visible = false
+layout_mode = 0
+offset_left = 16.1176
+offset_top = 20.6559
+offset_right = 56.1176
+offset_bottom = 60.6559
+scale = Vector2(16.2927, 9.82715)
+texture = ExtResource("29_mq2b3")
+expand_mode = 1
+
+[node name="hoja4" type="TextureRect" parent="fondo-libreta/Libreta"]
+layout_mode = 0
+offset_right = 700.0
+offset_bottom = 450.0
+texture = ExtResource("27_ogpdh")
 
 [node name="btn-salir" type="Button" parent="fondo-libreta/Libreta"]
 layout_mode = 0
@@ -929,32 +984,16 @@ offset_top = 28.5783
 offset_right = 676.026
 offset_bottom = 48.5783
 scale = Vector2(1.52528, 1.02132)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_usbpn")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_0845a")
-theme_override_styles/hover = SubResource("StyleBoxFlat_6j1yl")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_maio5")
-theme_override_styles/normal = SubResource("StyleBoxFlat_2y37h")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dqfho")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ufin0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_usbpn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0845a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6j1yl")
 text = "X"
 script = ExtResource("11")
 puzzle_node_path = NodePath("../..")
 
-[node name="btn-izquierda" type="Button" parent="fondo-libreta/Libreta"]
-layout_mode = 0
-offset_left = 66.7729
-offset_top = 196.599
-offset_right = 89.7729
-offset_bottom = 216.599
-scale = Vector2(1.62185, 1.61946)
-theme_override_font_sizes/font_size = 14
-theme_override_styles/focus = SubResource("StyleBoxFlat_stucp")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_stucp")
-theme_override_styles/hover = SubResource("StyleBoxFlat_jkesk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_stucp")
-theme_override_styles/normal = SubResource("StyleBoxFlat_stucp")
-text = "  <  "
-script = ExtResource("26_5txkl")
-
-[node name="btn-derecha" type="Button" parent="fondo-libreta/Libreta"]
+[node name="btn_derecha" type="Button" parent="fondo-libreta/Libreta"]
 layout_mode = 0
 offset_left = 573.327
 offset_top = 196.599
@@ -962,13 +1001,29 @@ offset_right = 596.327
 offset_bottom = 216.599
 scale = Vector2(1.62185, 1.61946)
 theme_override_font_sizes/font_size = 14
-theme_override_styles/focus = SubResource("StyleBoxFlat_stucp")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_stucp")
-theme_override_styles/hover = SubResource("StyleBoxFlat_jkesk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_stucp")
-theme_override_styles/normal = SubResource("StyleBoxFlat_stucp")
+theme_override_styles/focus = SubResource("StyleBoxFlat_maio5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_2y37h")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_maio5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_stucp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_maio5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_maio5")
 text = "  >  "
-script = ExtResource("26_5txkl")
+
+[node name="btn_izquierda" type="Button" parent="fondo-libreta/Libreta"]
+layout_mode = 0
+offset_left = 66.0051
+offset_top = 196.599
+offset_right = 89.0051
+offset_bottom = 216.599
+scale = Vector2(1.62185, 1.61946)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_maio5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_jkesk")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_maio5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_stucp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_maio5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_maio5")
+text = "  <  "
 
 [node name="btn-opciones" type="Button" parent="."]
 offset_left = -6.0
