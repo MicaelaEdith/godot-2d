@@ -21,12 +21,17 @@ func agregar_objeto(texture: Texture2D) -> void:
 
 func cargar_inventario() -> void:
 	var items = GameManager.obtener_inventario()
-	var slots = []
+	var slots: Array = []
 
 	for child in get_children():
 		if child is Button:
 			slots.append(child)
-	
+
+	for slot in slots:
+		if slot.has_node("Icono"):
+			var icono = slot.get_node("Icono")
+			icono.texture = null
+
 	for i in range(min(items.size(), slots.size())):
 		var slot = slots[i]
 		if slot.has_node("Icono"):

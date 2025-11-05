@@ -67,6 +67,7 @@ bg_color = Color(0.00784314, 0.00784314, 0.00392157, 0.705882)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5opjp"]
 
 [node name="Menu" type="Node2D"]
+position = Vector2(-1, 0)
 script = ExtResource("1_v0s1l")
 
 [node name="TextureRect" type="TextureRect" parent="."]

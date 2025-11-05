@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=3 uid="uid://7t38wh05jrn3"]
+[gd_scene load_steps=135 format=3 uid="uid://7t38wh05jrn3"]
 
 [ext_resource type="Texture2D" uid="uid://do101gcww5hg1" path="res://assets/fondos-escenas/scn2.png" id="1_ummw5"]
 [ext_resource type="Script" uid="uid://bpccimtsph6i4" path="res://scripts/inventario.gd" id="2_7u07a"]
@@ -22,7 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://du5u4c57laqf1" path="res://assets/btnVolver_press.png" id="14_yhujg"]
 [ext_resource type="Texture2D" uid="uid://cbcpjcshgxyxr" path="res://assets/fondos-escenas/marcas-afiche.png" id="15_mvd64"]
 [ext_resource type="Texture2D" uid="uid://c0tvx3ueqm4sv" path="res://assets/elementos/botella.png" id="16_yhujg"]
+[ext_resource type="Texture2D" uid="uid://vrs84um1fkf" path="res://assets/fondos-escenas/piezas/palanca-maquina.png" id="17_fb6pi"]
 [ext_resource type="Script" uid="uid://csulo2gwie42r" path="res://scripts/elementos.gd" id="17_jc18c"]
+[ext_resource type="Script" uid="uid://c1va0lp6vddqa" path="res://scripts/puzzles/maquina.gd" id="17_rwnkh"]
 [ext_resource type="Texture2D" uid="uid://5fdnyainh8f5" path="res://assets/elementos/quimico.png" id="19_lk1rc"]
 [ext_resource type="Texture2D" uid="uid://cur4t0uemu2g6" path="res://assets/btnOpciones.png" id="20_5k77u"]
 [ext_resource type="Texture2D" uid="uid://v8xyi0k0sij2" path="res://assets/btnInventario_press.png" id="20_y7ptj"]
@@ -92,6 +94,29 @@ expand_margin_bottom = 3.0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n02ge"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8dm74"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0e5wg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e7rhv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_76v5h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6av43"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gaeu5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k0nnv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0v0up"]
+bg_color = Color(1, 1, 1, 0.0313726)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_518tc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_axk3o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x5psm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l02a7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lspob"]
 
@@ -441,21 +466,51 @@ texture = ExtResource("15_mvd64")
 [node name="fondo-maquina" type="ColorRect" parent="fondo1"]
 visible = false
 layout_mode = 0
-offset_left = 7.58444
-offset_top = -1.45148
-offset_right = 47.5844
-offset_bottom = 38.5485
+offset_left = 8.84852
+offset_top = -11.6118
+offset_right = 48.8485
+offset_bottom = 28.3882
 scale = Vector2(38.3822, 26.7287)
 color = Color(0.0728427, 0.0728426, 0.0728426, 0.945098)
 
 [node name="maquina" type="TextureRect" parent="fondo1/fondo-maquina"]
 layout_mode = 0
-offset_left = 12.943
-offset_top = 3.25825
-offset_right = 52.943
-offset_bottom = 43.2583
-scale = Vector2(0.348288, 0.793471)
+offset_left = 12.9759
+offset_top = 2.82381
+offset_right = 52.9759
+offset_bottom = 42.8239
+scale = Vector2(0.351957, 0.837163)
 texture = ExtResource("14_x5348")
+expand_mode = 1
+script = ExtResource("17_rwnkh")
+
+[node name="btn_palanca" type="Button" parent="fondo1/fondo-maquina/maquina"]
+layout_mode = 0
+offset_left = 8.23447
+offset_top = 5.70828
+offset_right = 16.2345
+offset_bottom = 13.7083
+scale = Vector2(0.545824, 1.0776)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0e5wg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_e7rhv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_76v5h")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6av43")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_gaeu5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_k0nnv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0v0up")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_518tc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_axk3o")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_x5psm")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l02a7")
+
+[node name="palanca" type="TextureRect" parent="fondo1/fondo-maquina/maquina/btn_palanca"]
+layout_mode = 0
+offset_left = 0.171435
+offset_top = 0.300978
+offset_right = 40.1714
+offset_bottom = 40.301
+scale = Vector2(0.190389, 0.175305)
+texture = ExtResource("17_fb6pi")
 expand_mode = 1
 
 [node name="Button2" type="Button" parent="fondo1/fondo-maquina"]
