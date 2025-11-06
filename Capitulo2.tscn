@@ -1,4 +1,4 @@
-[gd_scene load_steps=135 format=3 uid="uid://7t38wh05jrn3"]
+[gd_scene load_steps=139 format=3 uid="uid://7t38wh05jrn3"]
 
 [ext_resource type="Texture2D" uid="uid://do101gcww5hg1" path="res://assets/fondos-escenas/scn2.png" id="1_ummw5"]
 [ext_resource type="Script" uid="uid://bpccimtsph6i4" path="res://scripts/inventario.gd" id="2_7u07a"]
@@ -27,8 +27,12 @@
 [ext_resource type="Script" uid="uid://c1va0lp6vddqa" path="res://scripts/puzzles/maquina.gd" id="17_rwnkh"]
 [ext_resource type="Texture2D" uid="uid://5fdnyainh8f5" path="res://assets/elementos/quimico.png" id="19_lk1rc"]
 [ext_resource type="Texture2D" uid="uid://cur4t0uemu2g6" path="res://assets/btnOpciones.png" id="20_5k77u"]
+[ext_resource type="Texture2D" uid="uid://bgelu2un71pi7" path="res://assets/fondos-escenas/piezas/cuadro.png" id="20_e50sl"]
+[ext_resource type="Texture2D" uid="uid://cf4ttfxnflgcm" path="res://assets/elementos/llave.png" id="20_eydma"]
+[ext_resource type="Script" uid="uid://baat7kdeins7w" path="res://scripts/cuadro.gd" id="20_jrg3n"]
 [ext_resource type="Texture2D" uid="uid://v8xyi0k0sij2" path="res://assets/btnInventario_press.png" id="20_y7ptj"]
 [ext_resource type="Texture2D" uid="uid://bv3b75l06pcwr" path="res://assets/btnOpciones_ok.png" id="21_gekx4"]
+[ext_resource type="Texture2D" uid="uid://mvfobf8cgcwr" path="res://assets/fondos-escenas/estante.png" id="22_oub8t"]
 [ext_resource type="Texture2D" uid="uid://be2kn83qoxtrd" path="res://assets/btnOpciones_press.png" id="22_ummw5"]
 [ext_resource type="Texture2D" uid="uid://3ss3yjm8dfkm" path="res://assets/fondos-escenas/menu opciones.png" id="23_x5348"]
 [ext_resource type="Script" uid="uid://4ju2g4sjm0ue" path="res://scripts/opciones.gd" id="24_y7ptj"]
@@ -567,6 +571,89 @@ offset_bottom = 40.0
 scale = Vector2(0.89634, 1.89067)
 expand_mode = 3
 stretch_mode = 6
+
+[node name="llave" type="TextureRect" parent="fondo2"]
+offset_left = 401.134
+offset_top = 392.859
+offset_right = 501.134
+offset_bottom = 492.859
+rotation = -2.22978
+scale = Vector2(0.392798, 0.414298)
+texture = ExtResource("20_eydma")
+script = ExtResource("17_jc18c")
+icono_inventario = ExtResource("20_eydma")
+
+[node name="btn-cuadro" type="Button" parent="fondo2"]
+offset_left = 325.235
+offset_top = 292.126
+offset_right = 334.362
+offset_bottom = 300.355
+rotation = -0.00300203
+scale = Vector2(12.5956, 17.5995)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_k2wuo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_dueee")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vnfq5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qemnd")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cm5q6")
+script = ExtResource("20_jrg3n")
+
+[node name="cuadro" type="TextureRect" parent="fondo2/btn-cuadro"]
+layout_mode = 0
+offset_left = -0.865353
+offset_top = -1.1043
+offset_right = 155.135
+offset_bottom = 174.896
+scale = Vector2(0.073079, 0.0587115)
+texture = ExtResource("20_e50sl")
+expand_mode = 1
+
+[node name="btn-estante" type="Button" parent="fondo2"]
+offset_left = 554.249
+offset_top = 450.421
+offset_right = 563.376
+offset_bottom = 458.65
+rotation = -0.00300203
+scale = Vector2(43.8146, 17.4678)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_k2wuo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_dueee")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vnfq5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qemnd")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cm5q6")
+script = ExtResource("8_yhujg")
+puzzle_node_path = NodePath("../estante")
+
+[node name="estante" type="ColorRect" parent="fondo2"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(38.3822, 26.7287)
+color = Color(0.0728427, 0.0728426, 0.0728426, 0.945098)
+
+[node name="afiche" type="TextureRect" parent="fondo2/estante"]
+layout_mode = 0
+offset_left = 6.42888
+offset_top = 3.82257
+offset_right = 46.4289
+offset_bottom = 43.8226
+scale = Vector2(0.686586, 0.759879)
+texture = ExtResource("22_oub8t")
+expand_mode = 1
+
+[node name="btn-salir" type="Button" parent="fondo2/estante"]
+layout_mode = 0
+offset_left = 29.9685
+offset_top = 5.00702
+offset_right = 41.9685
+offset_bottom = 29.007
+scale = Vector2(0.0739733, 0.0680366)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kmqp1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_v1pru")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uu0sk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xvoya")
+theme_override_styles/normal = SubResource("StyleBoxFlat_07yux")
+text = "X"
+script = ExtResource("10_lk1rc")
+puzzle_node_path = NodePath("..")
 
 [node name="inventario" type="VBoxContainer" parent="."]
 offset_left = 1021.0
