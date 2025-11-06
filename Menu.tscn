@@ -71,11 +71,11 @@ position = Vector2(-1, 0)
 script = ExtResource("1_v0s1l")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -31.0
-offset_top = -15.0
-offset_right = 1068.0
-offset_bottom = 614.0
-scale = Vector2(1.1195, 1.06861)
+offset_left = -38.0
+offset_top = -16.0
+offset_right = 1061.0
+offset_bottom = 613.0
+scale = Vector2(1.13388, 1.07981)
 texture = ExtResource("2")
 expand_mode = 1
 

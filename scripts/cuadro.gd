@@ -1,6 +1,5 @@
 extends Button
 
-@onready var imagen = $imagen
 var activo := false
 var posicion_inicial := Vector2.ZERO
 var escala_inicial := Vector2.ONE
@@ -25,7 +24,6 @@ func _mover_y_agrandar():
 	tween.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
 
 	tween.tween_property(self, "scale", escala_inicial * 1.03, 0.20)
-	tween.tween_property(imagen, "scale", Vector2.ONE * 1.1, 0.20)
 	tween.tween_callback(func(): _desplazar(desplazamiento))
 
 
@@ -40,8 +38,6 @@ func _volver_a_posicion():
 	tween.set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
 
 	tween.tween_property(self, "scale", escala_inicial, 0.25)
-	tween.tween_property(imagen, "scale", Vector2.ONE, 0.25)
-
 	tween.tween_callback(func(): _volver_posicion_final())
 
 

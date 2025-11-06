@@ -573,10 +573,11 @@ expand_mode = 3
 stretch_mode = 6
 
 [node name="llave" type="TextureRect" parent="fondo2"]
-offset_left = 401.134
-offset_top = 392.859
-offset_right = 501.134
-offset_bottom = 492.859
+layout_mode = 0
+offset_left = 397.338
+offset_top = 395.738
+offset_right = 516.338
+offset_bottom = 504.738
 rotation = -2.22978
 scale = Vector2(0.392798, 0.414298)
 texture = ExtResource("20_eydma")
@@ -584,6 +585,7 @@ script = ExtResource("17_jc18c")
 icono_inventario = ExtResource("20_eydma")
 
 [node name="btn-cuadro" type="Button" parent="fondo2"]
+layout_mode = 0
 offset_left = 325.235
 offset_top = 292.126
 offset_right = 334.362
@@ -608,6 +610,7 @@ texture = ExtResource("20_e50sl")
 expand_mode = 1
 
 [node name="btn-estante" type="Button" parent="fondo2"]
+layout_mode = 0
 offset_left = 554.249
 offset_top = 450.421
 offset_right = 563.376
@@ -624,6 +627,7 @@ puzzle_node_path = NodePath("../estante")
 
 [node name="estante" type="ColorRect" parent="fondo2"]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(38.3822, 26.7287)
