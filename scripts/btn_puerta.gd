@@ -18,7 +18,7 @@ func _on_pressed():
 	var ruta = textura_actual.resource_path
 	var nombre = ruta.get_file().get_basename()
 
-	if nombre == "scn1_b":
+	if nombre == "scn1_b" or nombre == "scn1_c":
 		_cargar_capitulo2()
 
 func _cargar_capitulo2():

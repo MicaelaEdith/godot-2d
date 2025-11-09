@@ -437,11 +437,10 @@ script = ExtResource("9_7vs1p")
 puzzle_node_path = NodePath("../fondo-libreta")
 
 [node name="fondo-libreta" type="ColorRect" parent="."]
-visible = false
-offset_left = -38.0
-offset_top = -45.0
-offset_right = 2.0
-offset_bottom = -4.99997
+offset_left = -12.0
+offset_top = -13.0
+offset_right = 28.0
+offset_bottom = 27.0
 scale = Vector2(29.594, 16.8703)
 color = Color(0.168627, 0.168627, 0.168627, 0.858824)
 

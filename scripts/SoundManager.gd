@@ -5,7 +5,8 @@ var sonidos : Array[AudioStream] = [
 	preload("res://assets/audio/backgound.mp3"),
 	preload("res://assets/audio/boton.mp3"),
 	preload("res://assets/audio/puerta.mp3"),
-	preload("res://assets/audio/libreta.mp3")
+	preload("res://assets/audio/libreta.mp3"),
+	preload("res://assets/audio/cuadro.mp3")
 ]
 
 var reproductor : AudioStreamPlayer

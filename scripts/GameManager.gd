@@ -6,6 +6,7 @@ var objetos_recolectados : Array[String] = []
 var transicion = 0
 var puzzle_1 = false
 var objeto_seleccionado = null
+var luz_encendida = false
 
 func _ready():
 	print("[GameManager] Inventario inicializado")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=139 format=3 uid="uid://7t38wh05jrn3"]
+[gd_scene load_steps=140 format=3 uid="uid://7t38wh05jrn3"]
 
 [ext_resource type="Texture2D" uid="uid://do101gcww5hg1" path="res://assets/fondos-escenas/scn2.png" id="1_ummw5"]
 [ext_resource type="Script" uid="uid://bpccimtsph6i4" path="res://scripts/inventario.gd" id="2_7u07a"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://vrs84um1fkf" path="res://assets/fondos-escenas/piezas/palanca-maquina.png" id="17_fb6pi"]
 [ext_resource type="Script" uid="uid://csulo2gwie42r" path="res://scripts/elementos.gd" id="17_jc18c"]
 [ext_resource type="Script" uid="uid://c1va0lp6vddqa" path="res://scripts/puzzles/maquina.gd" id="17_rwnkh"]
+[ext_resource type="Texture2D" uid="uid://ddf47y8y1vb7j" path="res://assets/fondos-escenas/tablero-control-luz.png" id="19_3uc4u"]
 [ext_resource type="Texture2D" uid="uid://5fdnyainh8f5" path="res://assets/elementos/quimico.png" id="19_lk1rc"]
 [ext_resource type="Texture2D" uid="uid://cur4t0uemu2g6" path="res://assets/btnOpciones.png" id="20_5k77u"]
 [ext_resource type="Texture2D" uid="uid://bgelu2un71pi7" path="res://assets/fondos-escenas/piezas/cuadro.png" id="20_e50sl"]
@@ -515,6 +516,17 @@ offset_right = 40.1714
 offset_bottom = 40.301
 scale = Vector2(0.190389, 0.175305)
 texture = ExtResource("17_fb6pi")
+expand_mode = 1
+
+[node name="luz" type="TextureRect" parent="fondo1/fondo-maquina/maquina/btn_palanca"]
+visible = false
+layout_mode = 0
+offset_left = 18.3438
+offset_top = -2.64861
+offset_right = 58.3438
+offset_bottom = 37.3514
+scale = Vector2(0.275663, 0.175143)
+texture = ExtResource("19_3uc4u")
 expand_mode = 1
 
 [node name="Button2" type="Button" parent="fondo1/fondo-maquina"]

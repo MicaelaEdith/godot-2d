@@ -10,7 +10,7 @@ func _ready():
 	connect("pressed", Callable(self, "_on_cuadro_pressed"))
 
 func _on_cuadro_pressed():
-	SoundManager.reproducir_efecto(2) # buscar sonido nuevo
+	SoundManager.reproducir_efecto(5)
 	if not activo:
 		_mover_y_agrandar()
 	else:
