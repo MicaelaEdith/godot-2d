@@ -1,4 +1,4 @@
-[gd_scene load_steps=140 format=3 uid="uid://7t38wh05jrn3"]
+[gd_scene load_steps=143 format=3 uid="uid://7t38wh05jrn3"]
 
 [ext_resource type="Texture2D" uid="uid://do101gcww5hg1" path="res://assets/fondos-escenas/scn2.png" id="1_ummw5"]
 [ext_resource type="Script" uid="uid://bpccimtsph6i4" path="res://scripts/inventario.gd" id="2_7u07a"]
@@ -41,6 +41,8 @@
 [ext_resource type="Texture2D" uid="uid://kb0ndoilqke7" path="res://assets/libreta-0.png" id="27_8a1qp"]
 [ext_resource type="Texture2D" uid="uid://buh0rynj2ky88" path="res://assets/libreta-1.png" id="27_e0s3v"]
 [ext_resource type="Texture2D" uid="uid://doikq1mausg6k" path="res://assets/libreta-2.png" id="27_h00ou"]
+[ext_resource type="Texture2D" uid="uid://cnm802hmugfub" path="res://assets/libreta-3.png" id="37_cofmx"]
+[ext_resource type="Script" uid="uid://c8swixrb8tp8e" path="res://scripts/panelTexto.gd" id="43_72jg8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b3wq7"]
 
@@ -283,6 +285,9 @@ bg_color = Color(0.00784314, 0.00784314, 0.00392157, 0.705882)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h6t87"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5vxco"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oydi2"]
+bg_color = Color(0, 0, 0, 0.516)
 
 [node name="Capitulo2" type="Node2D"]
 
@@ -945,6 +950,15 @@ offset_right = 700.0
 offset_bottom = 450.0
 texture = ExtResource("27_8a1qp")
 
+[node name="hoja5" type="TextureRect" parent="fondo-libreta/Libreta"]
+layout_mode = 0
+offset_left = 3.07003
+offset_top = 14.1661
+offset_right = 1923.07
+offset_bottom = 1094.17
+scale = Vector2(0.353781, 0.336793)
+texture = ExtResource("37_cofmx")
+
 [node name="btn-salir" type="Button" parent="fondo-libreta/Libreta"]
 layout_mode = 0
 offset_left = 664.026
@@ -1084,3 +1098,25 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_hwvwc")
 theme_override_styles/hover = SubResource("StyleBoxFlat_k2wuo")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_h6t87")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5vxco")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 180.0
+offset_top = 12.0
+offset_right = 890.0
+offset_bottom = 62.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oydi2")
+script = ExtResource("43_72jg8")
+
+[node name="Label" type="Label" parent="Panel"]
+custom_minimum_size = Vector2(750, 50)
+layout_mode = 2
+offset_top = 10.0
+offset_right = 750.0
+offset_bottom = 60.0
+scale = Vector2(0.931848, 0.866415)
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

@@ -10,7 +10,6 @@ func _ready():
 	var path = icono_inventario.resource_path
 	var recolectados = GameManager.obtener_inventario_registrado()
 
-	
 	if path in recolectados:
 		visible = false
 	else:
@@ -19,6 +18,8 @@ func _ready():
 func _on_gui_input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		SoundManager.reproducir_efecto(2)
+		if self.name == "botella":
+			GameManager.texto_label = "Creo que ya vi esta botella en alguna parte."
 		
 		if inventario:
 			inventario.agregar_objeto(icono_inventario)

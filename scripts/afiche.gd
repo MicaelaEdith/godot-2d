@@ -4,6 +4,7 @@ extends Node
 @export var img_pistas: TextureRect
 @onready var inventario = get_tree().get_root().find_child("inventario", true, false)
 
+
 func _ready():
 	if boton:
 		boton.connect("pressed", Callable(self, "_on_boton_pressed"))
@@ -18,4 +19,7 @@ func _on_boton_pressed():
 			if inventario:
 				inventario.quitar_objeto("botella_i.png")
 	else:
+		if GameManager.objeto_seleccionado != null:
+			GameManager.texto_label = "Esto no me servirá..."
+
 		print("[BotonInteractivo] No se cumple la condición, objeto seleccionado:", GameManager.objeto_seleccionado)

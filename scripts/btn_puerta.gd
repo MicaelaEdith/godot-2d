@@ -20,6 +20,8 @@ func _on_pressed():
 
 	if nombre != "scn1":
 		_cargar_capitulo2()
+	else:
+		GameManager.texto_label = "Parece que está cerrada ¿Cómo podré abrirla?"
 
 func _cargar_capitulo2():
 	var nueva_escena = load("res://Capitulo2.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=3 uid="uid://eou4tc6mx8k"]
+[gd_scene load_steps=106 format=3 uid="uid://eou4tc6mx8k"]
 
 [ext_resource type="Texture2D" uid="uid://dmomuukbq7dns" path="res://assets/fondos-escenas/scn3.png" id="1_xq2wo"]
 [ext_resource type="Script" uid="uid://bpccimtsph6i4" path="res://scripts/inventario.gd" id="2_qyd5t"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://buh0rynj2ky88" path="res://assets/libreta-1.png" id="13_yeq4g"]
 [ext_resource type="Texture2D" uid="uid://doikq1mausg6k" path="res://assets/libreta-2.png" id="14_l3f84"]
 [ext_resource type="Script" uid="uid://bm4ftx147rmym" path="res://scripts/btn_cerrar.gd" id="15_214an"]
+[ext_resource type="Texture2D" uid="uid://cnm802hmugfub" path="res://assets/libreta-3.png" id="15_hdvcl"]
 [ext_resource type="Script" uid="uid://dwrqtt3rae8ng" path="res://scripts/btns.gd" id="16_ehis0"]
 [ext_resource type="Texture2D" uid="uid://cur4t0uemu2g6" path="res://assets/btnOpciones.png" id="17_60yao"]
 [ext_resource type="Texture2D" uid="uid://bv3b75l06pcwr" path="res://assets/btnOpciones_ok.png" id="18_pnjh3"]
@@ -25,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://du5u4c57laqf1" path="res://assets/btnVolver_press.png" id="23_hdvcl"]
 [ext_resource type="Texture2D" uid="uid://loxu6ug4k36h" path="res://assets/btnVolver_ok.png" id="24_h8ck0"]
 [ext_resource type="PackedScene" uid="uid://bq3m5pkfnaveb" path="res://Capitulo1.tscn" id="25_3yd60"]
+[ext_resource type="Script" uid="uid://c8swixrb8tp8e" path="res://scripts/panelTexto.gd" id="27_h8ck0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6snem"]
 
@@ -222,6 +224,9 @@ bg_color = Color(0.00784314, 0.00784314, 0.00392157, 0.705882)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l3f84"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_214an"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3yd60"]
+bg_color = Color(0, 0, 0, 0.516)
 
 [node name="Capitulo3" type="Node2D"]
 
@@ -507,6 +512,15 @@ offset_right = 700.0
 offset_bottom = 450.0
 texture = ExtResource("12_0spsp")
 
+[node name="hoja5" type="TextureRect" parent="fondo-libreta/Libreta"]
+layout_mode = 0
+offset_left = 3.07003
+offset_top = 14.1661
+offset_right = 1923.07
+offset_bottom = 1094.17
+scale = Vector2(0.353781, 0.336793)
+texture = ExtResource("15_hdvcl")
+
 [node name="btn-salir" type="Button" parent="fondo-libreta/Libreta"]
 layout_mode = 0
 offset_left = 664.026
@@ -647,7 +661,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_4ynnu")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_rdam8")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_t5hnb")
 
-[node name="btn-volver" type="Button" parent="."]
+[node name="btn_ascensorbaja" type="Button" parent="." node_paths=PackedStringArray("transicion")]
 offset_left = 790.0
 offset_top = 560.0
 offset_right = 810.04
@@ -667,11 +681,44 @@ normal_texture = ExtResource("22_lv3ro")
 pressed_texture = ExtResource("23_hdvcl")
 hover_texture = ExtResource("24_h8ck0")
 scene_to_load = ExtResource("25_3yd60")
+transicion = NodePath("../TransicionAscensor")
 
-[node name="TextureRect" type="TextureRect" parent="btn-volver"]
+[node name="TextureRect" type="TextureRect" parent="btn_ascensorbaja"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.89634, 1.89067)
+texture = ExtResource("22_lv3ro")
 expand_mode = 3
 stretch_mode = 6
+
+[node name="TransicionAscensor" type="TextureRect" parent="."]
+visible = false
+offset_left = -12.0084
+offset_top = -9.00006
+offset_right = 27.9916
+offset_bottom = 30.9999
+scale = Vector2(29.3647, 16.6669)
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 180.0
+offset_top = 12.0
+offset_right = 890.0
+offset_bottom = 62.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3yd60")
+script = ExtResource("27_h8ck0")
+
+[node name="Label" type="Label" parent="Panel"]
+custom_minimum_size = Vector2(750, 50)
+layout_mode = 2
+offset_top = 10.0
+offset_right = 750.0
+offset_bottom = 60.0
+scale = Vector2(0.931848, 0.866415)
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

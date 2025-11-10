@@ -7,6 +7,7 @@ var indice_actual: int = 0
 @onready var hoja2 = $hoja2
 @onready var hoja3 = $hoja3
 @onready var hoja4 = $hoja4
+@onready var hoja5 = $hoja5
 
 @onready var btn_izquierda = $btn_izquierda
 @onready var btn_derecha = $btn_derecha
@@ -17,6 +18,7 @@ func _ready():
 	hojas.append(hoja2)
 	hojas.append(hoja3)
 	hojas.append(hoja4)
+	hojas.append(hoja5)
 
 	if btn_izquierda:
 		btn_izquierda.connect("pressed", Callable(self, "_on_pagina_izquierda"))

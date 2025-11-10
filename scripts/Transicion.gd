@@ -13,7 +13,8 @@ var transiciones_imagenes := [
 
 var escenas_destino := [
 	"res://Capitulo1.tscn",
-	"res://Capitulo2.tscn"
+	"res://Capitulo2.tscn",
+	"res://Capitulo3.tscn",
 ]
 
 var indice_imagen := 0

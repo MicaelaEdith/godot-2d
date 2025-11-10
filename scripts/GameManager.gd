@@ -8,6 +8,7 @@ var puzzle_1 = false
 var puzzle_clave = false
 var objeto_seleccionado = null
 var luz_encendida = false
+var texto_label = ""
 
 func _ready():
 	print("[GameManager] Inventario inicializado")
