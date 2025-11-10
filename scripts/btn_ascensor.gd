@@ -18,9 +18,9 @@ func _on_pressed():
 	var ruta = textura_actual.resource_path
 	var nombre = ruta.get_file().get_basename()
 
-	if nombre != "scn1":
-		_cargar_capitulo2()
+	if nombre == "scn1_d":
+		_cargar_capitulo3()
 
-func _cargar_capitulo2():
-	var nueva_escena = load("res://Capitulo2.tscn")
+func _cargar_capitulo3():
+	var nueva_escena = load("res://Capitulo3.tscn")
 	get_tree().change_scene_to_packed(nueva_escena)

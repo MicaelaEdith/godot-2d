@@ -521,11 +521,12 @@ expand_mode = 1
 [node name="luz" type="TextureRect" parent="fondo1/fondo-maquina/maquina/btn_palanca"]
 visible = false
 layout_mode = 0
-offset_left = 18.3438
-offset_top = -2.64861
-offset_right = 58.3438
-offset_bottom = 37.3514
-scale = Vector2(0.275663, 0.175143)
+offset_left = 19.3724
+offset_top = -3.43115
+offset_right = 59.3724
+offset_bottom = 36.5689
+rotation = 0.0639803
+scale = Vector2(0.221329, 0.180988)
 texture = ExtResource("19_3uc4u")
 expand_mode = 1
 

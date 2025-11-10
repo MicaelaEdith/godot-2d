@@ -9,8 +9,14 @@ func _ready():
 		btn_palanca.connect("pressed", Callable(self, "_on_palanca_pressed"))
 	else:
 		push_warning("No se encontró el nodo btn_palanca")
+		
+		
+	if GameManager.luz_encendida:
+		luz.visible = true
+	else:
+		luz.visible = false
 
-func _on_palanca_pressed(): # arreglar vuelta al capitulo 1
+func _on_palanca_pressed():
 	if palanca:
 		palanca.visible = not palanca.visible
 		SoundManager.reproducir_efecto(2)

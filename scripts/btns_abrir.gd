@@ -14,5 +14,8 @@ func _gui_input(event):
 			if puzzle_node.name == "puzzle1":
 				if not GameManager.puzzle_1:
 					puzzle_node.visible = true
+			elif puzzle_node.name == "fondo-clave":
+				if not GameManager.puzzle_clave:
+					puzzle_node.visible = true
 			else:
 				puzzle_node.visible = true

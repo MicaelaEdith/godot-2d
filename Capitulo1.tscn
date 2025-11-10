@@ -1,21 +1,25 @@
-[gd_scene load_steps=127 format=3 uid="uid://bq3m5pkfnaveb"]
+[gd_scene load_steps=142 format=3 uid="uid://bq3m5pkfnaveb"]
 
-[ext_resource type="Texture2D" uid="uid://chfsp46bs10gt" path="res://assets/fondos-escenas/scn1.png" id="1"]
 [ext_resource type="Script" uid="uid://c0lsa6rksj0b3" path="res://scripts/Capitulo1.gd" id="1_8y3g0"]
 [ext_resource type="Script" uid="uid://v5ac5lvhi78m" path="res://scripts/btn_inventario.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://bvnuar76qp21m" path="res://assets/fondos-escenas/scn1_c.png" id="2_gwcpy"]
 [ext_resource type="Texture2D" uid="uid://di6sswiin63fd" path="res://assets/btnInventario_ok.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://d0bd52yan3rdx" path="res://assets/btnInventario.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://dsxs74g5j20l1" path="res://assets/btn_libreta.png" id="5"]
+[ext_resource type="Script" uid="uid://co4oylo2akhu8" path="res://scripts/btn_ascensor.gd" id="5_kemsk"]
 [ext_resource type="Texture2D" uid="uid://cd73oqgoxvota" path="res://assets/btn_libreta_ok.png" id="6"]
 [ext_resource type="Script" uid="uid://y3m1nku12x7n" path="res://scripts/btns_abrir.gd" id="7"]
 [ext_resource type="Script" uid="uid://c7w15rkhnjiob" path="res://scripts/puzzles/puzzle1.gd" id="8"]
 [ext_resource type="Texture2D" uid="uid://c07jbwhq8oop0" path="res://assets/puzzles/puzzle1/fondo.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://g31qgjk0ng5m" path="res://assets/fondos-escenas/piezas/clave-ascensor.png" id="9_mq2b3"]
 [ext_resource type="Texture2D" uid="uid://bjsb2q2i4ja5r" path="res://assets/puzzles/puzzle1/grilla.png" id="10"]
 [ext_resource type="Script" uid="uid://bm4ftx147rmym" path="res://scripts/btn_cerrar.gd" id="11"]
 [ext_resource type="Texture2D" uid="uid://v8xyi0k0sij2" path="res://assets/btnInventario_press.png" id="11_md1dm"]
 [ext_resource type="Script" uid="uid://dbknxeejasanw" path="res://scripts/puzzles/tile.gd" id="12"]
 [ext_resource type="Texture2D" uid="uid://3gj3yvhxekyb" path="res://assets/puzzles/puzzle1/ficha-horizontal.png" id="13"]
 [ext_resource type="Texture2D" uid="uid://b0fqydmtkwlnj" path="res://assets/puzzles/puzzle1/ficha-codo2.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://cl7uij2h61sk0" path="res://assets/fondos-escenas/piezas/simbolos/0.png" id="14_mq2b3"]
+[ext_resource type="Script" uid="uid://b17lgrlyub4cg" path="res://scripts/puzzles/clave_ascensor.gd" id="14_qre8g"]
 [ext_resource type="Texture2D" uid="uid://cmkfqy6orqfqo" path="res://assets/puzzles/puzzle1/ficha-codo1.png" id="15"]
 [ext_resource type="Texture2D" uid="uid://dikgqqe6oe1x8" path="res://assets/puzzles/puzzle1/ficha-t.png" id="16"]
 [ext_resource type="Texture2D" uid="uid://n6s4uw8ab2ve" path="res://assets/puzzles/puzzle1/ficha-vertical.png" id="17"]
@@ -35,6 +39,39 @@
 [ext_resource type="Texture2D" uid="uid://bv3b75l06pcwr" path="res://assets/btnOpciones_ok.png" id="29_5txkl"]
 [ext_resource type="Texture2D" uid="uid://doikq1mausg6k" path="res://assets/libreta-2.png" id="29_mq2b3"]
 [ext_resource type="Texture2D" uid="uid://be2kn83qoxtrd" path="res://assets/btnOpciones_press.png" id="30_4fbd5"]
+
+[sub_resource type="StyleBoxEmpty" id="38"]
+
+[sub_resource type="StyleBoxEmpty" id="39"]
+
+[sub_resource type="StyleBoxFlat" id="36"]
+bg_color = Color(0.952941, 0.905882, 0.905882, 0.164706)
+
+[sub_resource type="StyleBoxEmpty" id="37"]
+
+[sub_resource type="StyleBoxEmpty" id="40"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vgviy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8y3g0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_judj0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ndkbp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6s3fh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jrjag"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sjqmj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_md1dm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5txkl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4fbd5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bdndx"]
 
 [sub_resource type="StyleBoxEmpty" id="3"]
 
@@ -96,16 +133,32 @@
 
 [sub_resource type="StyleBoxEmpty" id="30"]
 
-[sub_resource type="StyleBoxEmpty" id="38"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_usbpn"]
 
-[sub_resource type="StyleBoxEmpty" id="39"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0845a"]
 
-[sub_resource type="StyleBoxFlat" id="36"]
-bg_color = Color(0.952941, 0.905882, 0.905882, 0.164706)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6j1yl"]
 
-[sub_resource type="StyleBoxEmpty" id="37"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_maio5"]
 
-[sub_resource type="StyleBoxEmpty" id="40"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2y37h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ugk7h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_toewa"]
+bg_color = Color(1, 1, 1, 0.160784)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f5jmv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_swdjl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qq5ha"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jv3i2"]
 
 [sub_resource type="StyleBoxEmpty" id="44"]
 
@@ -139,28 +192,6 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 expand_margin_left = 1.0
 expand_margin_top = 1.0
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vgviy"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8y3g0"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_judj0"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ndkbp"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6s3fh"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jrjag"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sjqmj"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_md1dm"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5txkl"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4fbd5"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bdndx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3bsje"]
 
@@ -295,8 +326,51 @@ offset_top = -97.0
 offset_right = 1036.0
 offset_bottom = 622.0
 scale = Vector2(1.1219, 1.07247)
-texture = ExtResource("1")
+texture = ExtResource("2_gwcpy")
 expand_mode = 1
+
+[node name="btn_clave" type="Button" parent="."]
+offset_left = 742.0
+offset_top = 321.0
+offset_right = 790.0
+offset_bottom = 368.0
+scale = Vector2(1.10309, 0.388033)
+theme_override_styles/focus = SubResource("38")
+theme_override_styles/disabled = SubResource("39")
+theme_override_styles/hover = SubResource("36")
+theme_override_styles/pressed = SubResource("37")
+theme_override_styles/normal = SubResource("40")
+script = ExtResource("7")
+puzzle_node_path = NodePath("../fondo-clave")
+
+[node name="TextureRect" type="TextureRect" parent="btn_clave"]
+layout_mode = 0
+offset_left = -4.54187e-05
+offset_top = 2.26943
+offset_right = 40.0
+offset_bottom = 42.2694
+scale = Vector2(1.22263, 1.12831)
+texture = ExtResource("9_mq2b3")
+expand_mode = 1
+
+[node name="btnAscensor" type="Button" parent="."]
+offset_left = 605.0
+offset_top = 280.0
+offset_right = 613.0
+offset_bottom = 288.0
+scale = Vector2(13.6019, 22.1054)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vgviy")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8y3g0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_judj0")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ndkbp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6s3fh")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_jrjag")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_sjqmj")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_md1dm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5txkl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4fbd5")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bdndx")
+script = ExtResource("5_kemsk")
 
 [node name="inventario" type="VBoxContainer" parent="."]
 offset_left = 1002.0
@@ -538,6 +612,191 @@ scale = Vector2(0.358843, 0.316814)
 texture = ExtResource("23")
 script = ExtResource("21")
 icono_inventario = ExtResource("23")
+
+[node name="btnPuerta" type="Button" parent="."]
+offset_left = 171.0
+offset_top = 224.0
+offset_right = 179.0
+offset_bottom = 232.0
+scale = Vector2(11.4114, 35.4459)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vgviy")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8y3g0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_judj0")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ndkbp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6s3fh")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_jrjag")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_sjqmj")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_md1dm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5txkl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4fbd5")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bdndx")
+script = ExtResource("24_vgviy")
+
+[node name="fondo-clave" type="ColorRect" parent="."]
+visible = false
+offset_left = -30.0
+offset_top = -49.0
+offset_right = 10.0
+offset_bottom = -9.0
+scale = Vector2(29.4729, 16.9973)
+color = Color(0, 0, 0, 0.627451)
+
+[node name="clave" type="TextureRect" parent="fondo-clave"]
+layout_mode = 0
+offset_left = 2.98579
+offset_top = 9.47207
+offset_right = 42.9858
+offset_bottom = 49.4721
+scale = Vector2(0.737026, 0.47799)
+texture = ExtResource("9_mq2b3")
+expand_mode = 1
+script = ExtResource("14_qre8g")
+
+[node name="btn1" type="Button" parent="fondo-clave/clave"]
+layout_mode = 0
+offset_left = 5.24806
+offset_top = 8.98511
+offset_right = 13.2481
+offset_bottom = 16.9851
+scale = Vector2(0.738767, 2.76698)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_usbpn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_0845a")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6j1yl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_maio5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2y37h")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ugk7h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_toewa")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_f5jmv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_swdjl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_qq5ha")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jv3i2")
+
+[node name="textura" type="TextureRect" parent="fondo-clave/clave/btn1"]
+layout_mode = 0
+offset_left = 1.17023
+offset_top = 1.31689
+offset_right = 41.1702
+offset_bottom = 41.3169
+scale = Vector2(0.146965, 0.134583)
+texture = ExtResource("14_mq2b3")
+expand_mode = 1
+
+[node name="btn2" type="Button" parent="fondo-clave/clave"]
+layout_mode = 0
+offset_left = 13.2122
+offset_top = 8.98511
+offset_right = 21.2122
+offset_bottom = 16.9851
+scale = Vector2(0.738767, 2.76698)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_usbpn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_0845a")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6j1yl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_maio5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2y37h")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ugk7h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_toewa")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_f5jmv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_swdjl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_qq5ha")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jv3i2")
+
+[node name="textura" type="TextureRect" parent="fondo-clave/clave/btn2"]
+layout_mode = 0
+offset_left = 1.17023
+offset_top = 1.31689
+offset_right = 41.1702
+offset_bottom = 41.3169
+scale = Vector2(0.146965, 0.134583)
+texture = ExtResource("14_mq2b3")
+expand_mode = 1
+
+[node name="btn3" type="Button" parent="fondo-clave/clave"]
+layout_mode = 0
+offset_left = 21.1764
+offset_top = 8.98511
+offset_right = 29.1764
+offset_bottom = 16.9851
+scale = Vector2(0.738767, 2.76698)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_usbpn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_0845a")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6j1yl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_maio5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2y37h")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ugk7h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_toewa")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_f5jmv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_swdjl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_qq5ha")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jv3i2")
+
+[node name="textura" type="TextureRect" parent="fondo-clave/clave/btn3"]
+layout_mode = 0
+offset_left = 1.17023
+offset_top = 1.31689
+offset_right = 41.1702
+offset_bottom = 41.3169
+scale = Vector2(0.146965, 0.134583)
+texture = ExtResource("14_mq2b3")
+expand_mode = 1
+
+[node name="btn4" type="Button" parent="fondo-clave/clave"]
+layout_mode = 0
+offset_left = 29.1405
+offset_top = 8.98511
+offset_right = 37.1405
+offset_bottom = 16.9851
+scale = Vector2(0.738767, 2.76698)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_usbpn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_0845a")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6j1yl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_maio5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2y37h")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ugk7h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_toewa")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_f5jmv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_swdjl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_qq5ha")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jv3i2")
+
+[node name="textura" type="TextureRect" parent="fondo-clave/clave/btn4"]
+layout_mode = 0
+offset_left = 1.17023
+offset_top = 1.31689
+offset_right = 41.1702
+offset_bottom = 41.3169
+scale = Vector2(0.146965, 0.134583)
+texture = ExtResource("14_mq2b3")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="fondo-clave"]
+offset_left = 30.0275
+offset_top = 5.00078
+offset_right = 42.0275
+offset_bottom = 29.0008
+scale = Vector2(0.0707177, 0.0648752)
+theme_override_styles/focus = SubResource("44")
+theme_override_styles/disabled = SubResource("45")
+theme_override_styles/hover = SubResource("42")
+theme_override_styles/pressed = SubResource("47")
+theme_override_styles/normal = SubResource("46")
+text = "x"
+icon_alignment = 1
+script = ExtResource("11")
+puzzle_node_path = NodePath("..")
+
+[node name="btnLibreta" type="Button" parent="."]
+offset_left = 25.0
+offset_top = 503.0
+offset_right = 37.0
+offset_bottom = 523.0
+scale = Vector2(6.9578, 4.11943)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3bsje")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ncuol")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dqfho")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vt0ad")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ufin0")
+script = ExtResource("7")
+puzzle_node_path = NodePath("../fondo-libreta")
 
 [node name="puzzle1" type="Control" parent="."]
 visible = false
@@ -890,39 +1149,6 @@ text = "x"
 icon_alignment = 1
 script = ExtResource("11")
 puzzle_node_path = NodePath("..")
-
-[node name="btnPuerta" type="Button" parent="."]
-offset_left = 171.0
-offset_top = 224.0
-offset_right = 179.0
-offset_bottom = 232.0
-scale = Vector2(11.4114, 35.4459)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_vgviy")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8y3g0")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_judj0")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ndkbp")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_6s3fh")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_jrjag")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_sjqmj")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_md1dm")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_5txkl")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4fbd5")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_bdndx")
-script = ExtResource("24_vgviy")
-
-[node name="btnLibreta" type="Button" parent="."]
-offset_left = 25.0
-offset_top = 503.0
-offset_right = 37.0
-offset_bottom = 523.0
-scale = Vector2(6.9578, 4.11943)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_3bsje")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_ncuol")
-theme_override_styles/hover = SubResource("StyleBoxTexture_dqfho")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_vt0ad")
-theme_override_styles/normal = SubResource("StyleBoxTexture_ufin0")
-script = ExtResource("7")
-puzzle_node_path = NodePath("../fondo-libreta")
 
 [node name="fondo-libreta" type="ColorRect" parent="."]
 visible = false
