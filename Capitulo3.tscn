@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=3 uid="uid://eou4tc6mx8k"]
+[gd_scene load_steps=119 format=3 uid="uid://eou4tc6mx8k"]
 
 [ext_resource type="Texture2D" uid="uid://dmomuukbq7dns" path="res://assets/fondos-escenas/scn3.png" id="1_xq2wo"]
 [ext_resource type="Script" uid="uid://bpccimtsph6i4" path="res://scripts/inventario.gd" id="2_qyd5t"]
@@ -27,6 +27,8 @@
 [ext_resource type="Texture2D" uid="uid://loxu6ug4k36h" path="res://assets/btnVolver_ok.png" id="24_h8ck0"]
 [ext_resource type="PackedScene" uid="uid://bq3m5pkfnaveb" path="res://Capitulo1.tscn" id="25_3yd60"]
 [ext_resource type="Script" uid="uid://c8swixrb8tp8e" path="res://scripts/panelTexto.gd" id="27_h8ck0"]
+[ext_resource type="Script" uid="uid://bxlfmp5mx4rbp" path="res://scripts/barra.gd" id="28_7vs1p"]
+[ext_resource type="Texture2D" uid="uid://drrrn3cjpc4yv" path="res://assets/elementos/barra_carbon.png" id="29_qdn86"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6snem"]
 
@@ -87,6 +89,42 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1oyiw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_klwuh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ehis0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_60yao"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pnjh3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sprmw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i6nuw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4m2fo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m23ox"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tao46"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qb5au"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u5opc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2nt2e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7vs1p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qdn86"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i6tkj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0spsp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yeq4g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l3f84"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_214an"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kxtnh"]
 
@@ -210,20 +248,6 @@ bg_color = Color(0.00784314, 0.00784314, 0.00392157, 0.705882)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rdam8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t5hnb"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7vs1p"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qdn86"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i6tkj"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0spsp"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yeq4g"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l3f84"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_214an"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3yd60"]
 bg_color = Color(0, 0, 0, 0.516)
@@ -445,6 +469,65 @@ offset_right = 45.7715
 offset_bottom = 43.5336
 scale = Vector2(0.270173, 0.147004)
 
+[node name="btn-barra" type="Button" parent="."]
+offset_left = 843.0
+offset_top = 525.0
+offset_right = 851.0
+offset_bottom = 533.0
+rotation = -0.597902
+scale = Vector2(3.98414, 5.28767)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ehis0")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_60yao")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_pnjh3")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_sprmw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_i6nuw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_4m2fo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_m23ox")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_tao46")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qb5au")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_u5opc")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2nt2e")
+script = ExtResource("28_7vs1p")
+
+[node name="TextureRect" type="TextureRect" parent="btn-barra"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.219726, 0.171993)
+texture = ExtResource("29_qdn86")
+expand_mode = 1
+
+[node name="btn_ascensorbaja" type="Button" parent="." node_paths=PackedStringArray("transicion")]
+offset_left = 790.0
+offset_top = 560.0
+offset_right = 810.04
+offset_bottom = 596.036
+rotation = 0.00316191
+scale = Vector2(1.58769, 0.531537)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7vs1p")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qdn86")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_i6tkj")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_0spsp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yeq4g")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_l3f84")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_214an")
+script = ExtResource("16_ehis0")
+normal_texture = ExtResource("22_lv3ro")
+pressed_texture = ExtResource("23_hdvcl")
+hover_texture = ExtResource("24_h8ck0")
+scene_to_load = ExtResource("25_3yd60")
+transicion = NodePath("../TransicionAscensor")
+
+[node name="TextureRect" type="TextureRect" parent="btn_ascensorbaja"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.89634, 1.89067)
+texture = ExtResource("22_lv3ro")
+expand_mode = 3
+stretch_mode = 6
+
 [node name="btnLibreta" type="Button" parent="."]
 offset_left = 25.0
 offset_top = 503.0
@@ -660,37 +743,6 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_axspg")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4ynnu")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_rdam8")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_t5hnb")
-
-[node name="btn_ascensorbaja" type="Button" parent="." node_paths=PackedStringArray("transicion")]
-offset_left = 790.0
-offset_top = 560.0
-offset_right = 810.04
-offset_bottom = 596.036
-rotation = 0.00316191
-scale = Vector2(1.58769, 0.531537)
-theme_override_font_sizes/font_size = 36
-theme_override_styles/focus = SubResource("StyleBoxEmpty_7vs1p")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_qdn86")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i6tkj")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_0spsp")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_yeq4g")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_l3f84")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_214an")
-script = ExtResource("16_ehis0")
-normal_texture = ExtResource("22_lv3ro")
-pressed_texture = ExtResource("23_hdvcl")
-hover_texture = ExtResource("24_h8ck0")
-scene_to_load = ExtResource("25_3yd60")
-transicion = NodePath("../TransicionAscensor")
-
-[node name="TextureRect" type="TextureRect" parent="btn_ascensorbaja"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.89634, 1.89067)
-texture = ExtResource("22_lv3ro")
-expand_mode = 3
-stretch_mode = 6
 
 [node name="TransicionAscensor" type="TextureRect" parent="."]
 visible = false

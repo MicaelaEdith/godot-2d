@@ -8,6 +8,7 @@ func _ready():
 	posicion_inicial = position
 	escala_inicial = scale
 	connect("pressed", Callable(self, "_on_cuadro_pressed"))
+	
 
 func _on_cuadro_pressed():
 	SoundManager.reproducir_efecto(5)

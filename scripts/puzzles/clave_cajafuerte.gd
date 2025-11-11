@@ -28,6 +28,9 @@ func _ready():
 	for i in range(botones.size()):
 		botones[i].connect("pressed", Callable(self, "_on_boton_pressed").bind(i))
 		_actualizar_boton(i)
+	
+	if GameManager.caja_fuerte:
+		_cargar_nuevo_fondo()
 
 func _on_boton_pressed(i: int):
 	SoundManager.reproducir_efecto(2)
@@ -62,4 +65,5 @@ func _cargar_nuevo_fondo():
 	botones[2].visible = false
 	piedra.visible = true
 	GameManager.caja_fuerte = true
+	# arreglar recarga de puzzle en recarga de escena, lo mismo para el cuadro
 		

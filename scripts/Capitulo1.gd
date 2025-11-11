@@ -8,7 +8,7 @@ func _process(_delta):
 	_actualizar_luz()
 
 func _actualizar_luz():
-	if GameManager.luz_encendida:
+	if GameManager.luz_encendida and not GameManager.cables_cortados:
 		var imagen = get_child(0)
 		var btn_clave = get_child(1)
 		btn_clave = true

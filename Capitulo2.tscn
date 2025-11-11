@@ -1,7 +1,8 @@
-[gd_scene load_steps=161 format=3 uid="uid://7t38wh05jrn3"]
+[gd_scene load_steps=176 format=3 uid="uid://7t38wh05jrn3"]
 
 [ext_resource type="Texture2D" uid="uid://do101gcww5hg1" path="res://assets/fondos-escenas/scn2.png" id="1_ummw5"]
 [ext_resource type="Script" uid="uid://bpccimtsph6i4" path="res://scripts/inventario.gd" id="2_7u07a"]
+[ext_resource type="Script" uid="uid://benr36tt4y7dk" path="res://scripts/fondo1_scn2.gd" id="2_lmpyi"]
 [ext_resource type="Script" uid="uid://v5ac5lvhi78m" path="res://scripts/btn_inventario.gd" id="3_3vvbw"]
 [ext_resource type="Texture2D" uid="uid://dg6yunyu07yss" path="res://assets/elementos/botella_i.png" id="4_jc18c"]
 [ext_resource type="Texture2D" uid="uid://d0bd52yan3rdx" path="res://assets/btnInventario.png" id="4_o3yyy"]
@@ -29,10 +30,13 @@
 [ext_resource type="Texture2D" uid="uid://5fdnyainh8f5" path="res://assets/elementos/quimico.png" id="19_lk1rc"]
 [ext_resource type="Texture2D" uid="uid://cur4t0uemu2g6" path="res://assets/btnOpciones.png" id="20_5k77u"]
 [ext_resource type="Texture2D" uid="uid://bgelu2un71pi7" path="res://assets/fondos-escenas/piezas/cuadro.png" id="20_e50sl"]
+[ext_resource type="Script" uid="uid://c7u3l0l6uvrvf" path="res://scripts/puzzles/btn_cables_cortados.gd" id="20_ebc2r"]
 [ext_resource type="Texture2D" uid="uid://cf4ttfxnflgcm" path="res://assets/elementos/llave.png" id="20_eydma"]
 [ext_resource type="Script" uid="uid://baat7kdeins7w" path="res://scripts/cuadro.gd" id="20_jrg3n"]
 [ext_resource type="Texture2D" uid="uid://v8xyi0k0sij2" path="res://assets/btnInventario_press.png" id="20_y7ptj"]
+[ext_resource type="Texture2D" uid="uid://djep7ctdwb2nl" path="res://assets/fondos-escenas/scn2_a2.png" id="21_6oxaa"]
 [ext_resource type="Texture2D" uid="uid://bv3b75l06pcwr" path="res://assets/btnOpciones_ok.png" id="21_gekx4"]
+[ext_resource type="Texture2D" uid="uid://b856phehpwa3u" path="res://assets/elementos/cinta.png" id="21_stpgo"]
 [ext_resource type="Texture2D" uid="uid://mvfobf8cgcwr" path="res://assets/fondos-escenas/estante.png" id="22_oub8t"]
 [ext_resource type="Texture2D" uid="uid://be2kn83qoxtrd" path="res://assets/btnOpciones_press.png" id="22_ummw5"]
 [ext_resource type="Texture2D" uid="uid://3ss3yjm8dfkm" path="res://assets/fondos-escenas/menu opciones.png" id="23_x5348"]
@@ -129,6 +133,28 @@ bg_color = Color(1, 1, 1, 0.0313726)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x5psm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l02a7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yio5x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x37k4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vgkmr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7wmq2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q2cc6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f501c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m5h6j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a5o7b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m1b4m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7d2rj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dputs"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0v0up"]
 
@@ -329,6 +355,9 @@ offset_right = 1505.0
 offset_bottom = 997.0
 scale = Vector2(0.791093, 0.688953)
 texture = ExtResource("1_ummw5")
+script = ExtResource("2_lmpyi")
+fondo1 = ExtResource("1_ummw5")
+fondo2 = ExtResource("21_6oxaa")
 
 [node name="btn-volver" type="Button" parent="fondo1"]
 layout_mode = 0
@@ -582,6 +611,28 @@ text = "X"
 script = ExtResource("10_lk1rc")
 puzzle_node_path = NodePath("..")
 
+[node name="btn-cables" type="Button" parent="fondo1" node_paths=PackedStringArray("fondo")]
+layout_mode = 0
+offset_left = 1195.81
+offset_top = 635.747
+offset_right = 1203.81
+offset_bottom = 643.747
+scale = Vector2(12.0387, 16.0609)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yio5x")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_x37k4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vgkmr")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_7wmq2")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_q2cc6")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_f501c")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_m5h6j")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_a5o7b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_m1b4m")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_7d2rj")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dputs")
+script = ExtResource("20_ebc2r")
+fondo = NodePath("..")
+nueva_imagen = ExtResource("21_6oxaa")
+
 [node name="fondo2" type="TextureRect" parent="."]
 visible = false
 offset_left = -30.0
@@ -590,6 +641,19 @@ offset_right = 1506.0
 offset_bottom = 992.0
 scale = Vector2(0.790259, 0.694905)
 texture = ExtResource("11_gekx4")
+
+[node name="cinta" type="TextureRect" parent="fondo2"]
+modulate = Color(1, 1, 1, 0.755)
+layout_mode = 0
+offset_left = 831.373
+offset_top = 198.588
+offset_right = 931.373
+offset_bottom = 298.588
+rotation = 1.53533
+scale = Vector2(0.402869, 0.41179)
+texture = ExtResource("21_stpgo")
+script = ExtResource("17_jc18c")
+icono_inventario = ExtResource("21_stpgo")
 
 [node name="btn-biblioteca2" type="Button" parent="fondo2"]
 layout_mode = 0
@@ -676,6 +740,7 @@ puzzle_node_path = NodePath("../estante")
 
 [node name="piedra" type="TextureRect" parent="fondo2"]
 visible = false
+layout_mode = 0
 offset_left = 859.212
 offset_top = 528.13
 offset_right = 959.212
@@ -709,6 +774,7 @@ img_fondo_estante = NodePath(".")
 piedra = NodePath("../piedra-zoom")
 
 [node name="btn1" type="Button" parent="fondo2/estante/img-estante"]
+layout_mode = 0
 offset_left = 27.6284
 offset_top = 19.5224
 offset_right = 35.6284
@@ -737,6 +803,7 @@ texture = ExtResource("25_oydi2")
 expand_mode = 1
 
 [node name="btn2" type="Button" parent="fondo2/estante/img-estante"]
+layout_mode = 0
 offset_left = 29.6651
 offset_top = 19.6619
 offset_right = 37.6651
@@ -765,6 +832,7 @@ texture = ExtResource("25_oydi2")
 expand_mode = 1
 
 [node name="btn3" type="Button" parent="fondo2/estante/img-estante"]
+layout_mode = 0
 offset_left = 31.6576
 offset_top = 19.5922
 offset_right = 39.6576
@@ -810,6 +878,7 @@ puzzle_node_path = NodePath("..")
 
 [node name="piedra-zoom" type="TextureRect" parent="fondo2/estante"]
 visible = false
+layout_mode = 0
 offset_left = 26.5727
 offset_top = 19.7589
 offset_right = 126.573
