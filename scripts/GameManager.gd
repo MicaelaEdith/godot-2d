@@ -4,10 +4,11 @@ var inventario : Array[Texture2D] = []
 var inventario_registrado : Array[String] = []
 var objetos_recolectados : Array[String] = []
 var transicion = 0
+var objeto_seleccionado = null
 var puzzle_1 = false
 var puzzle_clave = false
-var objeto_seleccionado = null
 var luz_encendida = false
+var caja_fuerte = false
 var texto_label = ""
 
 func _ready():

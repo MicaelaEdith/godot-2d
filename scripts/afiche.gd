@@ -4,7 +4,6 @@ extends Node
 @export var img_pistas: TextureRect
 @onready var inventario = get_tree().get_root().find_child("inventario", true, false)
 
-
 func _ready():
 	if boton:
 		boton.connect("pressed", Callable(self, "_on_boton_pressed"))

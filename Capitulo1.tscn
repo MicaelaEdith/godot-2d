@@ -1,4 +1,4 @@
-[gd_scene load_steps=145 format=3 uid="uid://bq3m5pkfnaveb"]
+[gd_scene load_steps=144 format=3 uid="uid://bq3m5pkfnaveb"]
 
 [ext_resource type="Script" uid="uid://c0lsa6rksj0b3" path="res://scripts/Capitulo1.gd" id="1_8y3g0"]
 [ext_resource type="Script" uid="uid://v5ac5lvhi78m" path="res://scripts/btn_inventario.gd" id="2"]
@@ -27,7 +27,6 @@
 [ext_resource type="Texture2D" uid="uid://c2jnqfwailt1l" path="res://assets/elementos/interruptor.png" id="19"]
 [ext_resource type="Script" uid="uid://csulo2gwie42r" path="res://scripts/elementos.gd" id="21"]
 [ext_resource type="Script" uid="uid://bpccimtsph6i4" path="res://scripts/inventario.gd" id="22"]
-[ext_resource type="Texture2D" uid="uid://b07kk5acknrxn" path="res://assets/elementos/piedra.png" id="23"]
 [ext_resource type="Script" uid="uid://b4c8y5aqos71h" path="res://scripts/btn_puerta.gd" id="24_vgviy"]
 [ext_resource type="Texture2D" uid="uid://3ss3yjm8dfkm" path="res://assets/fondos-escenas/menu opciones.png" id="25_judj0"]
 [ext_resource type="Script" uid="uid://bfw2ecnhxedp0" path="res://scripts/btn-libreta.gd" id="26_5txkl"]
@@ -588,16 +587,6 @@ scale = Vector2(0.415709, 0.399506)
 texture = ExtResource("19")
 script = ExtResource("21")
 icono_inventario = ExtResource("19")
-
-[node name="piedra" type="TextureRect" parent="."]
-offset_left = 278.0
-offset_top = 486.0
-offset_right = 378.0
-offset_bottom = 586.0
-scale = Vector2(0.358843, 0.316814)
-texture = ExtResource("23")
-script = ExtResource("21")
-icono_inventario = ExtResource("23")
 
 [node name="btnPuerta" type="Button" parent="."]
 offset_left = 171.0

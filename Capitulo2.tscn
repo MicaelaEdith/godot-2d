@@ -1,4 +1,4 @@
-[gd_scene load_steps=143 format=3 uid="uid://7t38wh05jrn3"]
+[gd_scene load_steps=161 format=3 uid="uid://7t38wh05jrn3"]
 
 [ext_resource type="Texture2D" uid="uid://do101gcww5hg1" path="res://assets/fondos-escenas/scn2.png" id="1_ummw5"]
 [ext_resource type="Script" uid="uid://bpccimtsph6i4" path="res://scripts/inventario.gd" id="2_7u07a"]
@@ -37,10 +37,15 @@
 [ext_resource type="Texture2D" uid="uid://be2kn83qoxtrd" path="res://assets/btnOpciones_press.png" id="22_ummw5"]
 [ext_resource type="Texture2D" uid="uid://3ss3yjm8dfkm" path="res://assets/fondos-escenas/menu opciones.png" id="23_x5348"]
 [ext_resource type="Script" uid="uid://4ju2g4sjm0ue" path="res://scripts/opciones.gd" id="24_y7ptj"]
+[ext_resource type="Script" uid="uid://dlfrtnj6r6d4f" path="res://scripts/puzzles/clave_cajafuerte.gd" id="25_330k4"]
+[ext_resource type="Texture2D" uid="uid://bqvms4q28bmob" path="res://assets/fondos-escenas/piezas/simbolos/b1.png" id="25_oydi2"]
 [ext_resource type="Script" uid="uid://bfw2ecnhxedp0" path="res://scripts/btn-libreta.gd" id="26_mvd64"]
 [ext_resource type="Texture2D" uid="uid://kb0ndoilqke7" path="res://assets/libreta-0.png" id="27_8a1qp"]
 [ext_resource type="Texture2D" uid="uid://buh0rynj2ky88" path="res://assets/libreta-1.png" id="27_e0s3v"]
 [ext_resource type="Texture2D" uid="uid://doikq1mausg6k" path="res://assets/libreta-2.png" id="27_h00ou"]
+[ext_resource type="Texture2D" uid="uid://droabeojnaflw" path="res://assets/fondos-escenas/piezas/simbolos/b2.png" id="27_m863n"]
+[ext_resource type="Texture2D" uid="uid://b07kk5acknrxn" path="res://assets/elementos/piedra.png" id="28_2atnl"]
+[ext_resource type="Script" uid="uid://7xeqniq4liif" path="res://scripts/puzzles/piedra.gd" id="29_abg0y"]
 [ext_resource type="Texture2D" uid="uid://cnm802hmugfub" path="res://assets/libreta-3.png" id="37_cofmx"]
 [ext_resource type="Script" uid="uid://c8swixrb8tp8e" path="res://scripts/panelTexto.gd" id="43_72jg8"]
 
@@ -124,6 +129,32 @@ bg_color = Color(1, 1, 1, 0.0313726)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x5psm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l02a7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0v0up"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ive6b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ge5p8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g871j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_53tr6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dx2mr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vcovm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nuea3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yfc1o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fs38o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jdwiu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qc0yu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q4to7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lspob"]
 
@@ -643,6 +674,18 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_cm5q6")
 script = ExtResource("8_yhujg")
 puzzle_node_path = NodePath("../estante")
 
+[node name="piedra" type="TextureRect" parent="fondo2"]
+visible = false
+offset_left = 859.212
+offset_top = 528.13
+offset_right = 959.212
+offset_bottom = 628.13
+rotation = 0.559964
+scale = Vector2(0.369937, 0.326455)
+mouse_filter = 2
+texture = ExtResource("28_2atnl")
+script = ExtResource("29_abg0y")
+
 [node name="estante" type="ColorRect" parent="fondo2"]
 visible = false
 layout_mode = 0
@@ -651,14 +694,102 @@ offset_bottom = 40.0
 scale = Vector2(38.3822, 26.7287)
 color = Color(0.0728427, 0.0728426, 0.0728426, 0.945098)
 
-[node name="afiche" type="TextureRect" parent="fondo2/estante"]
+[node name="img-estante" type="TextureRect" parent="fondo2/estante" node_paths=PackedStringArray("img_fondo_escena", "img_fondo_estante", "piedra")]
 layout_mode = 0
-offset_left = 6.42888
-offset_top = 3.82257
-offset_right = 46.4289
-offset_bottom = 43.8226
-scale = Vector2(0.686586, 0.759879)
+offset_left = 4.74748
+offset_top = 3.23034
+offset_right = 44.7475
+offset_bottom = 43.2304
+scale = Vector2(0.74461, 0.772184)
 texture = ExtResource("22_oub8t")
+expand_mode = 1
+script = ExtResource("25_330k4")
+img_fondo_escena = NodePath("../..")
+img_fondo_estante = NodePath(".")
+piedra = NodePath("../piedra-zoom")
+
+[node name="btn1" type="Button" parent="fondo2/estante/img-estante"]
+offset_left = 27.6284
+offset_top = 19.5224
+offset_right = 35.6284
+offset_bottom = 27.5224
+scale = Vector2(0.142937, 0.291538)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0v0up")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ive6b")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ge5p8")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g871j")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_53tr6")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_dx2mr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vcovm")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_nuea3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yfc1o")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_fs38o")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jdwiu")
+
+[node name="textura" type="TextureRect" parent="fondo2/estante/img-estante/btn1"]
+layout_mode = 0
+offset_left = -3.33344
+offset_top = -0.249487
+offset_right = 36.6665
+offset_bottom = 39.7505
+scale = Vector2(0.133759, 0.153223)
+texture = ExtResource("25_oydi2")
+expand_mode = 1
+
+[node name="btn2" type="Button" parent="fondo2/estante/img-estante"]
+offset_left = 29.6651
+offset_top = 19.6619
+offset_right = 37.6651
+offset_bottom = 27.6619
+scale = Vector2(0.132431, 0.28181)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0v0up")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ive6b")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ge5p8")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g871j")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_53tr6")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_dx2mr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qc0yu")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_nuea3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yfc1o")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_fs38o")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jdwiu")
+
+[node name="textura" type="TextureRect" parent="fondo2/estante/img-estante/btn2"]
+layout_mode = 0
+offset_left = -4.25451
+offset_top = 0.49724
+offset_right = 35.7455
+offset_bottom = 40.4972
+scale = Vector2(0.140126, 0.164828)
+texture = ExtResource("25_oydi2")
+expand_mode = 1
+
+[node name="btn3" type="Button" parent="fondo2/estante/img-estante"]
+offset_left = 31.6576
+offset_top = 19.5922
+offset_right = 39.6576
+offset_bottom = 27.5922
+scale = Vector2(0.108963, 0.218571)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0v0up")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ive6b")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ge5p8")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g871j")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_53tr6")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_dx2mr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_q4to7")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_nuea3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yfc1o")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_fs38o")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jdwiu")
+
+[node name="textura" type="TextureRect" parent="fondo2/estante/img-estante/btn3"]
+layout_mode = 0
+offset_left = -5.25445
+offset_top = -0.325703
+offset_right = 34.7455
+offset_bottom = 39.6743
+scale = Vector2(0.171313, 0.210908)
+texture = ExtResource("27_m863n")
 expand_mode = 1
 
 [node name="btn-salir" type="Button" parent="fondo2/estante"]
@@ -676,6 +807,18 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_07yux")
 text = "X"
 script = ExtResource("10_lk1rc")
 puzzle_node_path = NodePath("..")
+
+[node name="piedra-zoom" type="TextureRect" parent="fondo2/estante"]
+visible = false
+offset_left = 26.5727
+offset_top = 19.7589
+offset_right = 126.573
+offset_bottom = 119.759
+rotation = 0.559964
+scale = Vector2(0.0319809, 0.030372)
+texture = ExtResource("28_2atnl")
+script = ExtResource("17_jc18c")
+icono_inventario = ExtResource("28_2atnl")
 
 [node name="inventario" type="VBoxContainer" parent="."]
 offset_left = 1021.0
