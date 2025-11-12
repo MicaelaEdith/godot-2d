@@ -1,4 +1,4 @@
-[gd_scene load_steps=119 format=3 uid="uid://eou4tc6mx8k"]
+[gd_scene load_steps=147 format=3 uid="uid://eou4tc6mx8k"]
 
 [ext_resource type="Texture2D" uid="uid://dmomuukbq7dns" path="res://assets/fondos-escenas/scn3.png" id="1_xq2wo"]
 [ext_resource type="Script" uid="uid://bpccimtsph6i4" path="res://scripts/inventario.gd" id="2_qyd5t"]
@@ -29,6 +29,12 @@
 [ext_resource type="Script" uid="uid://c8swixrb8tp8e" path="res://scripts/panelTexto.gd" id="27_h8ck0"]
 [ext_resource type="Script" uid="uid://bxlfmp5mx4rbp" path="res://scripts/barra.gd" id="28_7vs1p"]
 [ext_resource type="Texture2D" uid="uid://drrrn3cjpc4yv" path="res://assets/elementos/barra_carbon.png" id="29_qdn86"]
+[ext_resource type="Texture2D" uid="uid://ct4k881g4i4j5" path="res://assets/fondos-escenas/piezas/cofre_a.png" id="30_qdn86"]
+[ext_resource type="Texture2D" uid="uid://b6yiri56mfsk" path="res://assets/fondos-escenas/piezas/cofre_b.png" id="30_yeq4g"]
+[ext_resource type="Script" uid="uid://cm6igvxvq3rfh" path="res://scripts/puzzles/cofre.gd" id="31_214an"]
+[ext_resource type="Texture2D" uid="uid://qac2mghkye14" path="res://assets/elementos/interruptor_2.png" id="31_l3f84"]
+[ext_resource type="Script" uid="uid://csulo2gwie42r" path="res://scripts/elementos.gd" id="32_214an"]
+[ext_resource type="Texture2D" uid="uid://c2jnqfwailt1l" path="res://assets/elementos/interruptor.png" id="33_ehis0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6snem"]
 
@@ -140,6 +146,28 @@ region_rect = Rect2(0, 0, 550, 470)
 texture = ExtResource("8_3yd60")
 region_rect = Rect2(0, 0, 550, 470)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8blba"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ptkr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_al8t6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gwp25"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d640p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hvmb8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ynnu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ad3uo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eflap"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1q7hn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_63ujg"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oaq2t"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pt4gj"]
@@ -193,6 +221,28 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 corner_detail = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8mgy1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wp6oq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fwhr3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t3tvn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5k0u3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_601uu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b8ay0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j1rok"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lu30j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vx7k4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xfiyk"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cnk85"]
 
@@ -542,6 +592,41 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_tao46")
 script = ExtResource("9_7vs1p")
 puzzle_node_path = NodePath("../fondo-libreta")
 
+[node name="cofre" type="TextureRect" parent="." node_paths=PackedStringArray("img_elemento", "node", "boton")]
+offset_left = 154.0
+offset_top = 423.0
+offset_right = 194.0
+offset_bottom = 463.0
+rotation = 0.00991308
+scale = Vector2(3.96847, 3.8598)
+texture = ExtResource("30_yeq4g")
+expand_mode = 1
+script = ExtResource("31_214an")
+img_cerrado = ExtResource("30_qdn86")
+img_abierto = ExtResource("30_yeq4g")
+img_elemento = NodePath("../interruptor")
+node = NodePath(".")
+boton = NodePath("Button")
+
+[node name="Button" type="Button" parent="cofre"]
+layout_mode = 0
+offset_left = 3.91699
+offset_top = 14.2102
+offset_right = 11.917
+offset_bottom = 22.2102
+scale = Vector2(4.1071, 2.88316)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8blba")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_5ptkr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_al8t6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_gwp25")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_d640p")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_hvmb8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4ynnu")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ad3uo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_eflap")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_1q7hn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_63ujg")
+
 [node name="fondo-libreta" type="ColorRect" parent="."]
 visible = false
 offset_left = -12.0
@@ -651,6 +736,24 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_al8t6")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8blba")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8blba")
 text = "  <  "
+
+[node name="btn-puertita-piedra" type="Button" parent="."]
+offset_left = 543.0
+offset_top = 418.0
+offset_right = 551.0
+offset_bottom = 426.0
+scale = Vector2(8.18381, 4.64548)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8mgy1")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_wp6oq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fwhr3")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_t3tvn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5k0u3")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_601uu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_b8ay0")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_j1rok")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lu30j")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vx7k4")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xfiyk")
 
 [node name="btn-opciones" type="Button" parent="."]
 offset_left = 27.0
@@ -774,3 +877,15 @@ scale = Vector2(0.931848, 0.866415)
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="interruptor" type="TextureRect" parent="."]
+visible = false
+offset_left = 219.0
+offset_top = 486.0
+offset_right = 319.0
+offset_bottom = 586.0
+rotation = -25.2008
+scale = Vector2(0.415709, 0.399506)
+texture = ExtResource("31_l3f84")
+script = ExtResource("32_214an")
+icono_inventario = ExtResource("33_ehis0")

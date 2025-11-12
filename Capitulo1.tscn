@@ -1,4 +1,4 @@
-[gd_scene load_steps=144 format=3 uid="uid://bq3m5pkfnaveb"]
+[gd_scene load_steps=142 format=3 uid="uid://bq3m5pkfnaveb"]
 
 [ext_resource type="Script" uid="uid://c0lsa6rksj0b3" path="res://scripts/Capitulo1.gd" id="1_8y3g0"]
 [ext_resource type="Script" uid="uid://v5ac5lvhi78m" path="res://scripts/btn_inventario.gd" id="2"]
@@ -24,8 +24,6 @@
 [ext_resource type="Texture2D" uid="uid://dikgqqe6oe1x8" path="res://assets/puzzles/puzzle1/ficha-t.png" id="16"]
 [ext_resource type="Texture2D" uid="uid://n6s4uw8ab2ve" path="res://assets/puzzles/puzzle1/ficha-vertical.png" id="17"]
 [ext_resource type="Texture2D" uid="uid://ds71wu2xx5qgb" path="res://assets/libreta.png" id="18"]
-[ext_resource type="Texture2D" uid="uid://c2jnqfwailt1l" path="res://assets/elementos/interruptor.png" id="19"]
-[ext_resource type="Script" uid="uid://csulo2gwie42r" path="res://scripts/elementos.gd" id="21"]
 [ext_resource type="Script" uid="uid://bpccimtsph6i4" path="res://scripts/inventario.gd" id="22"]
 [ext_resource type="Script" uid="uid://b4c8y5aqos71h" path="res://scripts/btn_puerta.gd" id="24_vgviy"]
 [ext_resource type="Texture2D" uid="uid://3ss3yjm8dfkm" path="res://assets/fondos-escenas/menu opciones.png" id="25_judj0"]
@@ -576,17 +574,6 @@ theme_override_styles/pressed = SubResource("37")
 theme_override_styles/normal = SubResource("40")
 script = ExtResource("7")
 puzzle_node_path = NodePath("../puzzle1")
-
-[node name="interruptor" type="TextureRect" parent="."]
-offset_left = 468.0
-offset_top = 446.0
-offset_right = 568.0
-offset_bottom = 546.0
-rotation = -25.263
-scale = Vector2(0.415709, 0.399506)
-texture = ExtResource("19")
-script = ExtResource("21")
-icono_inventario = ExtResource("19")
 
 [node name="btnPuerta" type="Button" parent="."]
 offset_left = 171.0

@@ -483,10 +483,10 @@ color = Color(0.0728427, 0.0728426, 0.0728426, 0.945098)
 
 [node name="afiche" type="TextureRect" parent="fondo1/fondo-afiche" node_paths=PackedStringArray("boton", "img_pistas")]
 layout_mode = 0
-offset_left = 12.943
-offset_top = 3.25825
-offset_right = 52.943
-offset_bottom = 43.2583
+offset_left = 12.9101
+offset_top = 3.09533
+offset_right = 52.9101
+offset_bottom = 43.0954
 scale = Vector2(0.348288, 0.793471)
 texture = ExtResource("12_ummw5")
 expand_mode = 1
@@ -496,10 +496,10 @@ img_pistas = NodePath("../btn-imagenes/img-pistas")
 
 [node name="btn-salir" type="Button" parent="fondo1/fondo-afiche"]
 layout_mode = 0
-offset_left = 25.0297
-offset_top = 4.99598
-offset_right = 37.0297
-offset_bottom = 28.996
+offset_left = 24.9968
+offset_top = 4.94167
+offset_right = 36.9968
+offset_bottom = 28.9417
 scale = Vector2(0.0438274, 0.0421164)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kmqp1")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_v1pru")
@@ -512,10 +512,10 @@ puzzle_node_path = NodePath("..")
 
 [node name="btn-imagenes" type="Button" parent="fondo1/fondo-afiche"]
 layout_mode = 0
-offset_left = 17.0927
-offset_top = 4.99598
-offset_right = 25.0927
-offset_bottom = 12.996
+offset_left = 17.0598
+offset_top = 4.83306
+offset_right = 25.0598
+offset_bottom = 12.8331
 scale = Vector2(0.746005, 1.87001)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_aiftn")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_1root")

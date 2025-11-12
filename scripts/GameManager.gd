@@ -10,8 +10,10 @@ var puzzle_clave = false
 var luz_encendida = false
 var caja_fuerte = false
 var cables_cortados = true
-var texto_label = ""
 var afiche_pistas_mostradas = false
+var cofre_cerrado = true
+var interruptor_encontrado = false
+var texto_label = ""
 
 
 func _ready():

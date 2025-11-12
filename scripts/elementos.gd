@@ -22,6 +22,9 @@ func _on_gui_input(event):
 			GameManager.texto_label = "Creo que ya vi esta botella en alguna parte."
 		elif self.name == "cinta":
 			GameManager.texto_label = "Esto me servirá para algo."
+		elif self.name == "interruptor":
+			GameManager.interruptor_encontrado = true
+			GameManager.texto_label = "Se parece al interruptor del dibujo..."
 		if inventario:
 			inventario.agregar_objeto(icono_inventario)
 		else:
