@@ -15,9 +15,11 @@ var sonidos : Array[AudioStream] = [
 
 var reproductor : AudioStreamPlayer
 var sonido_activo : int = -1
-
 var sonido_encendido : bool = true
 var efectos_encendidos : bool = true
+
+# 🆕 Lista para registrar los efectos activos
+var efectos_activos : Array[AudioStreamPlayer] = []
 
 func _ready():
 	reproductor = AudioStreamPlayer.new()
@@ -91,7 +93,6 @@ func _on_fade_out_completado():
 	reproductor.volume_db = 0
 	print("[SoundManager] Fade-out temporal completado")
 
-	
 func reproducir_efecto(indice: int) -> void:
 	if not efectos_encendidos:
 		print("[SoundManager] Efectos desactivados, no se reproduce nada.")
@@ -110,4 +111,28 @@ func reproducir_efecto(indice: int) -> void:
 	player_temp.play()
 	print("[SoundManager] Reproduciendo efecto:", indice)
 
-	player_temp.connect("finished", Callable(player_temp, "queue_free"))
+	efectos_activos.append(player_temp)
+
+	player_temp.connect("finished", Callable(self, "_on_efecto_finalizado").bind(player_temp))
+
+func _on_efecto_finalizado(player_temp: AudioStreamPlayer):
+	if player_temp in efectos_activos:
+		efectos_activos.erase(player_temp)
+	player_temp.queue_free()
+
+func detener_efectos():
+	for efecto in efectos_activos:
+		if efecto and efecto.playing:
+			efecto.stop()
+			efecto.queue_free()
+	efectos_activos.clear()
+	print("[SoundManager] Todos los efectos detenidos.")
+
+
+func reanudar_musica():
+	if not sonido_encendido:
+		print("[SoundManager] La música está desactivada, no se reanuda.")
+		return
+
+	reproducir_sonido(1)
+	print("[SoundManager] Música principal reanudada.")

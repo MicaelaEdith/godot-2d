@@ -21,7 +21,7 @@ func _on_button_pressed() -> void:
 	if GameManager.maquina_encendida:
 		return
 
-	if GameManager.objeto_seleccionado == "piedra.png":
+	if GameManager.objeto_seleccionado == "piedra.png" and GameManager.interruptor_conectado:
 		GameManager.maquina_encendida = true
 		if inventario:
 			inventario.quitar_objeto("piedra.png")
@@ -30,13 +30,15 @@ func _on_button_pressed() -> void:
 		print("[Maquina] Máquina encendida. Iniciando secuencia visual.")
 		
 		await _animar_encendido()
-
 		get_tree().change_scene_to_file("res://Transicion.tscn")
 	else:
 		if GameManager.objeto_seleccionado != null:
 			GameManager.texto_label = "Esto no funciona"
+		if not GameManager.interruptor_conectado:
+			GameManager.texto_label = "Según el dibujo falta el interruptor"
 
 func _animar_encendido() -> void:
+	GameManager.capitulo4 = true
 	for i in range(4):
 		node.texture = img_prendido
 		await get_tree().create_timer(0.3).timeout
@@ -46,3 +48,4 @@ func _animar_encendido() -> void:
 	node.texture = img_prendido
 	if img_elemento:
 		img_elemento.visible = false
+ 

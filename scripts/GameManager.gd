@@ -13,7 +13,9 @@ var cables_cortados = true
 var afiche_pistas_mostradas = false
 var cofre_cerrado = true
 var interruptor_encontrado = false
+var interruptor_conectado = false
 var maquina_encendida = false
+var capitulo4 = false
 var texto_label = ""
 
 func _ready():

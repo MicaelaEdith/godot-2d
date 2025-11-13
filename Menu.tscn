@@ -13,58 +13,58 @@
 [ext_resource type="Texture2D" uid="uid://3ss3yjm8dfkm" path="res://assets/fondos-escenas/menu opciones.png" id="12_5qkn8"]
 [ext_resource type="Script" uid="uid://4ju2g4sjm0ue" path="res://scripts/opciones.gd" id="13_xucoo"]
 
-[sub_resource type="StyleBoxEmpty" id="3"]
-
-[sub_resource type="StyleBoxEmpty" id="4"]
-
-[sub_resource type="StyleBoxEmpty" id="1"]
+[sub_resource type="StyleBoxEmpty" id="5"]
 
 [sub_resource type="StyleBoxEmpty" id="2"]
 
-[sub_resource type="StyleBoxEmpty" id="5"]
+[sub_resource type="StyleBoxEmpty" id="1"]
 
-[sub_resource type="StyleBoxEmpty" id="8"]
+[sub_resource type="StyleBoxEmpty" id="4"]
 
-[sub_resource type="StyleBoxEmpty" id="9"]
-
-[sub_resource type="StyleBoxEmpty" id="6"]
-
-[sub_resource type="StyleBoxEmpty" id="12"]
+[sub_resource type="StyleBoxEmpty" id="3"]
 
 [sub_resource type="StyleBoxEmpty" id="11"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xucoo"]
+[sub_resource type="StyleBoxEmpty" id="12"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0duj0"]
+[sub_resource type="StyleBoxEmpty" id="6"]
+
+[sub_resource type="StyleBoxEmpty" id="9"]
+
+[sub_resource type="StyleBoxEmpty" id="8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5qkn8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lwhxt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75jwl"]
 bg_color = Color(0.00784314, 0.00784314, 0.00392157, 0.705882)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lwhxt"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0duj0"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5qkn8"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xucoo"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ktlje"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n8j1b"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mnkgh"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h06ok"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_elwp8"]
 bg_color = Color(0.00784314, 0.00784314, 0.00392157, 0.705882)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h06ok"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mnkgh"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n8j1b"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ktlje"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_elwp8"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5opjp"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2qy1q"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_75jwl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lwhxt"]
 bg_color = Color(0.00784314, 0.00784314, 0.00392157, 0.705882)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_75jwl"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2qy1q"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5opjp"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_elwp8"]
 
 [node name="Menu" type="Node2D"]
 position = Vector2(-1, 0)
@@ -90,11 +90,11 @@ size_flags_vertical = 4
 custom_minimum_size = Vector2(60, 45)
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_styles/focus = SubResource("3")
-theme_override_styles/disabled = SubResource("4")
-theme_override_styles/hover = SubResource("1")
-theme_override_styles/pressed = SubResource("2")
 theme_override_styles/normal = SubResource("5")
+theme_override_styles/pressed = SubResource("2")
+theme_override_styles/hover = SubResource("1")
+theme_override_styles/disabled = SubResource("4")
+theme_override_styles/focus = SubResource("3")
 script = ExtResource("4")
 normal_texture = ExtResource("1")
 pressed_texture = ExtResource("10")
@@ -116,11 +116,11 @@ layout_mode = 2
 custom_minimum_size = Vector2(60, 45)
 layout_mode = 2
 size_flags_vertical = 0
-theme_override_styles/focus = SubResource("8")
-theme_override_styles/disabled = SubResource("9")
-theme_override_styles/hover = SubResource("6")
-theme_override_styles/pressed = SubResource("12")
 theme_override_styles/normal = SubResource("11")
+theme_override_styles/pressed = SubResource("12")
+theme_override_styles/hover = SubResource("6")
+theme_override_styles/disabled = SubResource("9")
+theme_override_styles/focus = SubResource("8")
 script = ExtResource("4")
 normal_texture = ExtResource("3")
 pressed_texture = ExtResource("6")
@@ -153,11 +153,11 @@ offset_right = 84.0
 offset_bottom = 157.0
 scale = Vector2(2.40962, 2.34712)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_xucoo")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_0duj0")
-theme_override_styles/hover = SubResource("StyleBoxFlat_75jwl")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_lwhxt")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5qkn8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lwhxt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_75jwl")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0duj0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xucoo")
 alignment = 2
 
 [node name="BotonEfectos" type="Button" parent="opciones"]
@@ -167,11 +167,11 @@ offset_top = 123.0
 offset_right = 183.0
 offset_bottom = 155.0
 scale = Vector2(2.40415, 2.41112)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ktlje")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_mnkgh")
-theme_override_styles/hover = SubResource("StyleBoxFlat_elwp8")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_h06ok")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_n8j1b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_h06ok")
+theme_override_styles/hover = SubResource("StyleBoxFlat_elwp8")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mnkgh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ktlje")
 
 [node name="BotonCerrar" type="Button" parent="opciones"]
 layout_mode = 0
@@ -180,8 +180,8 @@ offset_top = 124.0
 offset_right = 281.0
 offset_bottom = 156.0
 scale = Vector2(2.40415, 2.41112)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_elwp8")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_2qy1q")
-theme_override_styles/hover = SubResource("StyleBoxFlat_lwhxt")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_75jwl")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5opjp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_75jwl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lwhxt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2qy1q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_elwp8")
