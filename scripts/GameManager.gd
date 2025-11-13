@@ -13,8 +13,8 @@ var cables_cortados = true
 var afiche_pistas_mostradas = false
 var cofre_cerrado = true
 var interruptor_encontrado = false
+var maquina_encendida = false
 var texto_label = ""
-
 
 func _ready():
 	print("[GameManager] Inventario inicializado")
